@@ -16,12 +16,18 @@ public class PushDownListReturnBean {
         public String FSupply;
 
         public String FName;
+        public String FSaleOrgID;
+        public String FStoreOrgID;
+        public String FSaleManID;
+        public String FSaleDeptID;
+        public String FNot;
         public String FDeptID;
         public String FManagerID;
         public String FEmpID;
         public String FInterID;
         public int tag;
 
+        public String FBillTypeName;
 
         @Override
         public String toString() {

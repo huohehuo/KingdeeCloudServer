@@ -26,7 +26,45 @@ public class DownloadReturnBean {
     public ArrayList<StoreMan> storeMans;
     public ArrayList<SaleMan> saleMans;
     public ArrayList<Org> orgs;
+    public ArrayList<CodeCheckBackDataBean> codeCheckBackDataBeans;
+    public ArrayList<AuxSignSecCheckBean> auxSignSecCheckBeans;
+    public ArrayList<PrintDataBean> printDataBeans;
+    public ArrayList<PrintHistory> printHistories;
+
     public int size;
+
+
+    public class PrintDataBean {
+        public String FBarCode;
+        public String FBatch;
+        public String FAuxNum;
+        public String FBaseNum;
+        public String FStoreNum;
+    }
+
+
+    public class CodeCheckBackDataBean {
+        public String FTip;
+        public String FBillNo;
+        public String FItemID;
+        public String FUnitID;
+        public String FBaseUnitName;
+        public String FStoreUnitName;
+        public String FQty;
+        public String FBaseQty;
+        public String FStoreQty;
+        public String FStockID;
+        public String FStockPlaceID;
+        public String FBatchNo;
+        public String FKFPeriod;
+        public String FKFDate;
+        public String FActualmodel;
+        public String FAuxsign;
+        public String FPurchaseNo;
+
+        public String FBarCode;
+        public String FHuoZhuNumber;
+    }
 
     public class InStorageType {
         public String FID;
@@ -42,6 +80,7 @@ public class DownloadReturnBean {
         public String FNumber;
         public String FName;
         public String FDeptID;
+        public String FOrg;
         @Override
         public String toString() {
             return "buyer{" +
@@ -49,6 +88,7 @@ public class DownloadReturnBean {
                     ", FNumber='" + FNumber + '\'' +
                     ", FName='" + FName + '\'' +
                     ", FDeptID='" + FDeptID + '\'' +
+                    ", FOrg='" + FOrg + '\'' +
                     '}';
         }
     }
@@ -57,6 +97,7 @@ public class DownloadReturnBean {
         public String FNumber;
         public String FName;
         public String FDeptID;
+        public String FOrg;
 
         @Override
         public String toString() {
@@ -65,6 +106,7 @@ public class DownloadReturnBean {
                     ", FNumber='" + FNumber + '\'' +
                     ", FName='" + FName + '\'' +
                     ", FDeptID='" + FDeptID + '\'' +
+                    ", FOrg='" + FOrg + '\'' +
                     '}';
         }
     }
@@ -73,6 +115,7 @@ public class DownloadReturnBean {
         public String FNumber;
         public String FName;
         public String FDeptID;
+        public String FOrg;
         @Override
         public String toString() {
             return "SaleMan{" +
@@ -80,6 +123,7 @@ public class DownloadReturnBean {
                     ", FNumber='" + FNumber + '\'' +
                     ", FName='" + FName + '\'' +
                     ", FDeptID='" + FDeptID + '\'' +
+                    ", FOrg='" + FOrg + '\'' +
                     '}';
         }
     }
@@ -97,6 +141,7 @@ public class DownloadReturnBean {
         public String FISSTOCK;
         public String FNumber;
         public String FName;
+        public String FOrg;
 
         @Override
         public String toString() {
@@ -105,6 +150,7 @@ public class DownloadReturnBean {
                     "FISSTOCK='" + FISSTOCK + '\'' +
                     ", FNumber='" + FNumber + '\'' +
                     ", FName='" + FName + '\'' +
+                    ", FOrg='" + FOrg + '\'' +
                     '}';
         }
         //        public String FparentID;
@@ -117,12 +163,14 @@ public class DownloadReturnBean {
         public String FDpartmentID;
         public String FEmpGroup;
         public String FEmpGroupID;
+        public String FOrg;
     }
 
     public class wavehouse {
         public String FSPID;
         public String FNumber;
         public String FName;
+        public String FOrg;
 //        public String FSPGroupID;
 //        public String FFullName;
 //        public String FLevel;
@@ -150,6 +198,7 @@ public class DownloadReturnBean {
         public String FNumber;
         public String FIsOpenWaveHouse;
         public String FallowFStore;//允许负库存
+        public String FOrg;//
 //        public String FEmpID;
 //        public String FTypeID;
 //        public String FSPGroupID;
@@ -164,6 +213,7 @@ public class DownloadReturnBean {
         public String FMeasureUnitID;
         public String FNumber;
         public String FName;
+        public String FOrg;
 //        public String FUnitGroupID;
 //        public String FCoefficient;
     }
@@ -193,6 +243,7 @@ public class DownloadReturnBean {
         public String FItemID;
         public String FNumber;
         public String FName;
+        public String FOrg;
 //        public String FItemClassID;
 //        public String FParentID;
 //        public String FLevel;
@@ -211,6 +262,7 @@ public class DownloadReturnBean {
 //                    ", FLevel='" + FLevel + '\'' +
 //                    ", FDetail='" + FDetail + '\'' +
                     ", FName='" + FName + '\'' +
+                    ", FOrg='" + FOrg + '\'' +
 //                    ", FAddress='" + FAddress + '\'' +
 //                    ", FPhone='" + FPhone + '\'' +
 //                    ", FEmail='" + FEmail + '\'' +
@@ -261,6 +313,8 @@ public class DownloadReturnBean {
         public String FName;
         public String FModel;
         public String FMnemoniccode;
+        public String FOrg;
+        public String FMASTERID;//库存ID,用于查库存
     }
 
     public class User {
@@ -274,6 +328,7 @@ public class DownloadReturnBean {
         public String FItemID;
         public String FNumber;
         public String FName;
+        public String FOrg;
 //        public String FItemClassID;
 //        public String FParentID;
 //        public String FLevel;

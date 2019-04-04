@@ -1,8 +1,10 @@
 package Server.ClientSearch;
 
 import Bean.DownloadReturnBean;
+import Bean.SearchBean;
 import Utils.CommonJson;
 import Utils.JDBCUtil;
+import Utils.Lg;
 import com.google.gson.Gson;
 
 import javax.servlet.ServletException;
@@ -32,14 +34,18 @@ public class ClientSearchLike extends HttpServlet {
         Connection conn = null;
         PreparedStatement sta = null;
         ResultSet rs = null;
+        String con="";
         ArrayList<DownloadReturnBean.Client> container = new ArrayList<DownloadReturnBean.Client>();
         System.out.println(parameter);
         if (parameter != null) {
             try {
                 conn = JDBCUtil.getConn(request);
-                SQL = "SELECT t0.FCUSTID as 客户ID,t0.FNUMBER as 客户编码,t1.FNAME as 客户名称 FROM t_BD_Customer t0 LEFT OUTER JOIN t_BD_Customer_L t1 ON (t0.FCUSTID = t1.FCUSTID AND t1.FLocaleId = 2052) WHERE ((t0.FFORBIDSTATUS = 'A' AND t0.FUSEORGID = 1) AND t0.FUSEORGID IN (1, 0)) and (t0.FNUMBER like '%"+parameter+"%' or t1.FNAME like '%"+parameter+"%')";
+                SearchBean searchBean = new Gson().fromJson(parameter,SearchBean.class);
+                SearchBean.S2Product s2Product = new Gson().fromJson(searchBean.json,SearchBean.S2Product.class);
+                if (!"".equals(s2Product.FOrg))con+=con+" and t0.FUSEORGID="+s2Product.FOrg;
+                SQL = "SELECT distinct top 20 t0.FNUMBER as 客户编码,t1.FNAME as 客户名称 FROM t_BD_Customer t0 LEFT OUTER JOIN t_BD_Customer_L t1 ON (t0.FCUSTID = t1.FCUSTID AND t1.FLocaleId = 2052) WHERE ((t0.FFORBIDSTATUS = 'A')) and (t0.FNUMBER like '%"+s2Product.likeOr+"%' or t1.FNAME like '%"+s2Product.likeOr+"%')" +con;
                 sta = conn.prepareStatement(SQL);
-                System.out.println("SQL:"+SQL);
+                Lg.e("Client:SQL:"+SQL);
                 rs = sta.executeQuery();
                 DownloadReturnBean downloadReturnBean = new DownloadReturnBean();
                 if(rs!=null){
@@ -47,12 +53,13 @@ public class ClientSearchLike extends HttpServlet {
                     System.out.println("rs的长度"+i);
                     while (rs.next()) {
                         DownloadReturnBean.Client bean = downloadReturnBean.new Client();
-                        bean.FItemID = rs.getString("客户ID");
+//                        bean.FItemID = rs.getString("客户ID");
                         bean.FNumber = rs.getString("客户编码");
                         bean.FName = rs.getString("客户名称");
+//                        bean.FOrg = rs.getString("FUSEORGID");
                         container.add(bean);
                     }
-                    System.out.println("获得客户数据："+container.toString());
+                    Lg.e("客户数据：",container.size());
                     downloadReturnBean.clients = container;
                     response.getWriter().write(CommonJson.getCommonJson(true,gson.toJson(downloadReturnBean)));
                 }else{

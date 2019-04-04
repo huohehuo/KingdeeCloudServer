@@ -41,7 +41,7 @@ public class SetPropties extends HttpServlet {
 		PreparedStatement sta = null;
 		Statement sta1 = null;
 		ResultSet rs = null;
-		ResultSet rs1 = null;
+//		ResultSet rs1 = null;
 		String version = null;
 		String VersionResulr = "";
 		try {
@@ -50,17 +50,17 @@ public class SetPropties extends HttpServlet {
 				conn1 = JDBCUtil.getConn(getDataBaseUrl.getUrl(cBean.ip, cBean.port, cBean.database), cBean.password, cBean.username);
 				sta1 = conn1.createStatement();
 				System.out.println(request.getParameter("json"));
-				rs1 = sta1.executeQuery("Select FValue From t_SystemProfile Where FCategory='Base' and FKey ='ServicePack'");
-				if(rs1.next()){
-					System.out.println(1+":"+conn1+"");
-					version = rs1.getString("FValue");
-					System.out.println("version:"+version);
-					VersionResulr = version.replace(".", "");
-					System.out.println(2+"VersionResulr:"+VersionResulr);
+//				rs1 = sta1.executeQuery("Select FValue From t_SystemProfile Where FCategory='Base' and FKey ='ServicePack'");
+//				if(rs1.next()){
+//					System.out.println(1+":"+conn1+"");
+//					version = rs1.getString("FValue");
+//					System.out.println("version:"+version);
+//					VersionResulr = version.replace(".", "");
+//					System.out.println(2+"VersionResulr:"+VersionResulr);
 					conn = JDBCUtil.getSQLiteConn();
-					System.out.println(3+":"+conn+"");
-					sta = conn.prepareStatement("select * from p_CreateProc where FVersion=? order by FDescription");
-					sta.setString(1, VersionResulr);
+//					System.out.println(3+":"+conn+"");
+					sta = conn.prepareStatement("select * from p_CreateProc where FVersion=100000 order by FDescription");
+//					sta.setString(1, VersionResulr);
 					rs = sta.executeQuery();
 					int updateNum=0;
 						while (rs.next()) {
@@ -83,9 +83,9 @@ public class SetPropties extends HttpServlet {
 						response.getWriter().write(CommonJson.getCommonJson(false,"配置错误,请确认指定文件是否防止正确"));
 
 					}
-				}else{
-					response.getWriter().write(CommonJson.getCommonJson(false, "未查询到语句"));
-				}
+//				}else{
+//					response.getWriter().write(CommonJson.getCommonJson(false, "未查询到语句"));
+//				}
 			}else{
 				response.getWriter().write(CommonJson.getCommonJson(false,  "Json有误"));
 			}
@@ -105,7 +105,7 @@ public class SetPropties extends HttpServlet {
 				if(rs!=null){rs.close();}
 				if(conn!=null){conn1.close();}
 				if(sta!=null){sta1.close();}
-				if(rs!=null){rs1.close();}
+//				if(rs!=null){rs1.close();}
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

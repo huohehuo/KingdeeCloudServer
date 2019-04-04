@@ -1,9 +1,10 @@
 package Server.SupplerSearch;
 
 import Bean.DownloadReturnBean;
+import Bean.SearchBean;
 import Utils.CommonJson;
 import Utils.JDBCUtil;
-import Utils.getDataBaseUrl;
+import Utils.Lg;
 import com.google.gson.Gson;
 
 import javax.servlet.ServletException;
@@ -33,16 +34,20 @@ public class SupplerSearchLike extends HttpServlet {
         Connection conn = null;
         PreparedStatement sta = null;
         ResultSet rs = null;
+        String con="";
         ArrayList<DownloadReturnBean.suppliers> container = new ArrayList<>();
         System.out.println(parameter);
         if (parameter != null) {
             try {
                 conn = JDBCUtil.getConn(request);
+                SearchBean searchBean = new Gson().fromJson(parameter,SearchBean.class);
+                SearchBean.S2Product s2Product = new Gson().fromJson(searchBean.json,SearchBean.S2Product.class);
+                if (!"".equals(s2Product.FOrg))con+=con+" and t0.FUSEORGID="+s2Product.FOrg;
 //              SQL = "select top 50 FSecCoefficient,FSecUnitID,FIsSnManage,FItemID,FISKFPeriod,convert(INT,FKFPeriod) as FKFPeriod,FNumber,FModel,FName,FFullName,FUnitID,FUnitGroupID,FDefaultLoc,isnull(FProfitRate,0) as FProfitRate,isnull(FTaxRate,1) as FTaxRate,isnull(FOrderPrice,0) as FOrderPrice,isnull(FSalePrice,0) as FSalePrice,isnull(FPlanPrice,0) as FPlanPrice,FBarcode,FSPID,FBatchManager from t_ICItem where FErpClsID not in (6,8) and FDeleted = 0 and (FNumber like '%"+parameter+"%' or FName like '%"+parameter+"%') order by FNumber";//旗舰版和k3
-                SQL = "SELECT t0.FSUPPLIERID as 供应商ID,t0.FNUMBER as 供应商编码,t1.FNAME as 供应商名称 FROM t_BD_Supplier t0 LEFT OUTER JOIN t_BD_Supplier_L t1 ON (t0.FSUPPLIERID = t1.FSUPPLIERID AND t1.FLocaleId = 2052) WHERE ((t0.FFORBIDSTATUS = 'A' AND t0.FUSEORGID = 1) AND t0.FUSEORGID IN (1, 0)) and (t0.FNUMBER like '%"+parameter+"%' or t1.FNAME like '%"+parameter+"%')";
+                SQL = "SELECT t0.FUSEORGID,t0.FSUPPLIERID as 供应商ID,t0.FNUMBER as 供应商编码,t1.FNAME as 供应商名称 FROM t_BD_Supplier t0 LEFT OUTER JOIN t_BD_Supplier_L t1 ON (t0.FSUPPLIERID = t1.FSUPPLIERID AND t1.FLocaleId = 2052) WHERE ((t0.FFORBIDSTATUS = 'A')) and (t0.FNUMBER like '%"+s2Product.likeOr+"%' or t1.FNAME like '%"+s2Product.likeOr+"%')" +con;
 
                 sta = conn.prepareStatement(SQL);
-                System.out.println("SQL:"+SQL);
+                Lg.e("Suppliers:SQL:"+SQL);
                 rs = sta.executeQuery();
                 DownloadReturnBean downloadReturnBean = new DownloadReturnBean();
                 if(rs!=null){
@@ -53,6 +58,7 @@ public class SupplerSearchLike extends HttpServlet {
                         bean.FItemID = rs.getString("供应商ID");
                         bean.FNumber = rs.getString("供应商编码");
                         bean.FName = rs.getString("供应商名称");
+                        bean.FOrg = rs.getString("FUSEORGID");
 
                         container.add(bean);
                     }

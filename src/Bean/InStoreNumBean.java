@@ -7,4 +7,5 @@ public class InStoreNumBean {
 	public String FBatchNo;
 	public String FKFDate;
 	public String FKFPeriod;
+	public String FOwnerID;//货主id
 }

@@ -80,14 +80,14 @@ public class DownloadInfo extends HttpServlet {
                 for (Integer aChoose : choose) {
                     System.out.println("DownloadInfo下载定位:"+aChoose);
                     switch (aChoose) {
-                        case 1:
+                        case 1: //采购员
                             container = getBuyer(statement, rSet, version, dBean);
                             System.out.println("container" + container.size());
                             System.out.println("container" + container.toString());
                             dBean.buyers = container;
                             size += container.size();
                             break;
-                        case 2:
+                        case 2://部门表
                             department = getDepartment(statement, rSet, version, dBean);
                             System.out.println("department" + department.size());
                             System.out.println("department" + department.toString());
@@ -95,77 +95,77 @@ public class DownloadInfo extends HttpServlet {
                             size += department.size();
                             break;
 
-                        case 3:
+                        case 3://员工表
                             empArrayList = getEmployee(statement, rSet, version, dBean);
                             System.out.println("emp" + empArrayList.size());
                             dBean.employee = empArrayList;
                             size += empArrayList.size();
                             break;
-                        case 4:
+                        case 4://仓位表
                             wavehouse = getWaveHouse(statement, rSet, version, dBean);
                             System.out.println("wavehouse" + wavehouse.size());
                             dBean.wavehouse = wavehouse;
                             size += wavehouse.size();
                             break;
-                        case 5:
+                        case 5://库存表
                             instorageNums = getInstorageNums(statement, rSet, version, dBean);
                             System.out.println("instorageNums" + instorageNums.size());
                             dBean.InstorageNum = instorageNums;
                             size += instorageNums.size();
                             break;
-                        case 6:
+                        case 6://仓库表
                             storage = getStorage(statement, rSet, version, dBean);
                             System.out.println("storage" + storage.size());
                             dBean.storage = storage;
                             size += storage.size();
                             break;
-                        case 7:
+                        case 7://单位表
                             unit = getUnit(statement, rSet, version, dBean);
                             System.out.println("unit" + unit.size());
                             dBean.units = unit;
                             size += unit.size();
                             break;
-                        case 8:
+                        case 8://仓管员表
                             storeMen = getStoreMan(statement, rSet, version, dBean);
                             System.out.println("storeMens" + storeMen.size());
                             System.out.println("storeMens" + storeMen.toString());
                             dBean.storeMans = storeMen;
                             size += storeMen.size();
                             break;
-                        case 9:
+                        case 9://供应商表
                             suppliers = getSuppliers(statement, rSet, version, dBean);
                             System.out.println("suppliers" + suppliers.size());
                             dBean.suppliers = suppliers;
                             size += suppliers.size();
                             break;
-                        case 10:
+                        case 10://销售员表
                             saleMens = getSaleMan(statement, rSet, version, dBean);
                             System.out.println("saleMen" + saleMens.size());
                             System.out.println("saleMen" + saleMens.toString());
                             dBean.saleMans = saleMens;
                             size += saleMens.size();
                             break;
-                        case 11:
+                        case 11://商品资料表
                             products = getProduct(statement, rSet, version, dBean);
                             System.out.println("products" + products.size());
                             dBean.products = products;
                             size += products.size();
                             break;
-                        case 12:
+                        case 12://用户信息表
                             user = getUser(statement, rSet, version, dBean);
                             System.out.println("user" + user.size());
                             dBean.User = user;
                             size += user.size();
                             break;
-                        case 13:
+                        case 13://客户信息表
                             client = getClient(statement, rSet, version, dBean);
                             System.out.println("client" + client.size());
                             dBean.clients = client;
                             size += client.size();
                             break;
-                        case 14:
+                        case 14://组织表
                             orgs = getOrg(statement, rSet, version, dBean);
-                            System.out.println("goodsDepartments" + orgs.size());
+                            System.out.println("getOrg" + orgs.size());
                             dBean.orgs = orgs;
                             size += orgs.size();
                             break;
@@ -229,7 +229,7 @@ public class DownloadInfo extends HttpServlet {
 
     private ArrayList<Client> getClient(Statement statement, ResultSet rSet, String version, DownloadReturnBean dBean) {
         ArrayList<Client> container = new ArrayList<DownloadReturnBean.Client>();
-        String sql = "SELECT t0.FCUSTID as 客户ID,t0.FNUMBER as 客户编码,t1.FNAME as 客户名称 FROM t_BD_Customer t0 LEFT OUTER JOIN t_BD_Customer_L t1 ON (t0.FCUSTID = t1.FCUSTID AND t1.FLocaleId = 2052) WHERE ((t0.FFORBIDSTATUS = 'A' AND t0.FUSEORGID = 1) AND t0.FUSEORGID IN (1, 0))";
+        String sql = "SELECT t0.FUSEORGID,t0.FCUSTID as 客户ID,t0.FNUMBER as 客户编码,t1.FNAME as 客户名称 FROM t_BD_Customer t0 LEFT OUTER JOIN t_BD_Customer_L t1 ON (t0.FCUSTID = t1.FCUSTID AND t1.FLocaleId = 2052) WHERE (t0.FFORBIDSTATUS = 'A')";
         try {
             rSet = statement.executeQuery(sql);
             while (rSet.next()) {
@@ -237,6 +237,7 @@ public class DownloadInfo extends HttpServlet {
                 bean.FItemID = rSet.getString("客户ID");
                 bean.FNumber = rSet.getString("客户编码");
                 bean.FName = rSet.getString("客户名称");
+                bean.FOrg = rSet.getString("FUSEORGID");
 //                bean.FParentID = rSet.getString("FParentID");
 //                bean.FItemClassID = rSet.getString("FItemClassID");
 //                bean.FLevel = rSet.getString("FLevel");
@@ -265,7 +266,7 @@ public class DownloadInfo extends HttpServlet {
 //        } else if (version.equals("800103")  || version.equals("800102") || version.contains("5001")) {
 //            sql = "select FIsSnManage,FItemID,FISKFPeriod,convert(INT,FKFPeriod) as FKFPeriod ,FNumber,FModel,FName,FFullName,FUnitID,FUnitGroupID,FDefaultLoc,isnull(FProfitRate,0) as FProfitRate,isnull(FTaxRate,1) as FTaxRate,isnull(FOrderPrice,0) as FOrderPrice,isnull(FSalePrice,0) as FSalePrice,isnull(FPlanPrice,0) as FPlanPrice,FBarcode,FSPID,FBatchManager from t_ICItem where FErpClsID not in (6,8) and FDeleted = 0 order by FName collate Chinese_PRC_CI_AS";//�콢���k3
 //        } else {
-            sql = "select  t6.FPRODUCEUNITID as 生产单位ID,t5.FPURCHASEUNITID as  采购单位ID,t5.FPURCHASEPRICEUNITID as 采购计价单位ID,t4.FSALEUNITID as 销售单位ID,t4.FSALEPRICEUNITID as 销售计价单位ID,FSTOREUNITID as 库存单位ID,FAUXUNITID as 辅助单位ID,FSTOCKID as 默认仓库ID,FSTOCKPLACEID as 默认仓位ID,FISBATCHMANAGE as 是否启用批号管理,FISKFPERIOD as 是否开启保质期管理,FEXPPERIOD as 保质期,FEXPUNIT as 保质期单位,t2.FISPURCHASE as 允许采购,t2.FISSALE as 允许销售,t2.FISINVENTORY as 允许库存,t2.FISPRODUCE as 允许生产,t2.FISSUBCONTRACT as 允许委外,t2.FISASSET as 允许资产,t2.FBASEUNITID as 基本单位ID,t2.FWEIGHTUNITID as 重量单位ID,t2.FVOLUMEUNITID as 尺寸单位ID,t2.FBARCODE as 条码,t2.FGROSSWEIGHT as 毛重,t2.FNETWEIGHT as 净重,t2.FLENGTH as 长,t2.FWIDTH as 宽,t2.FHEIGHT as 高,t2.FVOLUME as 体积,t1.FMaterialid as 物料内码,t0.FNumber as 编码,t0.FOLDNUMBER as 旧物料编码,t1.FName as 商品名称,t1.FSPECIFICATION as 规格型号,t0.FMNEMONICCODE as 助记码 from T_BD_MATERIAL t0 left join t_bd_material_l t1 on (t0.fmaterialid=t1.fmaterialid AND t1.FLocaleId = 2052) left join t_BD_MaterialBase t2 on t2.fmaterialid=t0.fmaterialid  left join T_BD_MATERIALSTOCK t3 on t3.fmaterialid=t0.fmaterialid left join T_BD_MATERIALSALE t4 on t4.fmaterialid=t0.fmaterialid left join T_BD_MATERIALPURCHASE t5 on t5.fmaterialid=t0.fmaterialid left join T_BD_MATERIALPRODUCE t6 on t6.fmaterialid=t0.fmaterialid  where t0.FUSEORGID = 1 AND (t0.FDOCUMENTSTATUS = 'C' AND t0.FFORBIDSTATUS = 'A') AND t0.FFORBIDSTATUS = 'A'";
+            sql = "select  t0.FMASTERID,t0.FUSEORGID,t6.FPRODUCEUNITID as 生产单位ID,t5.FPURCHASEUNITID as  采购单位ID,t5.FPURCHASEPRICEUNITID as 采购计价单位ID,t4.FSALEUNITID as 销售单位ID,t4.FSALEPRICEUNITID as 销售计价单位ID,FSTOREUNITID as 库存单位ID,FAUXUNITID as 辅助单位ID,FSTOCKID as 默认仓库ID,FSTOCKPLACEID as 默认仓位ID,FISBATCHMANAGE as 是否启用批号管理,FISKFPERIOD as 是否开启保质期管理,FEXPPERIOD as 保质期,FEXPUNIT as 保质期单位,t2.FISPURCHASE as 允许采购,t2.FISSALE as 允许销售,t2.FISINVENTORY as 允许库存,t2.FISPRODUCE as 允许生产,t2.FISSUBCONTRACT as 允许委外,t2.FISASSET as 允许资产,t2.FBASEUNITID as 基本单位ID,t2.FWEIGHTUNITID as 重量单位ID,t2.FVOLUMEUNITID as 尺寸单位ID,t2.FBARCODE as 条码,t2.FGROSSWEIGHT as 毛重,t2.FNETWEIGHT as 净重,t2.FLENGTH as 长,t2.FWIDTH as 宽,t2.FHEIGHT as 高,t2.FVOLUME as 体积,t1.FMaterialid as 物料内码,t0.FNumber as 编码,t0.FOLDNUMBER as 旧物料编码,t1.FName as 商品名称,t1.FSPECIFICATION as 规格型号,t0.FMNEMONICCODE as 助记码 from T_BD_MATERIAL t0 left join t_bd_material_l t1 on (t0.fmaterialid=t1.fmaterialid AND t1.FLocaleId = 2052) left join t_BD_MaterialBase t2 on t2.fmaterialid=t0.fmaterialid  left join T_BD_MATERIALSTOCK t3 on t3.fmaterialid=t0.fmaterialid left join T_BD_MATERIALSALE t4 on t4.fmaterialid=t0.fmaterialid left join T_BD_MATERIALPURCHASE t5 on t5.fmaterialid=t0.fmaterialid left join T_BD_MATERIALPRODUCE t6 on t6.fmaterialid=t0.fmaterialid  where   (t0.FDOCUMENTSTATUS = 'C' AND t0.FFORBIDSTATUS = 'A') AND t0.FFORBIDSTATUS = 'A'";
         //        }
         try {
             rSet = statement.executeQuery(sql);
@@ -306,6 +307,8 @@ public class DownloadInfo extends HttpServlet {
                 bean.FName                         = rSet.getString("商品名称");
                 bean.FModel                        = rSet.getString("规格型号");
                 bean.FMnemoniccode                 = rSet.getString("助记码");
+                bean.FOrg                          = rSet.getString("FUSEORGID");
+                bean.FMASTERID                          = rSet.getString("FMASTERID");
 
                 container.add(bean);
             }
@@ -319,7 +322,7 @@ public class DownloadInfo extends HttpServlet {
 
     private ArrayList<suppliers> getSuppliers(Statement statement, ResultSet rSet, String version, DownloadReturnBean dBean) {
         ArrayList<suppliers> container = new ArrayList<DownloadReturnBean.suppliers>();
-        String sql = "SELECT t0.FSUPPLIERID as 供应商ID,t0.FNUMBER as 供应商编码,t1.FNAME as 供应商名称 FROM t_BD_Supplier t0 LEFT OUTER JOIN t_BD_Supplier_L t1 ON (t0.FSUPPLIERID = t1.FSUPPLIERID AND t1.FLocaleId = 2052) WHERE ((t0.FFORBIDSTATUS = 'A' AND t0.FUSEORGID = 1) AND t0.FUSEORGID IN (1, 0))";
+        String sql = "SELECT t0.FUSEORGID,t0.FSUPPLIERID as 供应商ID,t0.FNUMBER as 供应商编码,t1.FNAME as 供应商名称 FROM t_BD_Supplier t0 LEFT OUTER JOIN t_BD_Supplier_L t1 ON (t0.FSUPPLIERID = t1.FSUPPLIERID AND t1.FLocaleId = 2052) WHERE (t0.FFORBIDSTATUS = 'A')";
         try {
             rSet = statement.executeQuery(sql);
             while (rSet.next()) {
@@ -327,6 +330,7 @@ public class DownloadInfo extends HttpServlet {
                 bean.FItemID = rSet.getString("供应商ID");
                 bean.FNumber = rSet.getString("供应商编码");
                 bean.FName = rSet.getString("供应商名称");
+                bean.FOrg = rSet.getString("FUSEORGID");
 //                bean.FItemClassID = rSet.getString("FItemClassID");
 //                bean.FParentID = rSet.getString("FParentID");
 //                bean.FLevel = rSet.getString("FLevel");
@@ -346,7 +350,7 @@ public class DownloadInfo extends HttpServlet {
     //获取单位
     private ArrayList<Unit> getUnit(Statement statement, ResultSet rSet, String version, DownloadReturnBean dBean) {
         ArrayList<Unit> container = new ArrayList<DownloadReturnBean.Unit>();
-        String sql = "SELECT t0.FUNITID as 单位ID,t0.FNUMBER as 单位编码,t1.FNAME as 单位名称 FROM T_BD_UNIT t0 LEFT OUTER JOIN T_BD_UNIT_L t1 ON (t0.FUNITID = t1.FUNITID AND t1.FLocaleId = 2052) WHERE ((t0.FFORBIDSTATUS='A'))";
+        String sql = "SELECT t0.FUSEORGID,t0.FUNITID as 单位ID,t0.FNUMBER as 单位编码,t1.FNAME as 单位名称 FROM T_BD_UNIT t0 LEFT OUTER JOIN T_BD_UNIT_L t1 ON (t0.FUNITID = t1.FUNITID AND t1.FLocaleId = 2052) WHERE ((t0.FFORBIDSTATUS='A'))";
         try {
             rSet = statement.executeQuery(sql);
             while (rSet.next()) {
@@ -354,6 +358,7 @@ public class DownloadInfo extends HttpServlet {
                 bean.FMeasureUnitID = rSet.getString("单位ID");
                 bean.FNumber = rSet.getString("单位编码");
                 bean.FName = rSet.getString("单位名称");
+                bean.FOrg = rSet.getString("FUSEORGID");
 //                bean.FUnitGroupID = rSet.getString("FUnitGroupID");
 //                bean.FCoefficient = rSet.getString("FCoefficient");
                 container.add(bean);
@@ -377,7 +382,7 @@ public class DownloadInfo extends HttpServlet {
 //                    "t1.FGroupID,t1.FStockGroupID,t1.FIsStockMgr,t1.FUnderStock from t_Stock" +
 //                    " t1 left join t_Item t2 on t1.FItemID=t2.FItemID WHERE t2.FItemClassID=5 AND t2.FDetail=1  AND (((FTypeID not in (501,502,503)) and FTypeID <> 504)) AND t2.FDeleteD=0 "; //���k3
 //        } else {
-            sql = "SELECT t0.FSTOCKID as 仓库ID,t0.FNUMBER as 仓库编码,t1.FNAME as 仓库名称,FISOPENLOCATION as 启用仓位,FALLOWMINUSQTY as 允许负库存 FROM t_BD_Stock t0 LEFT OUTER JOIN t_BD_Stock_L t1 ON (t0.FSTOCKID = t1.FSTOCKID AND t1.FLocaleId = 2052) WHERE ((t0.FFORBIDSTATUS = 'A' AND t0.FUSEORGID = 1) AND t0.FUSEORGID IN (1, 0))";//רҵ��
+            sql = "SELECT t0.FUSEORGID,t0.FSTOCKID as 仓库ID,t0.FNUMBER as 仓库编码,t1.FNAME as 仓库名称,FISOPENLOCATION as 启用仓位,FALLOWMINUSQTY as 允许负库存 FROM t_BD_Stock t0 LEFT OUTER JOIN t_BD_Stock_L t1 ON (t0.FSTOCKID = t1.FSTOCKID AND t1.FLocaleId = 2052) WHERE t0.FFORBIDSTATUS = 'A'";//רҵ��
 //        }
 
         try {
@@ -389,6 +394,7 @@ public class DownloadInfo extends HttpServlet {
                 bean.FNumber = rSet.getString("仓库编码");
                 bean.FIsOpenWaveHouse = rSet.getString("启用仓位");
                 bean.FallowFStore = rSet.getString("允许负库存");
+                bean.FOrg = rSet.getString("FUSEORGID");
 //                bean.FEmpID = rSet.getString("FEmpID");
 //                bean.FTypeID = rSet.getString("FTypeID");
 //                bean.FSPGroupID = rSet.getString("FSPGroupID");
@@ -407,7 +413,7 @@ public class DownloadInfo extends HttpServlet {
 
     private ArrayList<wavehouse> getWaveHouse(Statement statement, ResultSet rSet, String version, DownloadReturnBean dBean) {
         ArrayList<wavehouse> container = new ArrayList<>();
-        String sql = "SELECT t0.FID as 仓位ID,t0.FNUMBER as 仓位编码,t1.FNAME as 仓位名称 FROM T_BAS_FLEXVALUES t0 LEFT OUTER JOIN T_BAS_FLEXVALUES_L t1 ON (t0.FID = t1.FID AND t1.FLocaleId = 2052) WHERE ((t0.FFORBIDSTATUS='A'))";
+        String sql = "SELECT t0.FUSEORGID,t0.FID as 仓位ID,t0.FNUMBER as 仓位编码,t1.FNAME as 仓位名称 FROM T_BAS_FLEXVALUES t0 LEFT OUTER JOIN T_BAS_FLEXVALUES_L t1 ON (t0.FID = t1.FID AND t1.FLocaleId = 2052) WHERE ((t0.FFORBIDSTATUS='A'))";
         try {
             rSet = statement.executeQuery(sql);
             while (rSet.next()) {
@@ -415,6 +421,7 @@ public class DownloadInfo extends HttpServlet {
                 bean.FSPID = rSet.getString("仓位ID");
                 bean.FNumber = rSet.getString("仓位编码");
                 bean.FName = rSet.getString("仓位名称");
+                bean.FOrg = rSet.getString("FUSEORGID");
 //                bean.FSPGroupID = rSet.getString("FSPGroupID");
 //                bean.FFullName = rSet.getString("FFullName");
 //                bean.FLevel = rSet.getString("FLevel");
@@ -433,7 +440,7 @@ public class DownloadInfo extends HttpServlet {
 
     private ArrayList<employee> getEmployee(Statement statement, ResultSet rSet, String version, DownloadReturnBean dBean) {
         ArrayList<employee> container = new ArrayList<>();
-        String sql = "SELECT t0.FID as 员工ID,t0.FNUMBER as 员工编码,t1.FNAME as 员工名称 FROM T_HR_EMPINFO t0 LEFT OUTER JOIN T_HR_EMPINFO_L t1 ON (t0.FID = t1.FID AND t1.FLocaleId = 2052) WHERE ((t0.FFORBIDSTATUS='A'))";
+        String sql = "SELECT t0.FUSEORGID,t0.FID as 员工ID,t0.FNUMBER as 员工编码,t1.FNAME as 员工名称 FROM T_HR_EMPINFO t0 LEFT OUTER JOIN T_HR_EMPINFO_L t1 ON (t0.FID = t1.FID AND t1.FLocaleId = 2052) WHERE ((t0.FFORBIDSTATUS='A')) and t0.FDOCUMENTSTATUS = 'C'";
         try {
             rSet = statement.executeQuery(sql);
             while (rSet.next()) {
@@ -441,6 +448,7 @@ public class DownloadInfo extends HttpServlet {
                 emp.FItemID = rSet.getString("员工ID");
                 emp.FName = rSet.getString("员工名称");
                 emp.FNumber = rSet.getString("员工编码");
+                emp.FOrg = rSet.getString("FUSEORGID");
 //                emp.FDpartmentID = rSet.getString("FDepartmentID");
 //                emp.FEmpGroup = rSet.getString("FEmpGroup");
 //                emp.FEmpGroupID = rSet.getString("FEmpGroupID");
@@ -454,7 +462,7 @@ public class DownloadInfo extends HttpServlet {
     }
 
     private ArrayList<DownloadReturnBean.department> getDepartment(Statement statement, ResultSet rSet, String version, DownloadReturnBean dBean) {
-        String sql = "SELECT t0.FISSTOCK,t0.FDEPTID as 部门ID,t0.FNUMBER as 部门编码,t1.FNAME as 部门名称 FROM T_BD_DEPARTMENT t0 LEFT OUTER JOIN T_BD_DEPARTMENT_L t1 ON (t0.FDEPTID = t1.FDEPTID AND t1.FLocaleId = 2052) WHERE ((t0.FFORBIDSTATUS = 'A' AND t0.FUSEORGID = 1) AND t0.FUSEORGID IN (1, 0))";
+        String sql = "SELECT t0.FUSEORGID,t0.FISSTOCK,t0.FDEPTID as 部门ID,t0.FNUMBER as 部门编码,t1.FNAME as 部门名称 FROM T_BD_DEPARTMENT t0 LEFT OUTER JOIN T_BD_DEPARTMENT_L t1 ON (t0.FDEPTID = t1.FDEPTID AND t1.FLocaleId = 2052) WHERE (t0.FFORBIDSTATUS = 'A')";
         ArrayList<DownloadReturnBean.department> container = new ArrayList<>();
         try {
             rSet = statement.executeQuery(sql);
@@ -464,6 +472,7 @@ public class DownloadInfo extends HttpServlet {
                 bean.FName = rSet.getString("部门名称");
                 bean.FNumber = rSet.getString("部门编码");
                 bean.FISSTOCK = rSet.getString("FISSTOCK");
+                bean.FOrg = rSet.getString("FUSEORGID");
 //                bean.FparentID = rSet.getString("FParentID");
                 container.add(bean);
             }
@@ -521,7 +530,7 @@ public class DownloadInfo extends HttpServlet {
     private ArrayList<DownloadReturnBean.buyer> getBuyer(Statement statement, ResultSet rSet, String version, DownloadReturnBean dBean) {
         String sql = null;
         ArrayList<DownloadReturnBean.buyer> container = new ArrayList<>();
-        sql = "SELECT t0.FID as 采购员ID,t0.FNUMBER as 采购员编码,t1.FNAME as 采购员名称,t0.FDEPTID as 所属部门ID FROM  V_BD_BUYER t0 LEFT OUTER JOIN V_BD_BUYER_L t1 ON (t0.FID = t1.FID AND t1.FLocaleId = 2052) WHERE (t0.FFORBIDSTATUS = 'A' ) and t0.FBIZORGID = '1' AND t0.FISUSE = '1'";//רҵ��
+        sql = "SELECT t0.FBIZORGID,t0.FID as 采购员ID,t0.FNUMBER as 采购员编码,t1.FNAME as 采购员名称,t0.FDEPTID as 所属部门ID FROM  V_BD_BUYER t0 LEFT OUTER JOIN V_BD_BUYER_L t1 ON (t0.FID = t1.FID AND t1.FLocaleId = 2052) WHERE (t0.FFORBIDSTATUS = 'A' ) AND t0.FISUSE = '1'";//רҵ��
 
         try {
             rSet = statement.executeQuery(sql);
@@ -531,6 +540,7 @@ public class DownloadInfo extends HttpServlet {
                 bean.FNumber = rSet.getString("采购员编码");
                 bean.FName = rSet.getString("采购员名称");
                 bean.FDeptID = rSet.getString("所属部门ID");
+                bean.FOrg = rSet.getString("FBIZORGID");
                 container.add(bean);
             }
         } catch (SQLException e) {
@@ -543,7 +553,7 @@ public class DownloadInfo extends HttpServlet {
     private ArrayList<DownloadReturnBean.StoreMan> getStoreMan(Statement statement, ResultSet rSet, String version, DownloadReturnBean dBean) {
         String sql = null;
         ArrayList<DownloadReturnBean.StoreMan> container = new ArrayList<>();
-        sql = "SELECT t0.FID as 仓管员ID,t0.FNUMBER as 仓管员编码,t1.FNAME as 仓管员名称,t0.FDEPTID as 所属部门ID FROM  V_BD_WAREHOUSEWORKERS t0 LEFT OUTER JOIN V_BD_WAREHOUSEWORKERS_L t1 ON (t0.FID = t1.FID AND t1.FLocaleId = 2052) WHERE (t0.FFORBIDSTATUS = 'A' ) and t0.FBIZORGID = '1' AND t0.FISUSE = '1'";//רҵ��
+        sql = "SELECT t0.FBIZORGID,t0.FID as 仓管员ID,t0.FNUMBER as 仓管员编码,t1.FNAME as 仓管员名称,t0.FDEPTID as 所属部门ID FROM  V_BD_WAREHOUSEWORKERS t0 LEFT OUTER JOIN V_BD_WAREHOUSEWORKERS_L t1 ON (t0.FID = t1.FID AND t1.FLocaleId = 2052) WHERE (t0.FFORBIDSTATUS = 'A' ) AND t0.FISUSE = '1'";//רҵ��
 
         try {
             rSet = statement.executeQuery(sql);
@@ -553,6 +563,7 @@ public class DownloadInfo extends HttpServlet {
                 bean.FNumber = rSet.getString("仓管员编码");
                 bean.FName = rSet.getString("仓管员名称");
                 bean.FDeptID = rSet.getString("所属部门ID");
+                bean.FOrg = rSet.getString("FBIZORGID");
                 container.add(bean);
             }
         } catch (SQLException e) {
@@ -565,7 +576,7 @@ public class DownloadInfo extends HttpServlet {
     private ArrayList<DownloadReturnBean.SaleMan> getSaleMan(Statement statement, ResultSet rSet, String version, DownloadReturnBean dBean) {
         String sql = null;
         ArrayList<DownloadReturnBean.SaleMan> container = new ArrayList<>();
-        sql = "SELECT t0.FID as 销售员ID,t0.FNUMBER as 销售员编码,t1.FNAME as 销售员名称,t0.FDEPTID as 所属部门ID FROM  V_BD_SALESMAN t0 LEFT OUTER JOIN V_BD_SALESMAN_L t1 ON (t0.FID = t1.FID AND t1.FLocaleId = 2052) WHERE (t0.FFORBIDSTATUS = 'A' ) and t0.FBIZORGID = '1' AND t0.FISUSE = '1'";//רҵ��
+        sql = "SELECT t0.FBIZORGID,t0.FID as 销售员ID,t0.FNUMBER as 销售员编码,t1.FNAME as 销售员名称,t0.FDEPTID as 所属部门ID FROM  V_BD_SALESMAN t0 LEFT OUTER JOIN V_BD_SALESMAN_L t1 ON (t0.FID = t1.FID AND t1.FLocaleId = 2052) WHERE (t0.FFORBIDSTATUS = 'A' ) and t0.FISUSE = '1'";//רҵ��
 
         try {
             rSet = statement.executeQuery(sql);
@@ -575,6 +586,7 @@ public class DownloadInfo extends HttpServlet {
                 bean.FNumber = rSet.getString("销售员编码");
                 bean.FName = rSet.getString("销售员名称");
                 bean.FDeptID = rSet.getString("所属部门ID");
+                bean.FOrg = rSet.getString("FBIZORGID");
                 container.add(bean);
             }
         } catch (SQLException e) {

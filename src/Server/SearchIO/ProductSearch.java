@@ -1,11 +1,10 @@
 package Server.SearchIO;
 
-import Bean.CheckBarCodeIsUse;
 import Bean.DownloadReturnBean;
 import Bean.SearchBean;
 import Utils.CommonJson;
 import Utils.JDBCUtil;
-import Utils.getDataBaseUrl;
+import Utils.Lg;
 import com.google.gson.Gson;
 
 import javax.servlet.ServletException;
@@ -21,7 +20,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
- * Created by NB on 2017/8/7.
+ * 物料查询：可根据 id  barcode 模糊查询三个方式查询数据
  */
 @WebServlet(urlPatterns = "/S2Product")
 public class ProductSearch extends HttpServlet {
@@ -43,15 +42,29 @@ public class ProductSearch extends HttpServlet {
                 conn = JDBCUtil.getConn(request);
                 SearchBean searchBean = new Gson().fromJson(parameter,SearchBean.class);
                 if (SearchBean.product_for_barcode.equals(searchBean.searchType)){
-                    SQL="select top 50 t6.FPRODUCEUNITID as 生产单位ID,t5.FPURCHASEUNITID as  采购单位ID,t5.FPURCHASEPRICEUNITID as 采购计价单位ID,t4.FSALEUNITID as 销售单位ID,t4.FSALEPRICEUNITID as 销售计价单位ID,FSTOREUNITID as 库存单位ID,FAUXUNITID as 辅助单位ID,FSTOCKID as 默认仓库ID,FSTOCKPLACEID as 默认仓位ID,FISBATCHMANAGE as 是否启用批号管理,FISKFPERIOD as 是否开启保质期管理,FEXPPERIOD as 保质期,FEXPUNIT as 保质期单位,t2.FISPURCHASE as 允许采购,t2.FISSALE as 允许销售,t2.FISINVENTORY as 允许库存," +
+                    SearchBean.S2Product s2Product = new Gson().fromJson(searchBean.json,SearchBean.S2Product.class);
+                    con+=con+" and t2.FBARCODE="+s2Product.likeOr;
+                    if (!"".equals(s2Product.FOrg))con+=con+" and t0.FUSEORGID="+s2Product.FOrg;
+                    SQL="select top 50 t0.FMASTERID,t0.FUSEORGID,t6.FPRODUCEUNITID as 生产单位ID,t5.FPURCHASEUNITID as  采购单位ID,t5.FPURCHASEPRICEUNITID as 采购计价单位ID,t4.FSALEUNITID as 销售单位ID,t4.FSALEPRICEUNITID as 销售计价单位ID,FSTOREUNITID as 库存单位ID,FAUXUNITID as 辅助单位ID,FSTOCKID as 默认仓库ID,FSTOCKPLACEID as 默认仓位ID,FISBATCHMANAGE as 是否启用批号管理,FISKFPERIOD as 是否开启保质期管理,FEXPPERIOD as 保质期,FEXPUNIT as 保质期单位,t2.FISPURCHASE as 允许采购,t2.FISSALE as 允许销售,t2.FISINVENTORY as 允许库存," +
                             "t2.FISPRODUCE as 允许生产,t2.FISSUBCONTRACT as 允许委外,t2.FISASSET as 允许资产,t2.FBASEUNITID as 基本单位ID,t2.FWEIGHTUNITID as 重量单位ID,t2.FVOLUMEUNITID as 尺寸单位ID,t2.FBARCODE as 条码,t2.FGROSSWEIGHT as 毛重,t2.FNETWEIGHT as 净重,t2.FLENGTH as 长,t2.FWIDTH as 宽,t2.FHEIGHT as 高,t2.FVOLUME as 体积,t1.FMaterialid as 物料内码,t0.FNumber as 编码,t0.FOLDNUMBER as 旧物料编码,t1.FName as 商品名称,t1.FSPECIFICATION as 规格型号,t0.FMNEMONICCODE as 助记码 from T_BD_MATERIAL t0 " +
-                            "left join t_bd_material_l t1 on (t0.fmaterialid=t1.fmaterialid AND t1.FLocaleId = 2052) left join t_BD_MaterialBase t2 on t2.fmaterialid=t0.fmaterialid  left join T_BD_MATERIALSTOCK t3 on t3.fmaterialid=t0.fmaterialid left join T_BD_MATERIALSALE t4 on t4.fmaterialid=t0.fmaterialid left join T_BD_MATERIALPURCHASE t5 on t5.fmaterialid=t0.fmaterialid left join T_BD_MATERIALPRODUCE t6 on t6.fmaterialid=t0.fmaterialid  where t0.FUSEORGID = 1 AND (t0.FDOCUMENTSTATUS = 'C' AND t0.FFORBIDSTATUS = 'A') AND t0.FFORBIDSTATUS = 'A'  and (t2.FBARCODE = "+searchBean.json+")";
+                            "left join t_bd_material_l t1 on (t0.fmaterialid=t1.fmaterialid AND t1.FLocaleId = 2052) left join t_BD_MaterialBase t2 on t2.fmaterialid=t0.fmaterialid  left join T_BD_MATERIALSTOCK t3 on t3.fmaterialid=t0.fmaterialid left join T_BD_MATERIALSALE t4 on t4.fmaterialid=t0.fmaterialid left join T_BD_MATERIALPURCHASE t5 on t5.fmaterialid=t0.fmaterialid left join T_BD_MATERIALPRODUCE t6 on t6.fmaterialid=t0.fmaterialid  where (t0.FDOCUMENTSTATUS = 'C' AND t0.FFORBIDSTATUS = 'A') AND t0.FFORBIDSTATUS = 'A' "+con;
+                }else if (SearchBean.product_for_number.equals(searchBean.searchType)){
+                    SearchBean.S2Product s2Product = new Gson().fromJson(searchBean.json,SearchBean.S2Product.class);
+                    con=" and t0.FNumber='"+s2Product.likeOr+"'";
+                    if (!"".equals(s2Product.FOrg))con=con+" and t0.FUSEORGID="+s2Product.FOrg;
+                    SQL="select top 50 t0.FMASTERID,t0.FUSEORGID,t6.FPRODUCEUNITID as 生产单位ID,t5.FPURCHASEUNITID as  采购单位ID,t5.FPURCHASEPRICEUNITID as 采购计价单位ID,t4.FSALEUNITID as 销售单位ID,t4.FSALEPRICEUNITID as 销售计价单位ID,FSTOREUNITID as 库存单位ID,FAUXUNITID as 辅助单位ID,FSTOCKID as 默认仓库ID,FSTOCKPLACEID as 默认仓位ID,FISBATCHMANAGE as 是否启用批号管理,FISKFPERIOD as 是否开启保质期管理,FEXPPERIOD as 保质期,FEXPUNIT as 保质期单位,t2.FISPURCHASE as 允许采购,t2.FISSALE as 允许销售,t2.FISINVENTORY as 允许库存," +
+                            "t2.FISPRODUCE as 允许生产,t2.FISSUBCONTRACT as 允许委外,t2.FISASSET as 允许资产,t2.FBASEUNITID as 基本单位ID,t2.FWEIGHTUNITID as 重量单位ID,t2.FVOLUMEUNITID as 尺寸单位ID,t2.FBARCODE as 条码,t2.FGROSSWEIGHT as 毛重,t2.FNETWEIGHT as 净重,t2.FLENGTH as 长,t2.FWIDTH as 宽,t2.FHEIGHT as 高,t2.FVOLUME as 体积,t1.FMaterialid as 物料内码,t0.FNumber as 编码,t0.FOLDNUMBER as 旧物料编码,t1.FName as 商品名称,t1.FSPECIFICATION as 规格型号,t0.FMNEMONICCODE as 助记码 from T_BD_MATERIAL t0 " +
+                            "left join t_bd_material_l t1 on (t0.fmaterialid=t1.fmaterialid AND t1.FLocaleId = 2052) left join t_BD_MaterialBase t2 on t2.fmaterialid=t0.fmaterialid  left join T_BD_MATERIALSTOCK t3 on t3.fmaterialid=t0.fmaterialid left join T_BD_MATERIALSALE t4 on t4.fmaterialid=t0.fmaterialid left join T_BD_MATERIALPURCHASE t5 on t5.fmaterialid=t0.fmaterialid left join T_BD_MATERIALPRODUCE t6 on t6.fmaterialid=t0.fmaterialid  where (t0.FDOCUMENTSTATUS = 'C' AND t0.FFORBIDSTATUS = 'A') AND t0.FFORBIDSTATUS = 'A' "+con;
                 }else if (SearchBean.product_for_id.equals(searchBean.searchType)){
-                    SQL="select top 50 t6.FPRODUCEUNITID as 生产单位ID,t5.FPURCHASEUNITID as  采购单位ID,t5.FPURCHASEPRICEUNITID as 采购计价单位ID,t4.FSALEUNITID as 销售单位ID,t4.FSALEPRICEUNITID as 销售计价单位ID,FSTOREUNITID as 库存单位ID,FAUXUNITID as 辅助单位ID,FSTOCKID as 默认仓库ID,FSTOCKPLACEID as 默认仓位ID,FISBATCHMANAGE as 是否启用批号管理,FISKFPERIOD as 是否开启保质期管理,FEXPPERIOD as 保质期,FEXPUNIT as 保质期单位,t2.FISPURCHASE as 允许采购,t2.FISSALE as 允许销售,t2.FISINVENTORY as 允许库存," +
+                    SearchBean.S2Product s2Product = new Gson().fromJson(searchBean.json,SearchBean.S2Product.class);
+                    con=" and t1.FMaterialid='"+s2Product.likeOr+"'";
+                    if (!"".equals(s2Product.FOrg))con=con+" and t0.FUSEORGID="+s2Product.FOrg;
+                    SQL="select top 50 t0.FMASTERID,t0.FUSEORGID,t6.FPRODUCEUNITID as 生产单位ID,t5.FPURCHASEUNITID as  采购单位ID,t5.FPURCHASEPRICEUNITID as 采购计价单位ID,t4.FSALEUNITID as 销售单位ID,t4.FSALEPRICEUNITID as 销售计价单位ID,FSTOREUNITID as 库存单位ID,FAUXUNITID as 辅助单位ID,FSTOCKID as 默认仓库ID,FSTOCKPLACEID as 默认仓位ID,FISBATCHMANAGE as 是否启用批号管理,FISKFPERIOD as 是否开启保质期管理,FEXPPERIOD as 保质期,FEXPUNIT as 保质期单位,t2.FISPURCHASE as 允许采购,t2.FISSALE as 允许销售,t2.FISINVENTORY as 允许库存," +
                             "t2.FISPRODUCE as 允许生产,t2.FISSUBCONTRACT as 允许委外,t2.FISASSET as 允许资产,t2.FBASEUNITID as 基本单位ID,t2.FWEIGHTUNITID as 重量单位ID,t2.FVOLUMEUNITID as 尺寸单位ID,t2.FBARCODE as 条码,t2.FGROSSWEIGHT as 毛重,t2.FNETWEIGHT as 净重,t2.FLENGTH as 长,t2.FWIDTH as 宽,t2.FHEIGHT as 高,t2.FVOLUME as 体积,t1.FMaterialid as 物料内码,t0.FNumber as 编码,t0.FOLDNUMBER as 旧物料编码,t1.FName as 商品名称,t1.FSPECIFICATION as 规格型号,t0.FMNEMONICCODE as 助记码 from T_BD_MATERIAL t0 " +
-                            "left join t_bd_material_l t1 on (t0.fmaterialid=t1.fmaterialid AND t1.FLocaleId = 2052) left join t_BD_MaterialBase t2 on t2.fmaterialid=t0.fmaterialid  left join T_BD_MATERIALSTOCK t3 on t3.fmaterialid=t0.fmaterialid left join T_BD_MATERIALSALE t4 on t4.fmaterialid=t0.fmaterialid left join T_BD_MATERIALPURCHASE t5 on t5.fmaterialid=t0.fmaterialid left join T_BD_MATERIALPRODUCE t6 on t6.fmaterialid=t0.fmaterialid  where t0.FUSEORGID = 1 AND (t0.FDOCUMENTSTATUS = 'C' AND t0.FFORBIDSTATUS = 'A') AND t0.FFORBIDSTATUS = 'A'  and (t1.FMaterialid = "+searchBean.json+")";
+                            "left join t_bd_material_l t1 on (t0.fmaterialid=t1.fmaterialid AND t1.FLocaleId = 2052) left join t_BD_MaterialBase t2 on t2.fmaterialid=t0.fmaterialid  left join T_BD_MATERIALSTOCK t3 on t3.fmaterialid=t0.fmaterialid left join T_BD_MATERIALSALE t4 on t4.fmaterialid=t0.fmaterialid left join T_BD_MATERIALPURCHASE t5 on t5.fmaterialid=t0.fmaterialid left join T_BD_MATERIALPRODUCE t6 on t6.fmaterialid=t0.fmaterialid  where (t0.FDOCUMENTSTATUS = 'C' AND t0.FFORBIDSTATUS = 'A') AND t0.FFORBIDSTATUS = 'A' "+con;
                 }else if (SearchBean.product_for_like.equals(searchBean.searchType)){
                     SearchBean.S2Product s2Product = new Gson().fromJson(searchBean.json,SearchBean.S2Product.class);
+                    if (!"".equals(s2Product.FOrg))con+=con+" and t0.FUSEORGID="+s2Product.FOrg;
                     if ("1".equals(s2Product.FIsPurchase))con+=con+" and t2.FISPURCHASE=1 ";
                     if ("1".equals(s2Product.FIsProduce))con+=con+" and t2.FISPRODUCE=1 ";
                     if ("1".equals(s2Product.FIsSale))con+=con+" and t2.FISSALE=1 ";
@@ -59,12 +72,12 @@ public class ProductSearch extends HttpServlet {
                     if ("1".equals(s2Product.FIsInventory))con+=con+" and t2.FISINVENTORY=1 ";
                     if ("1".equals(s2Product.FIsSubContract))con+=con+" and t2.FISSUBCONTRACT=1 ";
                     if (null!=s2Product.likeOr && !"".equals(s2Product.likeOr))con+=con+" and (t0.FNumber like '%"+s2Product.likeOr+"%' or t1.FName like '%"+s2Product.likeOr+"%')";
-                    SQL="select top 50 t6.FPRODUCEUNITID as 生产单位ID,t5.FPURCHASEUNITID as  采购单位ID,t5.FPURCHASEPRICEUNITID as 采购计价单位ID,t4.FSALEUNITID as 销售单位ID,t4.FSALEPRICEUNITID as 销售计价单位ID,FSTOREUNITID as 库存单位ID,FAUXUNITID as 辅助单位ID,FSTOCKID as 默认仓库ID,FSTOCKPLACEID as 默认仓位ID,FISBATCHMANAGE as 是否启用批号管理,FISKFPERIOD as 是否开启保质期管理,FEXPPERIOD as 保质期,FEXPUNIT as 保质期单位,t2.FISPURCHASE as 允许采购,t2.FISSALE as 允许销售,t2.FISINVENTORY as 允许库存," +
+                    SQL="select top 50 t0.FMASTERID,t0.FUSEORGID,t6.FPRODUCEUNITID as 生产单位ID,t5.FPURCHASEUNITID as  采购单位ID,t5.FPURCHASEPRICEUNITID as 采购计价单位ID,t4.FSALEUNITID as 销售单位ID,t4.FSALEPRICEUNITID as 销售计价单位ID,FSTOREUNITID as 库存单位ID,FAUXUNITID as 辅助单位ID,FSTOCKID as 默认仓库ID,FSTOCKPLACEID as 默认仓位ID,FISBATCHMANAGE as 是否启用批号管理,FISKFPERIOD as 是否开启保质期管理,FEXPPERIOD as 保质期,FEXPUNIT as 保质期单位,t2.FISPURCHASE as 允许采购,t2.FISSALE as 允许销售,t2.FISINVENTORY as 允许库存," +
                             "t2.FISPRODUCE as 允许生产,t2.FISSUBCONTRACT as 允许委外,t2.FISASSET as 允许资产,t2.FBASEUNITID as 基本单位ID,t2.FWEIGHTUNITID as 重量单位ID,t2.FVOLUMEUNITID as 尺寸单位ID,t2.FBARCODE as 条码,t2.FGROSSWEIGHT as 毛重,t2.FNETWEIGHT as 净重,t2.FLENGTH as 长,t2.FWIDTH as 宽,t2.FHEIGHT as 高,t2.FVOLUME as 体积,t1.FMaterialid as 物料内码,t0.FNumber as 编码,t0.FOLDNUMBER as 旧物料编码,t1.FName as 商品名称,t1.FSPECIFICATION as 规格型号,t0.FMNEMONICCODE as 助记码 from T_BD_MATERIAL t0 " +
-                            "left join t_bd_material_l t1 on (t0.fmaterialid=t1.fmaterialid AND t1.FLocaleId = 2052) left join t_BD_MaterialBase t2 on t2.fmaterialid=t0.fmaterialid  left join T_BD_MATERIALSTOCK t3 on t3.fmaterialid=t0.fmaterialid left join T_BD_MATERIALSALE t4 on t4.fmaterialid=t0.fmaterialid left join T_BD_MATERIALPURCHASE t5 on t5.fmaterialid=t0.fmaterialid left join T_BD_MATERIALPRODUCE t6 on t6.fmaterialid=t0.fmaterialid  where t0.FUSEORGID = 1 AND (t0.FDOCUMENTSTATUS = 'C' AND t0.FFORBIDSTATUS = 'A') AND t0.FFORBIDSTATUS = 'A'" + con;
+                            "left join t_bd_material_l t1 on (t0.fmaterialid=t1.fmaterialid AND t1.FLocaleId = 2052) left join t_BD_MaterialBase t2 on t2.fmaterialid=t0.fmaterialid  left join T_BD_MATERIALSTOCK t3 on t3.fmaterialid=t0.fmaterialid left join T_BD_MATERIALSALE t4 on t4.fmaterialid=t0.fmaterialid left join T_BD_MATERIALPURCHASE t5 on t5.fmaterialid=t0.fmaterialid left join T_BD_MATERIALPRODUCE t6 on t6.fmaterialid=t0.fmaterialid  where (t0.FDOCUMENTSTATUS = 'C' AND t0.FFORBIDSTATUS = 'A') AND t0.FFORBIDSTATUS = 'A'" + con;
                 }
                 sta = conn.prepareStatement(SQL);
-                System.out.println("SQL:"+SQL);
+                Lg.e("Product:SQL:"+SQL);
                 rs = sta.executeQuery();
                 DownloadReturnBean downloadReturnBean = new DownloadReturnBean();
                 if(rs!=null){
@@ -107,6 +120,8 @@ public class ProductSearch extends HttpServlet {
                         productBean.FName                         = rs.getString("商品名称");
                         productBean.FModel                        = rs.getString("规格型号");
                         productBean.FMnemoniccode                 = rs.getString("助记码");
+                        productBean.FOrg                          = rs.getString("FUSEORGID");
+                        productBean.FMASTERID                     = rs.getString("FMASTERID");
                         container.add(productBean);
                     }
                     downloadReturnBean.products = container;

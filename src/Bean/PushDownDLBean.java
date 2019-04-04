@@ -25,6 +25,7 @@ public class PushDownDLBean {
         public String FTaxPrice;
         public String FStockID;
         public String FBatchNo;
+        public String FHuoZhuNumber;
         public String FBaseCanreturnQty;
 
 //

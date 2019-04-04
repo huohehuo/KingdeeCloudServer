@@ -2,6 +2,7 @@ package Bean;
 
 public class SearchBean {
     public static String product_for_id="product_for_id";
+    public static String product_for_number="product_for_number";
     public static String product_for_barcode="product_for_barcode";
     public static String product_for_like="product_for_like";
     public String searchType;
@@ -21,6 +22,7 @@ public class SearchBean {
         public String FIsProduce;
         public String FIsSubContract;
         public String FIsAsset;
+        public String FOrg;
 
         public S2Product(){}
 

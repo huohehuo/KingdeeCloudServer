@@ -4,7 +4,7 @@ import Bean.PushDownListRequestBean;
 import Bean.PushDownListReturnBean;
 import Utils.CommonJson;
 import Utils.JDBCUtil;
-import Utils.getDataBaseUrl;
+import Utils.Lg;
 import com.google.gson.Gson;
 
 import javax.servlet.ServletException;
@@ -27,6 +27,7 @@ import java.util.ArrayList;
 public class PushDownList extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setCharacterEncoding("UTF-8");
+        request.setCharacterEncoding("UTF-8");
         Connection conn = null;
         PreparedStatement sta = null;
         ResultSet rs = null;
@@ -44,6 +45,8 @@ public class PushDownList extends HttpServlet {
                         condition += "and  t0.FSUPPLIERID = " + pushDownListRequestBean.FWLUnitID;
                         break;
                     case 2:
+                        condition += "and  st021.FNUMBER ='" + pushDownListRequestBean.FWLUnitID+"'";
+                        break;
                     case 3:
                         condition += "and  t0.FCUSTID = " + pushDownListRequestBean.FWLUnitID;
                         break;
@@ -66,26 +69,26 @@ public class PushDownList extends HttpServlet {
             switch (pushDownListRequestBean.id) {
                 case 1:
                     //采购订单下推外购入库单
-                    SQL = "select  distinct t0.FID,t0.FBILLNO as 单据编号,convert(varchar(100),t0.FDate,23) as 日期,st02.FName as 往来单位,t0.FSUPPLIERID as 往来单位ID from t_PUR_POOrder t0  LEFT OUTER JOIN t_BD_Supplier_L st02 ON t0.FSUPPLIERID = st02.FSupplierId  LEFT OUTER JOIN t_PUR_POOrderEntry t3 ON t0.FID = t3.FID  LEFT OUTER JOIN T_BD_MATERIAL st31 ON t3.FMATERIALID = st31.FMATERIALID LEFT OUTER JOIN t_PUR_POOrderEntry_D t3_D ON t3.FENTRYID = t3_D.FENTRYID LEFT OUTER JOIN t_PUR_POOrderEntry_R t3_R ON t3.FENTRYID = t3_R.FENTRYID where t0.FOBJECTTYPEID = 'PUR_PurchaseOrder' and t0.FDOCUMENTSTATUS = 'C' AND t0.FCANCELSTATUS = 'A' AND t0.FCLOSESTATUS = 'A' AND t3.FMRPFREEZESTATUS = 'A' AND t3.FMRPTERMINATESTATUS = 'A' AND t3.FMRPCLOSESTATUS = 'A' AND t3.FCHANGEFLAG <> 'I'  AND (t3_D.FBASEDELIVERYMAXQTY > t3_R.FBASESTOCKINQTY) AND (t3_D.FBASEDELIVERYMAXQTY > t3_R.FBASEJOINQTY) " + condition + " order by t0.FID desc ";
+                    SQL = "select  distinct t0.FID,t0.FNOTE,t0.FBILLNO as 单据编号,convert(varchar(100),t0.FDate,23) as 日期,st02.FName as 往来单位,st021.FNUMBER as 往来单位ID from t_PUR_POOrder t0 LEFT OUTER JOIN t_BD_Supplier st021 ON t0.FSUPPLIERID = st021.FSupplierId LEFT OUTER JOIN t_BD_Supplier_L st02 ON t0.FSUPPLIERID = st02.FSupplierId  LEFT OUTER JOIN t_PUR_POOrderEntry t3 ON t0.FID = t3.FID  LEFT OUTER JOIN T_BD_MATERIAL st31 ON t3.FMATERIALID = st31.FMATERIALID LEFT OUTER JOIN t_PUR_POOrderEntry_D t3_D ON t3.FENTRYID = t3_D.FENTRYID LEFT OUTER JOIN t_PUR_POOrderEntry_R t3_R ON t3.FENTRYID = t3_R.FENTRYID where t0.FOBJECTTYPEID = 'PUR_PurchaseOrder' and t0.FDOCUMENTSTATUS = 'C' AND t0.FCANCELSTATUS = 'A' AND t0.FCLOSESTATUS = 'A' AND t3.FMRPFREEZESTATUS = 'A' AND t3.FMRPTERMINATESTATUS = 'A' AND t3.FMRPCLOSESTATUS = 'A' AND t3.FCHANGEFLAG <> 'I'  AND (t3_D.FBASEDELIVERYMAXQTY > t3_R.FBASESTOCKINQTY) AND (t3_D.FBASEDELIVERYMAXQTY > t3_R.FBASEJOINQTY) " + condition + " order by t0.FID desc ";
                     break;
                 case 2:
                     //销售订单下推销售出库单
-                    SQL = "select  distinct t0.FID,t0.FBILLNO as 单据编号,convert(varchar(100),t0.FDate,23) as 日期,st02.FName as 往来单位,t0.FCUSTID as 往来单位ID from T_SAL_ORDER t0  LEFT OUTER JOIN t_BD_Customer_L st02 ON t0.FCUSTID  = st02.FCUSTID  LEFT OUTER JOIN T_SAL_ORDEREntry t3 ON t0.FID = t3.FID  LEFT OUTER JOIN T_BD_MATERIAL st31 ON t3.FMATERIALID = st31.FMATERIALID LEFT OUTER JOIN T_SAL_ORDEREntry_D t3_D ON t3.FENTRYID = t3_D.FENTRYID LEFT OUTER JOIN T_SAL_ORDEREntry_R t3_R ON t3.FENTRYID = t3_R.FENTRYID where t0.FOBJECTTYPEID = 'SAL_SaleOrder' and t0.FDOCUMENTSTATUS = 'C' AND t0.FCANCELSTATUS = 'A' AND t0.FCLOSESTATUS = 'A' AND t3.FMRPFREEZESTATUS = 'A' AND t3.FMRPTERMINATESTATUS = 'A' AND t3.FMRPCLOSESTATUS = 'A' AND t3.FCHANGEFLAG <> 'I'   AND ((t3_R.FBASECANOUTQTY + (t3_D.FBASEDELIVERYMAXQTY - t3.FBASEUNITQTY)) > 0) OR (t3_R.FBASECANOUTQTY < 0) " + condition + " order by t0.FID desc";
+                    SQL = "select  distinct t0.FID,t_100.FName as 销售订单单据类型,t0.FNOTE,t0.FBILLNO as 单据编号,convert(varchar(100),t0.FDate,23) as 日期,st02.FName as 往来单位,st021.FNUMBER as 往来单位ID,t0.FSALEORGID as 销售组织ID,t0.FSALEDEPTID as 销售部门ID,t0.FSALERID as 销售员ID from T_SAL_ORDER t0  LEFT OUTER JOIN t_BD_Customer st021 ON t0.FCUSTID  = st021.FCUSTID  LEFT OUTER JOIN t_BD_Customer_L st02 ON t0.FCUSTID  = st02.FCUSTID LEFT OUTER JOIN T_SAL_ORDEREntry t3 ON t0.FID = t3.FID  LEFT OUTER JOIN T_BD_MATERIAL st31 ON t3.FMATERIALID = st31.FMATERIALID LEFT OUTER JOIN T_SAL_ORDEREntry_D t3_D ON t3.FENTRYID = t3_D.FENTRYID LEFT OUTER JOIN T_SAL_ORDEREntry_R t3_R ON t3.FENTRYID = t3_R.FENTRYID left join T_BAS_BILLTYPE_L t_100 on (t_100.FBILLTYPEID=t0.FBILLTYPEID and t_100.FLOCALEID=2052)  where t0.FOBJECTTYPEID = 'SAL_SaleOrder' and t0.FDOCUMENTSTATUS = 'C' AND t0.FCANCELSTATUS = 'A' AND t0.FCLOSESTATUS = 'A' AND t3.FMRPFREEZESTATUS = 'A' AND t3.FMRPTERMINATESTATUS = 'A' AND t3.FMRPCLOSESTATUS = 'A' AND t3.FCHANGEFLAG <> 'I'   AND ((t3_R.FBASECANOUTQTY + (t3_D.FBASEDELIVERYMAXQTY - t3.FBASEUNITQTY)) > 0 OR (t3_R.FBASECANOUTQTY < 0))  " + condition + " order by t0.FID desc";
                     break;
                 case 3:
                     //销售订单下推销售退货单
-                    SQL = "select  distinct t0.FID,t0.FBILLNO as 单据编号,convert(varchar(100),t0.FDate,23) as 日期,st02.FName as 往来单位,t0.FCUSTID as 往来单位ID from T_SAL_ORDER t0  LEFT OUTER JOIN t_BD_Customer_L st02 ON t0.FCUSTID  = st02.FCUSTID  LEFT OUTER JOIN T_SAL_ORDEREntry t3 ON t0.FID = t3.FID  LEFT OUTER JOIN T_BD_MATERIAL st31 ON t3.FMATERIALID = st31.FMATERIALID LEFT OUTER JOIN T_SAL_ORDEREntry_D t3_D ON t3.FENTRYID = t3_D.FENTRYID LEFT OUTER JOIN T_SAL_ORDEREntry_R t3_R ON t3.FENTRYID = t3_R.FENTRYID where t0.FOBJECTTYPEID = 'SAL_SaleOrder' and t0.FDOCUMENTSTATUS = 'C' AND t0.FCANCELSTATUS = 'A' AND t3.FMRPFREEZESTATUS = 'A' AND t3.FMRPTERMINATESTATUS = 'A' and t3.FCHANGEFLAG <> N'I'  AND (t3.FCHANGEFLAG <> N'D') AND NOT EXISTS (SELECT 1 FROM T_BD_MATERIALQUALITY B WHERE (B.FCHECKRETURN = '1' AND B.FMATERIALID = t3.FMATERIALID)) and ABS(t3_R.FBASECANRETURNQTY) > 0 " + condition;
+                    SQL = "select  distinct t0.FID,t0.FBILLNO as 单据编号,convert(varchar(100),t0.FDate,23) as 日期,st02.FName as 往来单位,st021.FNUMBER as 往来单位ID from T_SAL_ORDER t0 LEFT OUTER JOIN t_BD_Customer st021 ON t0.FCUSTID  = st021.FCUSTID LEFT OUTER JOIN t_BD_Customer_L st02 ON t0.FCUSTID  = st02.FCUSTID  LEFT OUTER JOIN T_SAL_ORDEREntry t3 ON t0.FID = t3.FID  LEFT OUTER JOIN T_BD_MATERIAL st31 ON t3.FMATERIALID = st31.FMATERIALID LEFT OUTER JOIN T_SAL_ORDEREntry_D t3_D ON t3.FENTRYID = t3_D.FENTRYID LEFT OUTER JOIN T_SAL_ORDEREntry_R t3_R ON t3.FENTRYID = t3_R.FENTRYID where t0.FOBJECTTYPEID = 'SAL_SaleOrder' and t0.FDOCUMENTSTATUS = 'C' AND t0.FCANCELSTATUS = 'A' AND t3.FMRPFREEZESTATUS = 'A' AND t3.FMRPTERMINATESTATUS = 'A' and t3.FCHANGEFLAG <> N'I'  AND (t3.FCHANGEFLAG <> N'D') AND NOT EXISTS (SELECT 1 FROM T_BD_MATERIALQUALITY B WHERE (B.FCHECKRETURN = '1' AND B.FMATERIALID = t3.FMATERIALID)) and ABS(t3_R.FBASECANRETURNQTY) > 0 " + condition;
                     break;
                 case 4://销售出库单下推销售退货单
-                    SQL = "select   distinct t0.FID,t0.FBILLNO as 单据编号,convert(varchar(100),t0.FDate,23) as 日期,st02.FName as 往来单位,t0.FCUSTOMERID as 往来单位ID from T_SAL_OUTSTOCK t0   LEFT OUTER JOIN T_SAL_OUTSTOCKEntry t3 ON t0.FID = t3.FID  LEFT OUTER JOIN t_BD_Customer_L st02 ON t0.FCUSTOMERID  = st02.FCUSTID LEFT OUTER JOIN T_SAL_OUTSTOCKFIN t1 ON t0.FID = t1.FID LEFT OUTER JOIN T_SAL_OUTSTOCKEntry_F  t3_F ON   t3.FENTRYID = t3_F.FENTRYID  LEFT OUTER JOIN T_SAL_OUTSTOCKENTRY_R t2_R ON t3.FENTRYID = t2_R.FENTRYID LEFT OUTER JOIN T_BD_MATERIAL st31 ON t3.FMATERIALID = st31.FMATERIALID left join T_BD_MATERIAL_L st33 ON t3.FMATERIALID = st33.FMATERIALID LEFT OUTER JOIN T_SAL_OUTSTOCKEntry_R t3_R ON t3.FENTRYID = t3_R.FENTRYID where t0.FOBJECTTYPEID = 'SAL_OUTSTOCK' and t0.FDOCUMENTSTATUS = 'C' AND t0.FCANCELSTATUS = 'A' AND t1.FISGENFORIOS = '0' and  ABS(t3_F.FSALBASEQTY) > ABS(t2_R.FBASERETURNQTY) " + condition;
+                    SQL = "select   distinct t0.FID,t0.FBILLNO as 单据编号,convert(varchar(100),t0.FDate,23) as 日期,st02.FName as 往来单位,st021.FNUMBER as 往来单位ID from T_SAL_OUTSTOCK t0   LEFT OUTER JOIN T_SAL_OUTSTOCKEntry t3 ON t0.FID = t3.FID LEFT OUTER JOIN t_BD_Customer st021 ON t0.FCUSTID  = st021.FCUSTID LEFT OUTER JOIN t_BD_Customer_L st02 ON t0.FCUSTOMERID  = st02.FCUSTID LEFT OUTER JOIN T_SAL_OUTSTOCKFIN t1 ON t0.FID = t1.FID LEFT OUTER JOIN T_SAL_OUTSTOCKEntry_F  t3_F ON   t3.FENTRYID = t3_F.FENTRYID  LEFT OUTER JOIN T_SAL_OUTSTOCKENTRY_R t2_R ON t3.FENTRYID = t2_R.FENTRYID LEFT OUTER JOIN T_BD_MATERIAL st31 ON t3.FMATERIALID = st31.FMATERIALID left join T_BD_MATERIAL_L st33 ON t3.FMATERIALID = st33.FMATERIALID LEFT OUTER JOIN T_SAL_OUTSTOCKEntry_R t3_R ON t3.FENTRYID = t3_R.FENTRYID where t0.FOBJECTTYPEID = 'SAL_OUTSTOCK' and t0.FDOCUMENTSTATUS = 'C' AND t0.FCANCELSTATUS = 'A' AND t1.FISGENFORIOS = '0' and  ABS(t3_F.FSALBASEQTY) > ABS(t2_R.FBASERETURNQTY) " + condition;
                     break;
                 case 5:
                     //发货通知单下推销售出库单
-                    SQL = "select  distinct t0.FID,t0.FBILLNO as 单据编号,convert(varchar(100),t0.FDate,23) as 日期,st02.FName as 往来单位,t0.FCUSTOMERID as 往来单位ID from T_SAL_DELIVERYNOTICE t0  LEFT OUTER JOIN t_BD_Customer_L st02 ON t0.FCUSTOMERID  = st02.FCUSTID  LEFT OUTER JOIN T_SAL_DELIVERYNOTICEEntry t3 ON t0.FID = t3.FID  LEFT OUTER JOIN T_BD_MATERIAL st31 ON t3.FMATERIALID = st31.FMATERIALID LEFT OUTER JOIN T_SAL_DELIVERYNOTICEEntry_E t1_E ON t3.FENTRYID = t1_E.FENTRYID   where t0.FOBJECTTYPEID = 'SAL_DELIVERYNOTICE' and t0.FDOCUMENTSTATUS = 'C' AND t0.FCANCELSTATUS = 'A' AND t0.FCLOSESTATUS = 'A'  and  (FBUSINESSTYPE = 'NORMAL' OR FBUSINESSTYPE = 'DRPTRANS' )  AND  t3.FBASEUNITQTY-FBASEJOINOUTQTY>0 " + condition + " order by t0.FID desc";
+                    SQL = "select  distinct t0.FID,t0.FBILLNO as 单据编号,convert(varchar(100),t0.FDate,23) as 日期,st02.FName as 往来单位,st021.FNUMBER as 往来单位ID from T_SAL_DELIVERYNOTICE t0 LEFT OUTER JOIN t_BD_Customer st021 ON t0.FCUSTID  = st021.FCUSTID LEFT OUTER JOIN  t_BD_Customer_L st02 ON t0.FCUSTOMERID  = st02.FCUSTID  LEFT OUTER JOIN T_SAL_DELIVERYNOTICEEntry t3 ON t0.FID = t3.FID  LEFT OUTER JOIN T_BD_MATERIAL st31 ON t3.FMATERIALID = st31.FMATERIALID LEFT OUTER JOIN T_SAL_DELIVERYNOTICEEntry_E t1_E ON t3.FENTRYID = t1_E.FENTRYID   where t0.FOBJECTTYPEID = 'SAL_DELIVERYNOTICE' and t0.FDOCUMENTSTATUS = 'C' AND t0.FCANCELSTATUS = 'A' AND t0.FCLOSESTATUS = 'A'  and  (FBUSINESSTYPE = 'NORMAL' OR FBUSINESSTYPE = 'DRPTRANS' )  AND  t3.FBASEUNITQTY-FBASEJOINOUTQTY>0 " + condition + " order by t0.FID desc";
                     break;
                 case 6:
                     //退货通知单下推销售退货单
-                    SQL = "select  distinct t0.FID,t0.FBILLNO as 单据编号,convert(varchar(100),t0.FDate,23) as 日期,st02.FName as 往来单位,t0.FRECEIVECUSID as 往来单位ID from T_SAL_RETURNNOTICE t0  LEFT OUTER JOIN t_BD_Customer_L st02 ON t0.FRECEIVECUSID  = st02.FCUSTID  LEFT OUTER JOIN T_SAL_RETURNNOTICEEntry t3 ON t0.FID = t3.FID  LEFT OUTER JOIN T_BD_MATERIAL st31 ON t3.FMATERIALID = st31.FMATERIALID LEFT OUTER JOIN T_SAL_RETURNNOTICEEntry_E t1_E ON t3.FENTRYID = t1_E.FENTRYID   where t0.FOBJECTTYPEID = 'SAL_RETURNNOTICE' and t0.FDOCUMENTSTATUS = 'C' AND t0.FCANCELSTATUS = 'A'  AND  t3.FBASEUNITQTY-FBASEJOINRETQTY>0 " + condition + " order by t0.FID desc";
+                    SQL = "select  distinct t0.FID,t_100.FName  as 销售订单单据类型,t0.FDESCRIPTION as FNOTE,t0.FBILLNO as 单据编号,convert(varchar(100),t0.FDate,23) as 日期,st02.FName as 往来单位,st021.FNUMBER as 往来单位ID ,t0.FSaleORGID as 销售组织ID,t0.FRETDEPTID as 销售部门ID,t0.FSALESMANID as 销售员ID,t0.FRETORGID as 库存组织ID from T_SAL_RETURNNOTICE t0 LEFT OUTER JOIN t_BD_Customer st021 ON t0.FRETCUSTID  = st021.FCUSTID LEFT OUTER JOIN t_BD_Customer_L st02 ON t0.FRECEIVECUSID  = st02.FCUSTID  LEFT OUTER JOIN T_SAL_RETURNNOTICEEntry t3 ON t0.FID = t3.FID  LEFT OUTER JOIN T_BD_MATERIAL st31 ON t3.FMATERIALID = st31.FMATERIALID LEFT OUTER JOIN T_SAL_RETURNNOTICEEntry_E t1_E ON t3.FENTRYID = t1_E.FENTRYID  left join T_BAS_BILLTYPE_L t_100 on (t_100.FBILLTYPEID=t0.FBILLTYPEID and t_100.FLOCALEID=2052)  where t0.FOBJECTTYPEID = 'SAL_RETURNNOTICE' and t0.FDOCUMENTSTATUS = 'C' AND t0.FCANCELSTATUS = 'A'  AND  t3.FBASEUNITQTY-FBASEJOINRETQTY>0 " + condition + " order by t0.FID desc";
                     break;
 
                 case 7:
@@ -214,7 +217,17 @@ public class PushDownList extends HttpServlet {
                 pushDownListBean.FBillNo = rs.getString("单据编号");
                 pushDownListBean.FSupply = rs.getString("往来单位");
                 pushDownListBean.FSupplyID = rs.getString("往来单位ID");
+                pushDownListBean.FSaleDeptID = rs.getString("销售部门ID");
+                pushDownListBean.FSaleManID = rs.getString("销售员ID");
+                pushDownListBean.FSaleOrgID = rs.getString("销售组织ID");
+                pushDownListBean.FNot = rs.getString("FNOTE");
                 pushDownListBean.FID = rs.getString("FID");
+                if (pushDownListRequestBean.id==2){
+                    pushDownListBean.FBillTypeName = rs.getString("销售订单单据类型");
+                }
+                if (pushDownListRequestBean.id==6){
+                    pushDownListBean.FStoreOrgID = rs.getString("库存组织ID");
+                }
 
 //                pushDownListBean.FDeptID = rs.getString("FDeptID");
 //                pushDownListBean.FEmpID = rs.getString("FEmpID");
@@ -225,7 +238,7 @@ public class PushDownList extends HttpServlet {
                 container.add(pushDownListBean);
             }
             if (container.size() > 0) {
-                System.out.println("返回数据："+container.toString());
+                Lg.e("表头数据:"+container.size(),container);
                 pushDownListReturnBean.list = container;
                 response.getWriter().write(CommonJson.getCommonJson(true, gson.toJson(pushDownListReturnBean)));
             } else {

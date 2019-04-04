@@ -22,7 +22,18 @@ public class JDBCUtil {
 		return conn;
 	}
 
+	//获取时间表的时间
+	public static Connection getSQLiteForTime() throws ClassNotFoundException, SQLException{
+		Class.forName("org.sqlite.JDBC");
+		Connection conn = DriverManager.getConnection("jdbc:sqlite://c:/properties/dbManager.db");
+		return conn;
+	}
 	public static Connection getSQLiteConn1() throws ClassNotFoundException, SQLException{
+		Class.forName("org.sqlite.JDBC");
+		Connection conn = DriverManager.getConnection("jdbc:sqlite://c:/properties/dbother.db");
+		return conn;
+	}
+	public static Connection getSQLiteConn2() throws ClassNotFoundException, SQLException{
 		Class.forName("org.sqlite.JDBC");
 		Connection conn = DriverManager.getConnection("jdbc:sqlite://c:/properties/dbother.db");
 		return conn;

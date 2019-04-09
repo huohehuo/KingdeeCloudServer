@@ -19,7 +19,7 @@ import java.sql.SQLException;
 /**
  * 简单生产入库的回单
  */
-@WebServlet("/OtherOutUpload")
+@WebServlet(urlPatterns = "/OtherOutUpload")
 public class OtherOutUpload extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

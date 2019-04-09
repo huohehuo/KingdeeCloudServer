@@ -19,7 +19,7 @@ import java.sql.SQLException;
 /**
  * 简单生产入库的回单
  */
-@WebServlet("/ ")
+@WebServlet(urlPatterns = "/OtherInUpload")
 public class OtherInUpload extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -39,6 +39,7 @@ public class OtherInUpload extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		request.setCharacterEncoding("UTF-8");
 		String parameter = request.getParameter("json");
+		Lg.e("OtherInUpload",parameter);
 		Gson gson = new Gson();
 		Connection conn = null;
 		PreparedStatement sta = null;
@@ -51,7 +52,7 @@ public class OtherInUpload extends HttpServlet {
 					sta = conn.prepareStatement("exec proc_K3OtherInStock ?");
 					sta.setString(1, parameter);
 					execute = sta.execute();
-				Lg.e("OtherInUpload回单："+execute);
+					Lg.e("OtherInUpload回单："+execute);
 					response.getWriter().write(CommonJson.getCommonJson(true, ""));
 
 			} catch (ClassNotFoundException | SQLException e) {

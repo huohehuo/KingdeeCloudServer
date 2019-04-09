@@ -2,6 +2,7 @@ package Server.prop.RegisterUtils;
 
 import Utils.CommonJson;
 import Utils.JDBCUtil;
+import Utils.Lg;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -35,6 +36,7 @@ public class RegisterNumber extends HttpServlet {
                 while (rs.next()) {
                     num++;
                 }
+                Lg.e("用户数:"+num);
                 response.getWriter().write(CommonJson.getCommonJson(true,num+""));
             } catch (ClassNotFoundException e) {
                 response.getWriter().write(CommonJson.getCommonJson(false,"数据库错误\r\n----------------\r\n错误原因:\r\n"+e.toString()));

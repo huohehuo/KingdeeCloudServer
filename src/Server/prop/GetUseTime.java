@@ -37,7 +37,7 @@ public class GetUseTime extends HttpServlet {
                 Date curDate = new Date();
                 String str = format.format(curDate);
                 conn = JDBCUtil.getSQLiteForTime();
-                sta = conn.prepareStatement("SELECT * FROM GETTIMEMANAGER");
+                sta = conn.prepareStatement("SELECT * FROM GETTIMEMANAGER");//getTimeManager
                 rs = sta.executeQuery();
                 if(rs!=null){
                     String Use_Time = rs.getString("Use_Time");

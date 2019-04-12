@@ -22,4 +22,7 @@ public class PrintHistory {
     public String FMaterialid;
     public String FAuxSign;
     public String FActualModel;
+    public String FPrintMan;
+    public String FNumber;
+    public String FStorage;
 }

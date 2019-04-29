@@ -322,7 +322,7 @@ public class DownloadInfo extends HttpServlet {
 
     private ArrayList<suppliers> getSuppliers(Statement statement, ResultSet rSet, String version, DownloadReturnBean dBean) {
         ArrayList<suppliers> container = new ArrayList<DownloadReturnBean.suppliers>();
-        String sql = "SELECT t0.FUSEORGID,t0.FSUPPLIERID as 供应商ID,t0.FNUMBER as 供应商编码,t1.FNAME as 供应商名称 FROM t_BD_Supplier t0 LEFT OUTER JOIN t_BD_Supplier_L t1 ON (t0.FSUPPLIERID = t1.FSUPPLIERID AND t1.FLocaleId = 2052) WHERE (t0.FFORBIDSTATUS = 'A')";
+        String sql = "SELECT t1.FSHORTNAME as 简称,t0.FUSEORGID,t0.FSUPPLIERID as 供应商ID,t0.FNUMBER as 供应商编码,t1.FNAME as 供应商名称 FROM t_BD_Supplier t0 LEFT OUTER JOIN t_BD_Supplier_L t1 ON (t0.FSUPPLIERID = t1.FSUPPLIERID AND t1.FLocaleId = 2052) WHERE (t0.FFORBIDSTATUS = 'A')";
         try {
             rSet = statement.executeQuery(sql);
             while (rSet.next()) {
@@ -331,6 +331,7 @@ public class DownloadInfo extends HttpServlet {
                 bean.FNumber = rSet.getString("供应商编码");
                 bean.FName = rSet.getString("供应商名称");
                 bean.FOrg = rSet.getString("FUSEORGID");
+                bean.FNote = rSet.getString("简称");
 //                bean.FItemClassID = rSet.getString("FItemClassID");
 //                bean.FParentID = rSet.getString("FParentID");
 //                bean.FLevel = rSet.getString("FLevel");

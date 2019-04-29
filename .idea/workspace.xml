@@ -10,87 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c314ea08-6d77-469a-9858-6948002aef46" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/prop/RegisterUtils/RegisterUpdateMsg.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/upload/CgOrder2WgrkUpload.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Server/prop/RegisterUtils/RegisterUpdateMsg.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Server/upload/CgOrder2WgrkUpload.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Debug/版本/100000/4采购订单下推外购入库单.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/prop/RegisterUtils/RegisterUpdateMsg.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/upload/CgOrder2WgrkUpload.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Debug/配置文件/DBSetFile.db" afterPath="$PROJECT_DIR$/Debug/配置文件/DBSetFile.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$BarCode.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$BarCode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$Client.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$Client.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$GetGoodsDepartment.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$GetGoodsDepartment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$InstorageNum.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$InstorageNum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$Org.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$Org.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$PriceMethod.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$PriceMethod.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$SaleMan.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$SaleMan.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$StoreMan.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$StoreMan.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$Unit.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$Unit.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$User.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$bibiezhong.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$bibiezhong.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$buyer.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$buyer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$department.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$department.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$employee.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$employee.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$payType.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$payType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$product.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$product.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$purchaseMethod.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$purchaseMethod.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$storage.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$storage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$suppliers.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$suppliers.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$wanglaikemu.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$wanglaikemu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$wavehouse.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$wavehouse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$yuandanType.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$yuandanType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/RegisterBean.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/RegisterBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/ProductSearch/PrintBeforeData.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/ProductSearch/PrintBeforeData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/ProductSearch/PrintOutCheck.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/ProductSearch/PrintOutCheck.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/PushDown/PushDownList.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/PushDown/PushDownList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/PushDown/PushDownloadList.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/PushDown/PushDownloadList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/SearchIO/HuozhuByOrg.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/SearchIO/HuozhuByOrg.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/prop/DownloadInfo.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/prop/DownloadInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Webdao/WebDao.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Webdao/WebDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$BarCode.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$BarCode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$Client.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$Client.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$GetGoodsDepartment.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$GetGoodsDepartment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$InstorageNum.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$InstorageNum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$Org.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$Org.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$PriceMethod.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$PriceMethod.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$SaleMan.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$SaleMan.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$StoreMan.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$StoreMan.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$Unit.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$Unit.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$User.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$bibiezhong.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$bibiezhong.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$buyer.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$buyer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$department.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$department.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$employee.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$employee.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$payType.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$payType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$product.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$product.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$purchaseMethod.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$purchaseMethod.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$storage.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$storage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$suppliers.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$suppliers.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$wanglaikemu.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$wanglaikemu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$wavehouse.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$wavehouse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$yuandanType.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$yuandanType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/RegisterBean.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/RegisterBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/ProductSearch/PrintBeforeData.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Server/ProductSearch/PrintBeforeData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/ProductSearch/PrintOutCheck.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Server/ProductSearch/PrintOutCheck.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/PushDown/PushDownList.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Server/PushDown/PushDownList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/PushDown/PushDownloadList.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Server/PushDown/PushDownloadList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/SearchIO/HuozhuByOrg.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Server/SearchIO/HuozhuByOrg.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/prop/DownloadInfo.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Server/prop/DownloadInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Webdao/WebDao.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Webdao/WebDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Debug/版本/100000/000打印条码写入.sql" afterPath="$PROJECT_DIR$/Debug/版本/100000/000打印条码写入.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Debug/版本/100000/00批号补打条码写入.sql" afterPath="$PROJECT_DIR$/Debug/版本/100000/00批号补打条码写入.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/registerMsg.jsp" afterPath="$PROJECT_DIR$/out/artifacts/Assist/registerMsg.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bean/DownloadReturnBean.java" afterPath="$PROJECT_DIR$/src/Bean/DownloadReturnBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bean/RegisterBean.java" afterPath="$PROJECT_DIR$/src/Bean/RegisterBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/ProductSearch/PrintBeforeData.java" afterPath="$PROJECT_DIR$/src/Server/ProductSearch/PrintBeforeData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/ProductSearch/PrintOutCheck.java" afterPath="$PROJECT_DIR$/src/Server/ProductSearch/PrintOutCheck.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/PushDown/PushDownList.java" afterPath="$PROJECT_DIR$/src/Server/PushDown/PushDownList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/PushDown/PushDownloadList.java" afterPath="$PROJECT_DIR$/src/Server/PushDown/PushDownloadList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/SearchIO/HuozhuByOrg.java" afterPath="$PROJECT_DIR$/src/Server/SearchIO/HuozhuByOrg.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/SupplerSearch/SupplerSearchLike.java" afterPath="$PROJECT_DIR$/src/Server/SupplerSearch/SupplerSearchLike.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/prop/DownloadInfo.java" afterPath="$PROJECT_DIR$/src/Server/prop/DownloadInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Webdao/WebDao.java" afterPath="$PROJECT_DIR$/src/Webdao/WebDao.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/web/WEB-INF/classes/" />
@@ -151,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PrintBeforeData.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PrintBeforeData.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Server/ProductSearch/PrintBeforeData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="54" column="40" lean-forward="false" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
+            <state relative-caret-position="308">
+              <caret line="48" column="50" lean-forward="false" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="50" />
               <folding>
                 <marker date="1556100272818" expanded="true" signature="1949:4037" ph="select top 1... FAUXPROPID" />
                 <marker date="1556100272818" expanded="true" signature="2336:3024" ph="select t0.FA... T_STK_INVENTORY" />
@@ -165,14 +87,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GetInStoreNum.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Server/NumInStorage/GetInStoreNum.java">
+      <file leaf-file-name="WebDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Webdao/WebDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="76" column="21" lean-forward="false" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="21" />
+            <state relative-caret-position="297">
+              <caret line="28" column="30" lean-forward="false" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="false" />
-                <marker date="1552902417048" expanded="true" signature="2619:3237" ph="select t0.FO... T_STK_INVENTORY" />
+                <marker date="1556422596067" expanded="true" signature="1000:1022" ph="SELECT * FRO... REGISTER" />
               </folding>
             </state>
           </provider>
@@ -181,11 +103,10 @@
       <file leaf-file-name="SupplerSearchLike.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Server/SupplerSearch/SupplerSearchLike.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="42" column="61" lean-forward="false" selection-start-line="42" selection-start-column="61" selection-end-line="42" selection-end-column="61" />
+            <state relative-caret-position="369">
+              <caret line="64" column="21" lean-forward="true" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <marker date="1548122384792" expanded="true" signature="2319:2640" ph="SELECT t0.FU... t_BD_Supplier" />
+                <marker date="1556529000632" expanded="true" signature="2319:2660" ph="SELECT t0.FU... t_BD_Supplier" />
               </folding>
             </state>
           </provider>
@@ -194,38 +115,34 @@
       <file leaf-file-name="DownloadInfo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Server/prop/DownloadInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="599" column="0" lean-forward="false" selection-start-line="599" selection-start-column="0" selection-end-line="599" selection-end-column="0" />
+            <state relative-caret-position="507">
+              <caret line="332" column="56" lean-forward="true" selection-start-line="332" selection-start-column="56" selection-end-line="333" selection-end-column="50" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#873#874#0" expanded="false" />
-                <element signature="e#896#897#0" expanded="false" />
-                <element signature="e#11144#11171#0" expanded="false" />
-                <element signature="e#12655#12683#0" expanded="false" />
-                <element signature="e#18662#18692#0" expanded="false" />
-                <element signature="e#20139#20164#0" expanded="false" />
-                <element signature="e#21290#21318#0" expanded="false" />
-                <element signature="e#27577#27602#0" expanded="false" />
-                <element signature="e#34768#34800#0" expanded="false" />
-                <element signature="e#36472#36504#0" expanded="false" />
-                <element signature="e#38219#38251#0" expanded="false" />
-                <element signature="e#39147#39182#0" expanded="false" />
-                <element signature="e#40362#40390#0" expanded="false" />
-                <marker date="1555643844098" expanded="true" signature="11197:11412" ph="SELECT t0.FU... t_BD_Customer" />
-                <marker date="1555643844098" expanded="true" signature="13865:15220" ph="select t0.FM... T_BD_MATERIAL" />
-                <marker date="1555643844098" expanded="true" signature="18718:18948" ph="SELECT t0.FU... t_BD_Supplier" />
-                <marker date="1555643844098" expanded="true" signature="20190:20397" ph="SELECT t0.FU... T_BD_UNIT" />
-                <marker date="1555643844098" expanded="true" signature="22133:22391" ph="SELECT t0.FU... t_BD_Stock" />
-                <marker date="1555643844098" expanded="true" signature="23775:23984" ph="SELECT t0.FU... T_BAS_FLEXVALUES" />
-                <marker date="1555643844098" expanded="true" signature="25221:25451" ph="SELECT t0.FU... T_HR_EMPINFO" />
-                <marker date="1555643844098" expanded="true" signature="26394:26625" ph="SELECT t0.FU... T_BD_DEPARTMENT" />
-                <marker date="1555643844098" expanded="true" signature="27629:28076" ph="SELECT t0.FU... T_SEC_user" />
-                <marker date="1555643844098" expanded="true" signature="28813:29290" ph="select t0.FM... T_STK_INVENTORY" />
-                <marker date="1555643844098" expanded="true" signature="30304:30547" ph="SELECT t0.FB... V_BD_BUYER" />
-                <marker date="1555643844098" expanded="true" signature="31447:31712" ph="SELECT t0.FB... V_BD_WAREHOUSEWORKERS" />
-                <marker date="1555643844098" expanded="true" signature="32615:32864" ph="SELECT t0.FB... V_BD_SALESMAN" />
-                <marker date="1555643844098" expanded="true" signature="33694:34009" ph="SELECT t0_L.... T_ORG_Organizations" />
+                <marker date="1556526526962" expanded="true" signature="11197:11412" ph="SELECT t0.FU... t_BD_Customer" />
+                <marker date="1556526526962" expanded="true" signature="13865:15220" ph="select t0.FM... T_BD_MATERIAL" />
+                <marker date="1556526526962" expanded="true" signature="18718:18968" ph="SELECT t0.FU... t_BD_Supplier" />
+                <marker date="1556526526962" expanded="true" signature="20261:20468" ph="SELECT t0.FU... T_BD_UNIT" />
+                <marker date="1556526526962" expanded="true" signature="22204:22462" ph="SELECT t0.FU... t_BD_Stock" />
+                <marker date="1556526526962" expanded="true" signature="23846:24055" ph="SELECT t0.FU... T_BAS_FLEXVALUES" />
+                <marker date="1556526526962" expanded="true" signature="25292:25522" ph="SELECT t0.FU... T_HR_EMPINFO" />
+                <marker date="1556526526962" expanded="true" signature="26465:26696" ph="SELECT t0.FU... T_BD_DEPARTMENT" />
+                <marker date="1556526526962" expanded="true" signature="27700:28147" ph="SELECT t0.FU... T_SEC_user" />
+                <marker date="1556526526962" expanded="true" signature="28884:29361" ph="select t0.FM... T_STK_INVENTORY" />
+                <marker date="1556526526962" expanded="true" signature="30375:30618" ph="SELECT t0.FB... V_BD_BUYER" />
+                <marker date="1556526526962" expanded="true" signature="31518:31783" ph="SELECT t0.FB... V_BD_WAREHOUSEWORKERS" />
+                <marker date="1556526526962" expanded="true" signature="32686:32935" ph="SELECT t0.FB... V_BD_SALESMAN" />
+                <marker date="1556526526962" expanded="true" signature="33765:34080" ph="SELECT t0_L.... T_ORG_Organizations" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DownloadReturnBean.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Bean/DownloadReturnBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="473">
+              <caret line="247" column="27" lean-forward="false" selection-start-line="247" selection-start-column="27" selection-end-line="247" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -247,21 +164,11 @@
         <entry file="file://$PROJECT_DIR$/src/Server/upload/CgOrder2WgrkUpload.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="361">
-              <caret line="51" column="48" lean-forward="true" selection-start-line="51" selection-start-column="48" selection-end-line="51" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClientSearchLike.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Server/ClientSearch/ClientSearchLike.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="47" column="40" lean-forward="false" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+              <caret line="51" column="48" lean-forward="false" selection-start-line="51" selection-start-column="48" selection-end-line="51" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="false" />
-                <element signature="e#1292#1319#0" expanded="false" />
-                <marker date="1553072862278" expanded="true" signature="1782:2072" ph="SELECT disti... t_BD_Customer" />
+                <element signature="e#732#733#0" expanded="false" />
+                <element signature="e#755#756#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -326,11 +233,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Server/SearchIO/AuxSignSecCheck.java" />
         <option value="$PROJECT_DIR$/src/Server/upload/PGUpload.java" />
         <option value="$PROJECT_DIR$/src/Server/OnlyCode/CodeCheckInsertForOutDB.java" />
         <option value="$PROJECT_DIR$/src/Server/upload/DBUpload.java" />
-        <option value="$PROJECT_DIR$/src/Server/SupplerSearch/SupplerSearchLike.java" />
         <option value="$PROJECT_DIR$/src/Server/upload/PrintData.java" />
         <option value="$PROJECT_DIR$/src/Server/upload/PrintBeforeDataForCreateCode.java" />
         <option value="$PROJECT_DIR$/src/Bean/SearchBean.java" />
@@ -367,8 +272,6 @@
         <option value="$PROJECT_DIR$/src/Server/PushDown/PushDownList.java" />
         <option value="$PROJECT_DIR$/src/Server/upload/CgOrder2WgrkUpload.java" />
         <option value="$PROJECT_DIR$/src/Server/PushDown/PushDownloadList.java" />
-        <option value="$PROJECT_DIR$/src/Bean/DownloadReturnBean.java" />
-        <option value="$PROJECT_DIR$/src/Server/prop/DownloadInfo.java" />
         <option value="$PROJECT_DIR$/src/Server/SearchIO/HuozhuByOrg.java" />
         <option value="$PROJECT_DIR$/src/Server/ProductSearch/PrintBeforeData.java" />
         <option value="$PROJECT_DIR$/src/Bean/RegisterBean.java" />
@@ -377,6 +280,10 @@
         <option value="$PROJECT_DIR$/src/Server/prop/RegisterUtils/RegisterUpdateMsg.java" />
         <option value="$PROJECT_DIR$/src/Webdao/WebDao.java" />
         <option value="$PROJECT_DIR$/out/artifacts/Assist/registerMsg.jsp" />
+        <option value="$PROJECT_DIR$/out/artifacts/Assist/headLayout.jsp" />
+        <option value="$PROJECT_DIR$/src/Bean/DownloadReturnBean.java" />
+        <option value="$PROJECT_DIR$/src/Server/prop/DownloadInfo.java" />
+        <option value="$PROJECT_DIR$/src/Server/SupplerSearch/SupplerSearchLike.java" />
       </list>
     </option>
   </component>
@@ -803,8 +710,12 @@
     <property name="SearchEverywhereHistoryKey" value="ProductSearchLike&#9;FILE&#9;file://E:/FZ-kingdee/KingdeeServer/Asist/src/Server/ProductSearch/ProductSearchLike.java" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\FZ-kingdee\KingdeeCloud\KingdeeCloudServer\out\artifacts\Assist" />
+      <recent name="E:\FZ-kingdee\KingdeeCloud\KingdeeCloudServer\web" />
+      <recent name="E:\FZ-kingdee\KingdeeCloud\KingdeeCloudServer\src" />
+      <recent name="E:\FZ-kingdee\KingdeeCloud\KingdeeCloudServer\src\Bean" />
+      <recent name="E:\FZ-kingdee\KingdeeCloud\KingdeeCloudServer\src\Server\OnlyCode" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Server.prop.RegisterUtils" />
@@ -813,12 +724,8 @@
       <recent name="Bean" />
       <recent name="Server.OnlyCode" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\FZ-kingdee\KingdeeCloud\KingdeeCloudServer\web" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\FZ-kingdee\KingdeeCloud\KingdeeCloudServer\out\artifacts\Assist" />
-      <recent name="E:\FZ-kingdee\KingdeeCloud\KingdeeCloudServer\src" />
-      <recent name="E:\FZ-kingdee\KingdeeCloud\KingdeeCloudServer\src\Bean" />
-      <recent name="E:\FZ-kingdee\KingdeeCloud\KingdeeCloudServer\src\Server\OnlyCode" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1785,12 +1692,12 @@
       <workItem from="1556249114459" duration="3746000" />
       <workItem from="1556416147628" duration="8422000" />
       <workItem from="1556440110412" duration="2620000" />
-      <workItem from="1556500318926" duration="3364000" />
+      <workItem from="1556500318926" duration="10525000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1544466000" />
+    <option name="totallyTimeSpent" value="1551627000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1815,7 +1722,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44126984" sideWeight="0.51119405" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38650963" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4099783" sideWeight="0.48880598" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4099783" sideWeight="0.48880598" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13232104" sideWeight="0.49573562" order="8" side_tool="false" content_ui="tabs" />
@@ -1892,13 +1799,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Bean/CodeCheckBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Utils/CommonJson.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -2116,14 +2016,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bean/DownloadReturnBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="61" column="31" lean-forward="false" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Bean/RegisterBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -2201,14 +2093,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/Assist/registerMsg.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="33" column="23" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Server/prop/RegisterUtils/RegisterGetNum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -2237,16 +2121,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Webdao/WebDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <marker date="1556422596067" expanded="true" signature="1000:1022" ph="SELECT * FRO... REGISTER" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Server/NumInStorage/GetInStoreNum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
@@ -2266,17 +2140,6 @@
             <element signature="imports" expanded="false" />
             <element signature="e#1292#1319#0" expanded="false" />
             <marker date="1553072862278" expanded="true" signature="1782:2072" ph="SELECT disti... t_BD_Customer" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/SupplerSearch/SupplerSearchLike.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="42" column="61" lean-forward="false" selection-start-line="42" selection-start-column="61" selection-end-line="42" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <marker date="1548122384792" expanded="true" signature="2319:2640" ph="SELECT t0.FU... t_BD_Supplier" />
           </folding>
         </state>
       </provider>
@@ -2310,43 +2173,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/prop/DownloadInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="599" column="0" lean-forward="false" selection-start-line="599" selection-start-column="0" selection-end-line="599" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#873#874#0" expanded="false" />
-            <element signature="e#896#897#0" expanded="false" />
-            <element signature="e#11144#11171#0" expanded="false" />
-            <element signature="e#12655#12683#0" expanded="false" />
-            <element signature="e#18662#18692#0" expanded="false" />
-            <element signature="e#20139#20164#0" expanded="false" />
-            <element signature="e#21290#21318#0" expanded="false" />
-            <element signature="e#27577#27602#0" expanded="false" />
-            <element signature="e#34768#34800#0" expanded="false" />
-            <element signature="e#36472#36504#0" expanded="false" />
-            <element signature="e#38219#38251#0" expanded="false" />
-            <element signature="e#39147#39182#0" expanded="false" />
-            <element signature="e#40362#40390#0" expanded="false" />
-            <marker date="1555643844098" expanded="true" signature="11197:11412" ph="SELECT t0.FU... t_BD_Customer" />
-            <marker date="1555643844098" expanded="true" signature="13865:15220" ph="select t0.FM... T_BD_MATERIAL" />
-            <marker date="1555643844098" expanded="true" signature="18718:18948" ph="SELECT t0.FU... t_BD_Supplier" />
-            <marker date="1555643844098" expanded="true" signature="20190:20397" ph="SELECT t0.FU... T_BD_UNIT" />
-            <marker date="1555643844098" expanded="true" signature="22133:22391" ph="SELECT t0.FU... t_BD_Stock" />
-            <marker date="1555643844098" expanded="true" signature="23775:23984" ph="SELECT t0.FU... T_BAS_FLEXVALUES" />
-            <marker date="1555643844098" expanded="true" signature="25221:25451" ph="SELECT t0.FU... T_HR_EMPINFO" />
-            <marker date="1555643844098" expanded="true" signature="26394:26625" ph="SELECT t0.FU... T_BD_DEPARTMENT" />
-            <marker date="1555643844098" expanded="true" signature="27629:28076" ph="SELECT t0.FU... T_SEC_user" />
-            <marker date="1555643844098" expanded="true" signature="28813:29290" ph="select t0.FM... T_STK_INVENTORY" />
-            <marker date="1555643844098" expanded="true" signature="30304:30547" ph="SELECT t0.FB... V_BD_BUYER" />
-            <marker date="1555643844098" expanded="true" signature="31447:31712" ph="SELECT t0.FB... V_BD_WAREHOUSEWORKERS" />
-            <marker date="1555643844098" expanded="true" signature="32615:32864" ph="SELECT t0.FB... V_BD_SALESMAN" />
-            <marker date="1555643844098" expanded="true" signature="33694:34009" ph="SELECT t0_L.... T_ORG_Organizations" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Server/SearchIO/HuozhuByOrg.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -2361,20 +2187,101 @@
     <entry file="file://$PROJECT_DIR$/src/Server/upload/CgOrder2WgrkUpload.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
-          <caret line="51" column="48" lean-forward="true" selection-start-line="51" selection-start-column="48" selection-end-line="51" selection-end-column="48" />
+          <caret line="51" column="48" lean-forward="false" selection-start-line="51" selection-start-column="48" selection-end-line="51" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#732#733#0" expanded="false" />
+            <element signature="e#755#756#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Webdao/WebDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="28" column="30" lean-forward="false" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <marker date="1556422596067" expanded="true" signature="1000:1022" ph="SELECT * FRO... REGISTER" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/Assist/headLayout.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="39" column="37" lean-forward="true" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/Assist/registerMsg.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#3;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Server/ProductSearch/PrintBeforeData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="54" column="40" lean-forward="false" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
+        <state relative-caret-position="308">
+          <caret line="48" column="50" lean-forward="false" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="50" />
           <folding>
             <marker date="1556100272818" expanded="true" signature="1949:4037" ph="select top 1... FAUXPROPID" />
             <marker date="1556100272818" expanded="true" signature="2336:3024" ph="select t0.FA... T_STK_INVENTORY" />
             <marker date="1556100272818" expanded="true" signature="2798:2898" ph="select 1 fro... t_PDABarCodeSign" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/SupplerSearch/SupplerSearchLike.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="64" column="21" lean-forward="true" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
+          <folding>
+            <marker date="1556529000632" expanded="true" signature="2319:2660" ph="SELECT t0.FU... t_BD_Supplier" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/prop/DownloadInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="332" column="56" lean-forward="true" selection-start-line="332" selection-start-column="56" selection-end-line="333" selection-end-column="50" />
+          <folding>
+            <marker date="1556526526962" expanded="true" signature="11197:11412" ph="SELECT t0.FU... t_BD_Customer" />
+            <marker date="1556526526962" expanded="true" signature="13865:15220" ph="select t0.FM... T_BD_MATERIAL" />
+            <marker date="1556526526962" expanded="true" signature="18718:18968" ph="SELECT t0.FU... t_BD_Supplier" />
+            <marker date="1556526526962" expanded="true" signature="20261:20468" ph="SELECT t0.FU... T_BD_UNIT" />
+            <marker date="1556526526962" expanded="true" signature="22204:22462" ph="SELECT t0.FU... t_BD_Stock" />
+            <marker date="1556526526962" expanded="true" signature="23846:24055" ph="SELECT t0.FU... T_BAS_FLEXVALUES" />
+            <marker date="1556526526962" expanded="true" signature="25292:25522" ph="SELECT t0.FU... T_HR_EMPINFO" />
+            <marker date="1556526526962" expanded="true" signature="26465:26696" ph="SELECT t0.FU... T_BD_DEPARTMENT" />
+            <marker date="1556526526962" expanded="true" signature="27700:28147" ph="SELECT t0.FU... T_SEC_user" />
+            <marker date="1556526526962" expanded="true" signature="28884:29361" ph="select t0.FM... T_STK_INVENTORY" />
+            <marker date="1556526526962" expanded="true" signature="30375:30618" ph="SELECT t0.FB... V_BD_BUYER" />
+            <marker date="1556526526962" expanded="true" signature="31518:31783" ph="SELECT t0.FB... V_BD_WAREHOUSEWORKERS" />
+            <marker date="1556526526962" expanded="true" signature="32686:32935" ph="SELECT t0.FB... V_BD_SALESMAN" />
+            <marker date="1556526526962" expanded="true" signature="33765:34080" ph="SELECT t0_L.... T_ORG_Organizations" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bean/DownloadReturnBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="247" column="27" lean-forward="false" selection-start-line="247" selection-start-column="27" selection-end-line="247" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>

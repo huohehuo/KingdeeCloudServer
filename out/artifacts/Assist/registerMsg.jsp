@@ -11,8 +11,20 @@
 <html>
 <head>
     <title>注册用户管理</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
+<jsp:include page="headLayout.jsp"/>
+
 <%
     WebDao aa = new WebDao();
 //    List list = (List) request.getAttribute("pl_list");
@@ -32,9 +44,12 @@
     </tr>
 
     <tr align="center">
-        <td style="height: 45px; width:80px"><%=rs.getRegister_code() %></td>
-        <td style="height: 45px; width:180px"><%=rs.getVal1() %></td>
-        <td style="height: 45px; width:80px"><%=rs.getVal2() %></td>
+        <td style="height: 45px; width:80px"><%=rs.getRegister_code() %>
+        </td>
+        <td style="height: 45px; width:180px"><%=rs.getVal1() %>
+        </td>
+        <td style="height: 45px; width:80px"><%=rs.getVal2() %>
+        </td>
         <%--<td style="height: 45px;width:80px"><%=rs.getLast_use_date() %></td>--%>
         <td width="80px" align="center"><a href="RegisterDelete?json=<%=rs.getRegister_code() %>">删除</a></td>
     </tr>

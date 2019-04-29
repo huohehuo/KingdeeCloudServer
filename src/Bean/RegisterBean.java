@@ -1,8 +1,8 @@
 package Bean;
 
 public class RegisterBean {
-    public String type;
     public String Register_code;
+    public String type;
     public String val1;
     public String val2;
     public String val3;

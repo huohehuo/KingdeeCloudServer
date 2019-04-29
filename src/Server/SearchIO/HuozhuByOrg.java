@@ -39,7 +39,7 @@ public class HuozhuByOrg extends HttpServlet {
         if (parameter != null) {
             try {
                 conn = JDBCUtil.getConn(request);
-                SQL="SELECT t0.FNUMBER, t0_L.FNAME,t0.FORGID  FROM V_SCM_OWNERORG t0 LEFT OUTER JOIN V_SCM_OWNERORG_L t0_L ON (t0.FORGID = t0_L.FORGID AND t0_L.FLocaleId = 2052) WHERE ((((EXISTS (SELECT 1 FROM t_org_bizrelation a INNER JOIN t_org_bizrelationEntry b ON a.FBIZRELATIONID = b.FBIZRELATIONID WHERE (( a.FBRTYPEID = 112 AND b.FRELATIONORGID = '"+parameter+"') AND b.FORGID = t0.FORGID)) OR t0.FORGID = '"+parameter+"') AND (t0.FDOCUMENTSTATUS = 'C' AND t0.FFORBIDSTATUS = 'A')) AND t0.FFORBIDSTATUS = 'A') )";
+                SQL="SELECT t0_L.FDESCRIPTION,t0.FNUMBER, t0_L.FNAME,t0.FORGID  FROM V_SCM_OWNERORG t0 LEFT OUTER JOIN V_SCM_OWNERORG_L t0_L ON (t0.FORGID = t0_L.FORGID AND t0_L.FLocaleId = 2052) WHERE ((((EXISTS (SELECT 1 FROM t_org_bizrelation a INNER JOIN t_org_bizrelationEntry b ON a.FBIZRELATIONID = b.FBIZRELATIONID WHERE (( a.FBRTYPEID = 112 AND b.FRELATIONORGID = '"+parameter+"') AND b.FORGID = t0.FORGID)) OR t0.FORGID = '"+parameter+"') AND (t0.FDOCUMENTSTATUS = 'C' AND t0.FFORBIDSTATUS = 'A')) AND t0.FFORBIDSTATUS = 'A') )";
                 sta = conn.prepareStatement(SQL);
                 Lg.e("HuozhuByOrg:SQL:"+SQL);
                 rs = sta.executeQuery();
@@ -52,6 +52,7 @@ public class HuozhuByOrg extends HttpServlet {
                         bean.FNumber = rs.getString("FNUMBER");
                         bean.FName =   rs.getString("FNAME");
                         bean.FOrgID =  rs.getString("FORGID");
+                        bean.FNote =  rs.getString("FDESCRIPTION");
                         container.add(bean);
                     }
                     dBean.orgs = container;

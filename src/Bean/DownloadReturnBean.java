@@ -74,6 +74,7 @@ public class DownloadReturnBean {
         public String FOrgID;
         public String FNumber;
         public String FName;
+        public String FNote;
     }
     public class buyer{
         public String FID;

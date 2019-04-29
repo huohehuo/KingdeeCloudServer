@@ -10,7 +10,7 @@
          pageEncoding="UTF-8" %>
 <html>
 <head>
-    <title>方左扫描助手服务端</title>
+    <title>注册用户管理</title>
 </head>
 <body>
 <%
@@ -22,16 +22,19 @@
     for (int i = 0; i < list.size(); i++) {
         RegisterBean rs = (RegisterBean) list.get(i);
 %>
-<table border="0" bgcolor="ccceee" width="650" style="height: 161px;">
+<table border="0" bgcolor="ccceee" width="750" style="height: 161px;">
     <tr bgcolor="CCCCCC" align="center">
         <td style="height: 30px;width:80px ">用户码</td>
+        <td style="height: 30px;width:180px ">手机IMIE码</td>
+        <td style="height: 30px;width:80px ">版本号</td>
         <td style="height: 30px;width:80px ">操作</td>
 
     </tr>
 
     <tr align="center">
-        <td style="height: 45px; width:80px"><%=rs.getRegister_code() %>
-        </td>
+        <td style="height: 45px; width:80px"><%=rs.getRegister_code() %></td>
+        <td style="height: 45px; width:180px"><%=rs.getVal1() %></td>
+        <td style="height: 45px; width:80px"><%=rs.getVal2() %></td>
         <%--<td style="height: 45px;width:80px"><%=rs.getLast_use_date() %></td>--%>
         <td width="80px" align="center"><a href="RegisterDelete?json=<%=rs.getRegister_code() %>">删除</a></td>
     </tr>

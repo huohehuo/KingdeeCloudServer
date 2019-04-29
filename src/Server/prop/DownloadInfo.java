@@ -597,7 +597,7 @@ public class DownloadInfo extends HttpServlet {
     }
     private ArrayList<Org> getOrg(Statement statement, ResultSet rSet, String version, DownloadReturnBean dBean) {
         ArrayList<Org> container = new ArrayList<>();
-        String sql = "SELECT t0.FNUMBER as 编码, t0_L.FNAME as 名称, t0.FORGID as 组织ID FROM T_ORG_Organizations t0 LEFT OUTER JOIN T_ORG_Organizations_L t0_L ON (t0.FORGID = t0_L.FORGID AND t0_L.FLocaleId = 2052) WHERE (((( ( t0.FDOCUMENTSTATUS = 'C'))  ) AND (t0.FDOCUMENTSTATUS = 'C' AND t0.FFORBIDSTATUS = 'A')))";
+        String sql = "SELECT t0_L.FDESCRIPTION as 货主描述,t0.FNUMBER as 编码, t0_L.FNAME as 名称, t0.FORGID as 组织ID FROM T_ORG_Organizations t0 LEFT OUTER JOIN T_ORG_Organizations_L t0_L ON (t0.FORGID = t0_L.FORGID AND t0_L.FLocaleId = 2052) WHERE (((( ( t0.FDOCUMENTSTATUS = 'C'))  ) AND (t0.FDOCUMENTSTATUS = 'C' AND t0.FFORBIDSTATUS = 'A')))";
         try {
             rSet = statement.executeQuery(sql);
             while (rSet.next()) {
@@ -605,6 +605,7 @@ public class DownloadInfo extends HttpServlet {
                 bean.FNumber = rSet.getString("编码");
                 bean.FName = rSet.getString("名称");
                 bean.FOrgID = rSet.getString("组织ID");
+                bean.FNote = rSet.getString("货主描述");
                 container.add(bean);
             }
         } catch (SQLException e) {

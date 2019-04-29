@@ -36,7 +36,8 @@ public class WebDao {
 			while (rs.next()) {
 				RegisterBean bean = new RegisterBean();
 				bean.Register_code = rs.getString("Register_code");
-//				bean.Last_use_date = rs.getString("Last_use_date");
+				bean.val1 = rs.getString("Phone_msg");
+				bean.val2 = rs.getString("version");
 //				bean.Register_code = rs.getString("Register_code");
 				list.add(bean);
 			}

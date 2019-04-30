@@ -1,10 +1,7 @@
-package Server.upload;
+package Server.print;
 
 import Bean.DownloadReturnBean;
-import Utils.CommonJson;
-import Utils.JDBCUtil;
-import Utils.Lg;
-import Utils.getDataBaseUrl;
+import Utils.*;
 import com.google.gson.Gson;
 
 import javax.servlet.ServletException;
@@ -63,8 +60,8 @@ public class PrintBeforeDataForCreateCode extends HttpServlet {
                         cBean.FBarCode = rs.getString("条码");
                         cBean.FBatchNo = rs.getString("批号");
                         cBean.FQty = rs.getString("辅助数量");
-                        cBean.FBaseQty = rs.getString("基本单位数量");
-                        cBean.FStoreQty = rs.getString("库存单位数量");
+                        cBean.FBaseQty = MathUtil.cutZero(rs.getString("基本单位数量"));
+                        cBean.FStoreQty = MathUtil.cutZero(rs.getString("库存单位数量"));
 
 //							cBean.FItemID				=rs.getString("FItemID");
 //							cBean.FUnitID				=rs.getString("FUnitID");

@@ -1,9 +1,10 @@
-package Server.upload;
+package Server.print;
 
 import Bean.DownloadReturnBean;
 import Utils.CommonJson;
 import Utils.JDBCUtil;
 import Utils.Lg;
+import Utils.MathUtil;
 import com.google.gson.Gson;
 
 import javax.servlet.ServletException;
@@ -62,8 +63,8 @@ public class PrintData extends HttpServlet {
 							cBean.FBarCode					=rs.getString("条码");
 							cBean.FBatch					=rs.getString("批号");
 							cBean.FAuxNum					=rs.getString("辅助数量");
-							cBean.FBaseNum					=rs.getString("基本单位数量");
-							cBean.FStoreNum					=rs.getString("库存单位数量");
+							cBean.FBaseNum					= MathUtil.cutZero(rs.getString("基本单位数量"));
+							cBean.FStoreNum					=MathUtil.cutZero(rs.getString("库存单位数量"));
 							list.add(cBean);
 						}
 					}

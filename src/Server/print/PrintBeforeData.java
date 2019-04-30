@@ -1,11 +1,8 @@
-package Server.ProductSearch;
+package Server.print;
 
 import Bean.DownloadReturnBean;
 import Bean.PrintHistory;
-import Utils.CommonJson;
-import Utils.JDBCUtil;
-import Utils.Lg;
-import Utils.getDataBaseUrl;
+import Utils.*;
 import com.google.gson.Gson;
 
 import javax.servlet.ServletException;
@@ -21,7 +18,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
- * Created by NB on 2017/8/7.
+ * 期初物料补打
  */
 @WebServlet(urlPatterns = "/PrintBeforeData")
 public class PrintBeforeData extends HttpServlet {
@@ -59,7 +56,7 @@ public class PrintBeforeData extends HttpServlet {
                         bean.FName        = rs.getString("商品名称");
                         bean.FModel       = rs.getString("规格");
                         bean.FBatch       = rs.getString("批号");
-                        bean.FNum         = rs.getString("库存数");
+                        bean.FNum         = MathUtil.cutZero(rs.getString("库存数"));
 //                        bean.FUnit        = rs.getString("单位");
 //                        bean.FUnitAux     = rs.getString("辅助单位");
                         bean.FBaseUnit        = rs.getString("基本单位");
@@ -81,6 +78,7 @@ public class PrintBeforeData extends HttpServlet {
                         container.add(bean);
                     }
                     downloadReturnBean.printHistories = container;
+                    Lg.e("期初补打",container);
                     response.getWriter().write(CommonJson.getCommonJson(true,gson.toJson(downloadReturnBean)));
                 }else{
                     response.getWriter().write(CommonJson.getCommonJson(false,"未查询到数据"));

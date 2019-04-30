@@ -129,6 +129,8 @@ create table #Tmp11112 --创建临时表#Tmp
     FBatchNo varchar(128),
    
 )
+select @FSTOREQty=ROUND( @FSTOREQty,FPRECISION) from T_BD_UNIT   where FUNITID=@FSTOREUNITID
+select @FBASEQty=ROUND( @FBASEQty,FPRECISION) from T_BD_UNIT   where FUNITID=@FBASEUNITID
 insert into #Tmp11112(FBarCode,FBatchNo) values(@FBarCode,@FBatchNo)
 select FBarCode as 条码,FBatchNo as 批号,convert(float,isnull(@FAUXQty,0)) as 辅助数量,convert(float,@FBASEQty) as 基本单位数量,convert(float,@FSTOREQty) as 库存单位数量  from #Tmp11112
 drop table #Tmp11112 

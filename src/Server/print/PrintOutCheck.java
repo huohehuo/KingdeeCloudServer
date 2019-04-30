@@ -1,11 +1,9 @@
-package Server.ProductSearch;
+package Server.print;
 
 import Bean.DownloadReturnBean;
 import Bean.PrintHistory;
 import Bean.SearchBean;
-import Utils.CommonJson;
-import Utils.JDBCUtil;
-import Utils.getDataBaseUrl;
+import Utils.*;
 import com.google.gson.Gson;
 
 import javax.servlet.ServletException;
@@ -21,7 +19,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
- * Created by NB on 2017/8/7.
+ * 条码打印
  */
 @WebServlet(urlPatterns = "/PrintOutCheck")
 public class PrintOutCheck extends HttpServlet {
@@ -52,7 +50,7 @@ public class PrintOutCheck extends HttpServlet {
 //                SQL="select  convert(float, t1.FQty*isnull(t_R1.FCONVERTNUMERATOR,1)/isnull(t_R1.FCONVERTDENOMINATOR,1)) as 基本单位数量,convert(float,t1.FQty*isnull(t_R1.FCONVERTNUMERATOR,1)/isnull(t_R1.FCONVERTDENOMINATOR,1)*isnull(t_R3.FCONVERTDENOMINATOR,1)/isnull(t_R3.FCONVERTNUMERATOR,1)) as 库存单位数量,t1.FBarCode as 条码,t2.FNumber as 商品代码,t2L.FName as 商品名称,t2L.FSPECIFICATION as 规格,convert(decimal(28,0),t1.FQty) 数量,t3.FName as 单位,t1.FRemark6 as 辅助数量,t4.FName as 辅助单位,t1.FBatchNo as 批次,t1.FRemark5 as 货主,t5.FName as 库存单位,t6.FName as 基本单位 from t_PDABarCodeSign t1 left join T_BD_MATERIAL t2 on t1.FItemID = t2.FMaterialid left join t_bd_material_l t2L on  t2.fmaterialid=t2L.fmaterialid left join T_BD_MATERIALSTOCK t2U  on t2.fmaterialid=t2U.fmaterialid left join t_BD_MaterialBase t2M on t2.fmaterialid=t2M.fmaterialid left join T_BD_UNIT_L t3 on t1.FUnitID=t3.FUnitID left join T_BD_UNIT_L t4 on t2U.FAUXUNITID=t4.FUnitID left join T_BD_UNIT_L t5 on t5.FUnitID=t2U.FSTOREUNITID left join T_BD_UNIT_L t6 on t6.FUnitID = t2M.FBASEUNITID " +
 //                        "left join  T_BD_UNITCONVERTRATE t_R1 on (t_R1.FMASTERID=t1.FItemID and t_R1.FCURRENTUNITID = t1.FUnitID) " +
 //                        "left join  T_BD_UNITCONVERTRATE t_R3 on (t_R3.FMASTERID=t1.FItemID and t_R3.FCURRENTUNITID = t2U.FSTOREUNITID)where 1=1 "+con +" ORDER BY t1.FBarCode ASC";
-                SQL="select top 20 t_st1.FName as 仓库,'' as 仓位,CONVERT (VARCHAR (12),t1.FDateInStore,23) as 入库日期,t1.FRemark3 as 实际规格,t1.FRemark4 as 辅助标识,convert(float, (t1.FQty-isnull(t1.FQtyOut,0)) *isnull(t_R1.FCONVERTNUMERATOR,1)/isnull(t_R1.FCONVERTDENOMINATOR,1)) as 基本单位数量,convert(float,(t1.FQty-isnull(t1.FQtyOut,0))*isnull(t_R1.FCONVERTNUMERATOR,1)/isnull(t_R1.FCONVERTDENOMINATOR,1)*isnull(t_R3.FCONVERTDENOMINATOR,1)/isnull(t_R3.FCONVERTNUMERATOR,1)) as 库存单位数量,t1.FBarCode as 条码,t2.FNumber as 商品代码,t2L.FName as 商品名称,t2L.FSPECIFICATION as 规格,convert(decimal(28,0),(t1.FQty-isnull(t1.FQtyOut,0))) 数量,t3.FName as 单位,t1.FRemark6 as 辅助数量,t4.FName as 辅助单位,t1.FBatchNo as 批次,t1.FRemark5 as 货主,t5.FName as 库存单位,t6.FName as 基本单位 from t_PDABarCodeSign t1 left join T_BD_MATERIAL t2 on t1.FItemID = t2.FMaterialid left join t_bd_material_l t2L on  t2.fmaterialid=t2L.fmaterialid left join T_BD_MATERIALSTOCK t2U  on t2.fmaterialid=t2U.fmaterialid left join t_BD_MaterialBase t2M on t2.fmaterialid=t2M.fmaterialid left join T_BD_UNIT_L t3 on t1.FUnitID=t3.FUnitID left join T_BD_UNIT_L t4 on t2U.FAUXUNITID=t4.FUnitID left join T_BD_UNIT_L t5 on t5.FUnitID=t2U.FSTOREUNITID left join T_BD_UNIT_L t6 on t6.FUnitID = t2M.FBASEUNITID left join  T_BD_UNITCONVERTRATE t_R1 on (t_R1.FMASTERID=t2.FMASTERID and t_R1.FCURRENTUNITID = t1.FUnitID) left join  T_BD_UNITCONVERTRATE t_R3 on (t_R3.FMASTERID=t2.FMASTERID and t_R3.FCURRENTUNITID = t2U.FSTOREUNITID) left join t_BD_Stock_L t_st1 on t1.FStockID=t_st1.FSTOCKID where 1=1 "+con +" ORDER BY t1.FBarCode ASC";
+                SQL="select top 20 t_st1.FName as 仓库,'' as 仓位,CONVERT (VARCHAR (12),t1.FDateInStore,23) as 入库日期,t1.FRemark3 as 实际规格,t1.FRemark4 as 辅助标识,convert(float, round((t1.FQty-isnull(t1.FQtyOut,0)) *isnull(t_R1.FCONVERTNUMERATOR,1)/isnull(t_R1.FCONVERTDENOMINATOR,1),t101.FPRECISION)) as 基本单位数量,convert(float,ROUND( (t1.FQty-isnull(t1.FQtyOut,0))*isnull(t_R1.FCONVERTNUMERATOR,1)/isnull(t_R1.FCONVERTDENOMINATOR,1)*isnull(t_R3.FCONVERTDENOMINATOR,1)/isnull(t_R3.FCONVERTNUMERATOR,1),t100.FPRECISION)) as 库存单位数量,t1.FBarCode as 条码,t2.FNumber as 商品代码,t2L.FName as 商品名称,t2L.FSPECIFICATION as 规格,convert(decimal(28,0),(t1.FQty-isnull(t1.FQtyOut,0))) 数量,t3.FName as 单位,t1.FRemark6 as 辅助数量,t4.FName as 辅助单位,t1.FBatchNo as 批次,t1.FRemark5 as 货主,t5.FName as 库存单位,t6.FName as 基本单位 from t_PDABarCodeSign t1 left join T_BD_MATERIAL t2 on t1.FItemID = t2.FMaterialid left join t_bd_material_l t2L on  t2.fmaterialid=t2L.fmaterialid left join T_BD_MATERIALSTOCK t2U  on t2.fmaterialid=t2U.fmaterialid left join t_BD_MaterialBase t2M on t2.fmaterialid=t2M.fmaterialid left join T_BD_UNIT_L t3 on t1.FUnitID=t3.FUnitID left join T_BD_UNIT_L t4 on t2U.FAUXUNITID=t4.FUnitID left join T_BD_UNIT_L t5 on t5.FUnitID=t2U.FSTOREUNITID left join T_BD_UNIT_L t6 on t6.FUnitID = t2M.FBASEUNITID left join  T_BD_UNITCONVERTRATE t_R1 on (t_R1.FMASTERID=t2.FMASTERID and t_R1.FCURRENTUNITID = t1.FUnitID) left join  T_BD_UNITCONVERTRATE t_R3 on (t_R3.FMASTERID=t2.FMASTERID and t_R3.FCURRENTUNITID = t2U.FSTOREUNITID) left join t_BD_Stock_L t_st1 on t1.FStockID=t_st1.FSTOCKID left join T_BD_UNIT t100 on t5.FUNITID=t100.FUNITID left join T_BD_UNIT t101 on t6.FUNITID=t101.FUNITID where 1=1 "+con +" ORDER BY t1.FBarCode ASC";
                 sta = conn.prepareStatement(SQL);
                 rs = sta.executeQuery();
                 DownloadReturnBean downloadReturnBean = new DownloadReturnBean();
@@ -66,8 +64,8 @@ public class PrintOutCheck extends HttpServlet {
                         bean.FBatch       = rs.getString("批次");
                         bean.FName        = rs.getString("商品名称");
                         bean.FModel       = rs.getString("规格");
-                        bean.FNum         = rs.getString("库存单位数量");
-                        bean.FNum2        = rs.getString("基本单位数量");
+                        bean.FNum         = MathUtil.cutZero(rs.getString("库存单位数量"));
+                        bean.FNum2         = MathUtil.cutZero(rs.getString("基本单位数量"));
                         bean.FUnit        = rs.getString("库存单位");
                         bean.FUnitAux     = rs.getString("基本单位");
                         bean.FAuxSign     = rs.getString("辅助标识");
@@ -83,6 +81,7 @@ public class PrintOutCheck extends HttpServlet {
                         container.add(bean);
                     }
                     downloadReturnBean.printHistories = container;
+                    Lg.e("条码打印",container);
                     response.getWriter().write(CommonJson.getCommonJson(true,gson.toJson(downloadReturnBean)));
                 }else{
                     response.getWriter().write(CommonJson.getCommonJson(false,"未查询到数据"));

@@ -25,8 +25,9 @@
 <body>
 <div>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <a class="navbar-brand col-xl-7" href="#" style="margin-left: 6.25rem;">方左科技</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <%--<a class="navbar-brand col-xl-7" href="#" style="margin-left: 6.25rem;">方左科技</a>--%>
+        <a class="navbar-brand" href="#" style="margin-left: 6.25rem;">方左科技</a>
+        <%--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse col-xl-3" id="collapsibleNavbar">
@@ -41,19 +42,22 @@
                     <a class="nav-link" href="feedback.html">个人信息</a>
                 </li>
             </ul>
-        </div>
+        </div>--%>
     </nav>
-
-    <div  style="width: auto;height: auto;"class="col-lg-6">
-        <div class="input-group">
-            <input type="text" class="form-control">
-            <span class="input-group-btn">
+    <div class="container">
+        <div  style="width: auto;height: auto;margin-top: 50px;margin-bottom: 50px">
+            <div class="input-group">
+                <input type="text" class="form-control">
+                <span class="input-group-btn">
 						<button class="btn btn-default" type="button">
 							Go!
 						</button>
 					</span>
-        </div><!-- /input-group -->
-    </div><!-- /.col-lg-6 -->
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+    </div>
+
+
 </div>
 </body>
 

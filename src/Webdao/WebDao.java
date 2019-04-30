@@ -2,6 +2,7 @@ package Webdao;
 
 import Bean.RegisterBean;
 import Utils.JDBCUtil;
+import Utils.Lg;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -48,10 +49,27 @@ public class WebDao {
 		}finally {
 			JDBCUtil.close(rs,sta,conn);
 		}
-
-
 		return list;
 	}
+	public void deleteUser(String user){
+		try {
+			conn = JDBCUtil.getSQLiteConn1();
+			String SQL = "DELETE Register_code="+user+" FROM REGISTER";
+			sta = conn.prepareStatement(SQL);
+			boolean b = sta.execute();
+			Lg.e("删除",b);
+			if (!b){
+//                response.sendRedirect("error.jsp");
+			}
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			JDBCUtil.close(rs,sta,conn);
+		}
+	}
+
 	/*
 	admin  set
 	*/

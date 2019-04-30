@@ -24,7 +24,7 @@
 </head>
 <body>
 <jsp:include page="headLayout.jsp"/>
-
+<%--
 <%
     WebDao aa = new WebDao();
 //    List list = (List) request.getAttribute("pl_list");
@@ -33,8 +33,45 @@
 
     for (int i = 0; i < list.size(); i++) {
         RegisterBean rs = (RegisterBean) list.get(i);
-%>
-<table border="0" bgcolor="ccceee" width="750" style="height: 161px;">
+%>--%>
+<div class="container">
+    <div  class="card">
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>用户码</th>
+                    <th>手机信息</th>
+                    <th>版本号</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <%
+                    WebDao aa = new WebDao();
+//    List list = (List) request.getAttribute("pl_list");
+                    List list = aa.getRegister();
+                    for (int i = 0; i < list.size(); i++) {
+                        RegisterBean rs = (RegisterBean) list.get(i);
+                %>
+
+                <tr>
+                    <td><%=rs.getRegister_code() %></td>
+                    <td><%=rs.getVal1() %></td>
+                    <td><%=rs.getVal2() %></td>
+                    <%--<td style="height: 45px;width:80px"><%=rs.getLast_use_date() %></td>--%>
+                    <td><a href="RegisterDelete?json=<%=rs.getRegister_code() %>">删除</a></td>
+                </tr>
+                </tbody>
+                <%} %>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+
+<%--<table border="0" bgcolor="ccceee" width="750" style="height: 161px;">
     <tr bgcolor="CCCCCC" align="center">
         <td style="height: 30px;width:80px ">用户码</td>
         <td style="height: 30px;width:180px ">手机IMIE码</td>
@@ -50,12 +87,12 @@
         </td>
         <td style="height: 45px; width:80px"><%=rs.getVal2() %>
         </td>
-        <%--<td style="height: 45px;width:80px"><%=rs.getLast_use_date() %></td>--%>
+        &lt;%&ndash;<td style="height: 45px;width:80px"><%=rs.getLast_use_date() %></td>&ndash;%&gt;
         <td width="80px" align="center"><a href="RegisterDelete?json=<%=rs.getRegister_code() %>">删除</a></td>
     </tr>
     <%} %>
 
-</table>
+</table>--%>
 </body>
 
 

@@ -8,4 +8,5 @@ public class InStoreNumBean {
 	public String FKFDate;
 	public String FKFPeriod;
 	public String FOwnerID;//货主id
+	public String FOrgID;//组织id
 }

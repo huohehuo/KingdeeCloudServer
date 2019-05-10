@@ -8,6 +8,7 @@
 <%@ page language="java" import="java.util.*" import="Bean.RegisterBean" import="Webdao.WebDao"
          contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
+<%@ page import="com.sun.org.apache.xpath.internal.operations.String" %>
 <html>
 <head>
     <title>注册用户管理</title>
@@ -34,6 +35,12 @@
     for (int i = 0; i < list.size(); i++) {
         RegisterBean rs = (RegisterBean) list.get(i);
 %>--%>
+<%--<%
+    String tips = (String) request.getAttribute("tips");
+%>
+<h5 ><%=tips%></h5>--%>
+
+
 <div class="container">
     <div  class="card">
         <div class="card-body">
@@ -60,7 +67,7 @@
                     <td><%=rs.getVal1() %></td>
                     <td><%=rs.getVal2() %></td>
                     <%--<td style="height: 45px;width:80px"><%=rs.getLast_use_date() %></td>--%>
-                    <td><a href="RegisterDelete?json=<%=rs.getRegister_code() %>">删除</a></td>
+                    <td><a href="register_delete?json=<%=rs.getRegister_code() %>">删除</a></td>
                 </tr>
                 </tbody>
                 <%} %>

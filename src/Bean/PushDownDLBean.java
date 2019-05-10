@@ -27,6 +27,8 @@ public class PushDownDLBean {
         public String FBatchNo;
         public String FHuoZhuNumber;
         public String FBaseCanreturnQty;
+        public String AuxSign;//辅助标识
+        public String ActualModel;//实际规格
 
 //
 //        public String FItemID;

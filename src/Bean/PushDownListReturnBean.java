@@ -18,6 +18,7 @@ public class PushDownListReturnBean {
         public String FName;
         public String FSaleOrgID;
         public String FStoreOrgID;
+        public String FSettleOrgId;
         public String FSaleManID;
         public String FSaleDeptID;
         public String FNot;

@@ -246,6 +246,7 @@ public class DownloadReturnBean {
         public String FName;
         public String FOrg;
         public String FNote;
+        public String FMASTERID;
 //        public String FItemClassID;
 //        public String FParentID;
 //        public String FLevel;

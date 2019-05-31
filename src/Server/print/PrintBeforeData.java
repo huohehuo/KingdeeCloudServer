@@ -1,5 +1,6 @@
 package Server.print;
 
+import Bean.CommonBean;
 import Bean.DownloadReturnBean;
 import Bean.PrintHistory;
 import Utils.*;
@@ -37,8 +38,14 @@ public class PrintBeforeData extends HttpServlet {
         String con="";
         if (parameter != null) {
             try {
-
-                con=con+" and t0.FNumber like '%"+parameter+"%'" ;
+                CommonBean searchBean = new Gson().fromJson(parameter,CommonBean.class);
+                Lg.e("查找条件：",searchBean);
+                if (!searchBean.FName.equals("")){
+                    con=con+" and t0.FNumber like '%"+searchBean.FName+"%'" ;
+                }
+                if (!searchBean.FNumber.equals("")){
+                    con=con+" and (t2.FNumber like '%"+searchBean.FNumber+"%' or t2L.FName like '%"+searchBean.FNumber+"%')" ;
+                }
 
                 System.out.println(request.getParameter("sqlip") + " " + request.getParameter("sqlport") + " " + request.getParameter("sqlname") + " " + request.getParameter("sqlpass") + " " + request.getParameter("sqluser"));
                 conn = JDBCUtil.getConn(getDataBaseUrl.getUrl(request.getParameter("sqlip"), request.getParameter("sqlport"), request.getParameter("sqlname")), request.getParameter("sqlpass"), request.getParameter("sqluser"));

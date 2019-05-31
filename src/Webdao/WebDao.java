@@ -31,7 +31,7 @@ public class WebDao {
 		List<RegisterBean> list = new ArrayList<>();
 		try {
 			conn = JDBCUtil.getSQLiteConn1();
-			String SQL = "SELECT * FROM REGISTER";
+			String SQL = "SELECT * FROM REGISTER ORDER BY version DESC ";
 			sta = conn.prepareStatement(SQL);
 			rs = sta.executeQuery();
 			while (rs.next()) {
@@ -39,6 +39,7 @@ public class WebDao {
 				bean.Register_code = rs.getString("Register_code");
 				bean.val1 = rs.getString("Phone_msg");
 				bean.val2 = rs.getString("version");
+				bean.val3 = rs.getString("Last_use_date");
 //				bean.Register_code = rs.getString("Register_code");
 				list.add(bean);
 			}

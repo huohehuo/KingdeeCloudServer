@@ -50,6 +50,7 @@
                     <th>用户码</th>
                     <th>手机信息</th>
                     <th>版本号</th>
+                    <th>最后登录时间</th>
                     <th>操作</th>
                 </tr>
                 </thead>
@@ -66,6 +67,7 @@
                     <td><%=rs.getRegister_code() %></td>
                     <td><%=rs.getVal1() %></td>
                     <td><%=rs.getVal2() %></td>
+                    <td><%=rs.getVal3() %></td>
                     <%--<td style="height: 45px;width:80px"><%=rs.getLast_use_date() %></td>--%>
                     <td><a href="register_delete?json=<%=rs.getRegister_code() %>">删除</a></td>
                 </tr>

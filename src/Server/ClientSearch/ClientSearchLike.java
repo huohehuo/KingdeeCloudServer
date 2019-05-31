@@ -43,7 +43,7 @@ public class ClientSearchLike extends HttpServlet {
                 SearchBean searchBean = new Gson().fromJson(parameter,SearchBean.class);
                 SearchBean.S2Product s2Product = new Gson().fromJson(searchBean.json,SearchBean.S2Product.class);
                 if (!"".equals(s2Product.FOrg))con+=con+" and t0.FUSEORGID="+s2Product.FOrg;
-                SQL = "SELECT distinct top 20 t0.FNUMBER as 客户编码,t1.FNAME as 客户名称 FROM t_BD_Customer t0 LEFT OUTER JOIN t_BD_Customer_L t1 ON (t0.FCUSTID = t1.FCUSTID AND t1.FLocaleId = 2052) WHERE ((t0.FFORBIDSTATUS = 'A')) and (t0.FNUMBER like '%"+s2Product.likeOr+"%' or t1.FNAME like '%"+s2Product.likeOr+"%')" +con;
+                SQL = "SELECT distinct top 20 t0.FMASTERID,t1.FSHORTNAME as 简称,t0.FNUMBER as 客户编码,t1.FNAME as 客户名称 FROM t_BD_Customer t0 LEFT OUTER JOIN t_BD_Customer_L t1 ON (t0.FCUSTID = t1.FCUSTID AND t1.FLocaleId = 2052) WHERE ((t0.FFORBIDSTATUS = 'A')) and (t0.FNUMBER like '%"+s2Product.likeOr+"%' or t1.FNAME like '%"+s2Product.likeOr+"%')" +con;
                 sta = conn.prepareStatement(SQL);
                 Lg.e("Client:SQL:"+SQL);
                 rs = sta.executeQuery();
@@ -53,13 +53,14 @@ public class ClientSearchLike extends HttpServlet {
                     System.out.println("rs的长度"+i);
                     while (rs.next()) {
                         DownloadReturnBean.Client bean = downloadReturnBean.new Client();
-//                        bean.FItemID = rs.getString("客户ID");
+                        bean.FItemID = rs.getString("FMASTERID");
                         bean.FNumber = rs.getString("客户编码");
                         bean.FName = rs.getString("客户名称");
-//                        bean.FOrg = rs.getString("FUSEORGID");
+                        bean.FOrg = rs.getString("简称");
+                        bean.FMASTERID = rs.getString("FMASTERID");
                         container.add(bean);
                     }
-                    Lg.e("客户数据：",container.size());
+                    Lg.e("客户数据："+container.size(),container);
                     downloadReturnBean.clients = container;
                     response.getWriter().write(CommonJson.getCommonJson(true,gson.toJson(downloadReturnBean)));
                 }else{

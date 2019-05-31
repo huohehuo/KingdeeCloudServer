@@ -39,7 +39,7 @@ public class RegisterUpdateMsg extends HttpServlet {
                  Lg.e("RegisterUpdateMsg：更新手机信息",searchBean);
                 conn = JDBCUtil.getSQLiteConn2();
 //                    SQL = "UPDATE REGISTER SET orange_juice = '"+searchBean.val1+"' WHERE Register_code = ? ";
-                    SQL = "UPDATE REGISTER SET Phone_msg = '"+searchBean.val1+"', version='"+searchBean.val2+"' WHERE Register_code = ? ";
+                    SQL = "UPDATE REGISTER SET Phone_msg = '"+searchBean.val1+"', version='"+searchBean.val2+"',Last_use_date='"+searchBean.val3+"' WHERE Register_code = ? ";
                     sta = conn.prepareStatement(SQL);
                     sta.setString(1,searchBean.Register_code);
                     sta.execute();

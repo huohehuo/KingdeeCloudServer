@@ -64,6 +64,7 @@ public class DownloadInfo extends HttpServlet {
         ArrayList<employee> empArrayList;
         ArrayList<department> department;
         ArrayList<buyer> container;
+        ArrayList<RemarkData> remarkDatas;
         Gson gson = new Gson();
         int size = 0;
         DownloadReturnBean dBean = new DownloadReturnBean();
@@ -169,7 +170,12 @@ public class DownloadInfo extends HttpServlet {
                             dBean.orgs = orgs;
                             size += orgs.size();
                             break;
-
+                        case 15://组织/供应商/客户 的简称表
+                            remarkDatas = getRemarkData(statement, rSet, version, dBean);
+                            System.out.println("remarkDatas" + remarkDatas.size());
+                            dBean.remarkDatas = remarkDatas;
+                            size += remarkDatas.size();
+                            break;
 //                        case 15:
 //                            purchaseMethod = getPurchaseMethod(statement, rSet, version, dBean);
 //                            System.out.println("purchaseMethod" + purchaseMethod.size());
@@ -616,7 +622,28 @@ public class DownloadInfo extends HttpServlet {
 
         return container;
     }
+    private ArrayList<RemarkData> getRemarkData(Statement statement, ResultSet rSet, String version, DownloadReturnBean dBean) {
+        ArrayList<RemarkData> container = new ArrayList<>();
+        String sql = "select FNUMBER,'' FUSEORGID,FNAME,FSHORTNAME from ( select  t1.FNUMBER,t1.FUSEORGID,t2.FNAME,t2.FSHORTNAME from t_BD_Supplier t1 left join t_BD_Supplier_L t2 on (t1.FSUPPLIERID=t2.FSUPPLIERID) union all " +
+                "select  t1.FNUMBER,t1.FUSEORGID,t2.FNAME,t2.FSHORTNAME from t_BD_Customer t1 left join t_BD_Customer_L t2 on (t1.FCUSTID=t2.FCUSTID ) union all " +
+                "select t0.FNUMBER,t0.FORGID FUSEORGID,t0_L.FNAME,t0_L.FDESCRIPTION as FSHORTNAME from T_ORG_Organizations t0 LEFT OUTER JOIN T_ORG_Organizations_L t0_L ON (t0.FORGID = t0_L.FORGID AND t0_L.FLocaleId = 2052 )) t where t.FSHORTNAME<>''";
+        try {
+            rSet = statement.executeQuery(sql);
+            while (rSet.next()) {
+                DownloadReturnBean.RemarkData bean = dBean.new RemarkData();
+                bean.FNUMBER = rSet.getString("FNUMBER");
+                bean.FUSEORGID = rSet.getString("FUSEORGID");
+                bean.FNAME = rSet.getString("FNAME");
+                bean.FSHORTNAME = rSet.getString("FSHORTNAME");
+                container.add(bean);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
 
+        return container;
+    }
 
     //弃用
     private ArrayList<PriceMethod> getPriceMethods(Statement statement, ResultSet rSet, String version, DownloadReturnBean dBean) {

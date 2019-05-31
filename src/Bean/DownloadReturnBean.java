@@ -30,9 +30,15 @@ public class DownloadReturnBean {
     public ArrayList<AuxSignSecCheckBean> auxSignSecCheckBeans;
     public ArrayList<PrintDataBean> printDataBeans;
     public ArrayList<PrintHistory> printHistories;
+    public ArrayList<RemarkData> remarkDatas;
 
     public int size;
-
+    public class RemarkData {
+        public String FNUMBER;
+        public String FUSEORGID;
+        public String FNAME;
+        public String FSHORTNAME;
+    }
 
     public class PrintDataBean {
         public String FBarCode;
@@ -332,6 +338,7 @@ public class DownloadReturnBean {
         public String FNumber;
         public String FName;
         public String FOrg;
+        public String FMASTERID;
 //        public String FItemClassID;
 //        public String FParentID;
 //        public String FLevel;

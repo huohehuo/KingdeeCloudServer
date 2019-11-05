@@ -11,6 +11,7 @@ public class PushDownListReturnBean {
     public class PushDownListBean{
         public String FID;
         public String FBillNo;
+        public String FAccountID;
         public String FDate;
         public String FSupplyID;
         public String FSupply;
@@ -22,13 +23,37 @@ public class PushDownListReturnBean {
         public String FSaleManID;
         public String FSaleDeptID;
         public String FNot;
+        public String FDept;
+        public String FClient;
+        public String FClientID;
         public String FDeptID;
         public String FManagerID;
         public String FEmpID;
         public String FInterID;
+
+        public String FAppOrgID;
+        public String FHuozhuInType;
+        public String FHuozhuOutType;
+        public String FDbType;
+
         public int tag;
 
         public String FBillTypeName;
+
+        public String FOrderNo;
+        public String FWordShopID;
+        public String FWordShop;
+        public String FStoreManID;
+        public String FStockerGroupID;
+        public String FCreateOrgID;
+        public String FHuoZhuID;
+
+
+        public String FWlCompany;
+        public String FCarBoxNo;
+        public String FPassNo;
+        public String FFreight;
+        public String FYaoNo;            //
 
         @Override
         public String toString() {

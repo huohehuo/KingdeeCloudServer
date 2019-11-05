@@ -31,8 +31,118 @@ public class DownloadReturnBean {
     public ArrayList<PrintDataBean> printDataBeans;
     public ArrayList<PrintHistory> printHistories;
     public ArrayList<RemarkData> remarkDatas;
+    public ArrayList<WortPrintData> wortPrintDatas;
+    public ArrayList<DryingGetData> dryingGetDatas;
+    public ArrayList<PGetData> pGetDatas;
 
     public int size;
+
+
+    public class PGetData {
+        public String FID;
+        public String FBillNo;
+        public String PCS;
+        public String M3;
+        public String FAccountID;
+        public String FWide;
+        public String FStr1;
+        public String FStr2;
+        public String FStr3;
+        public String FStr4;
+        public String FStr5;
+
+    }
+    public class DryingGetData {
+        public String FID;
+        public String FEntryID;
+        public String FItemID;
+        public String FUnitID;
+        public String FDCStockID;
+        public String FDCSPID;
+        public String FSTOCKORGID;
+        public String FOWNERID;
+        public String FBoxCode;
+        public String FSplitBoxCode;
+        public String FDate;
+        public String FUser;
+        public String FName;
+        public String FUnit;
+        public String FModel;
+        public String FBatch;
+        public String FLenght;
+        public String FChang;
+        public String FKuan;
+        public String FHou;
+        public String FQty;
+        public String FQtySplit;
+        public String FM2Split;
+        public String FQtySum;
+        public String FM2;
+        public String FM2Sum;
+        public String FVolSum;
+        public String FTip;
+
+
+        public String FBarcode;
+        public String IMIE;
+        public String FBillerID;
+        public long FOrderId;
+        public int activity;
+
+        //用于回单
+        public String FNumber;
+        public String FUnitNumber;
+        public String FStorageNumber;
+        public String FStoreOrgNumber;
+        public String FHuozhuNumber;
+//    public String FBatch;
+//    public String FLenght;
+//    public String FQty;
+//    public String FM2;
+    }
+    public class WortPrintData {
+        public String FID;
+        public String FEntryID;
+        public String FItemID;
+        public String FUnitID;
+        public String FDCStockID;
+        public String FDCSPID;
+        public String FSTOCKORGID;
+        public String FOWNERID;
+        public String FBoxCode;
+        public String FDate;
+        public String FUser;
+        public String FName;
+        public String FUnit;
+        public String FModel;
+        public String FBatch;
+        public String FLenght;
+        public String FChang;
+        public String FKuan;
+        public String FHou;
+        public String FQty;
+        public String FQtySum;
+        public String FM2;
+        public String FM2Sum;
+
+        public String FVolSum;
+        public String FTip;
+        public String FWide;
+        public String FMaker;
+
+        public String FFBaoNum;
+        public String FLev;
+        public String FCarNo;
+        public String FFBaoNo;
+        public String FType;
+        public String FHuozhuNumber;//货主编码
+        public String FStorageNumber;//货主编码
+        public String FOrgNumber;//库存组织编码
+
+
+    }
+
+
     public class RemarkData {
         public String FNUMBER;
         public String FUSEORGID;
@@ -46,6 +156,30 @@ public class DownloadReturnBean {
         public String FAuxNum;
         public String FBaseNum;
         public String FStoreNum;
+
+        public String FQtyAll;
+        public String FVolAll;
+        public String FBoxCode;
+        public String FBoxDate;
+        public String FMaker;
+        public String FName;
+        public String FHuozhuNote;
+        public String FCarNo;
+        public String FUnit;
+        public String FModel;
+        public String FQty;
+        public String FVol;
+        public String FLev;
+        public String FEntryID;
+        public String FQtySplit;
+        public String FVolSplit;
+        public String FWide;
+        public String FStorage;
+        public String FBaoNum;//包数
+        public String FFBaoNum;//分包数
+        public String FFBaoNo;//分包号
+        public String FBoxType;
+
     }
 
 
@@ -70,6 +204,27 @@ public class DownloadReturnBean {
 
         public String FBarCode;
         public String FHuoZhuNumber;
+
+        public String FLevel;//等级
+        public String FYmLenght;//原木长度
+        public String FYmDiameter;//原木直径
+        public String FBLenght;//板长
+        public String FBWide;//板宽
+        public String FBThick;//板厚
+        public String FVolume;//体积
+        public String FCeng;//体积
+        public String FCodeType;//0水板，其他原木
+
+        public String FName;
+        public String FStorage;
+        public String FModel;
+        public String FNumber;
+        public String FUnitNumber;
+        public String FStorageNumber;
+        public String FStoreOrgNumber;
+
+
+
     }
 
     public class InStorageType {
@@ -331,6 +486,9 @@ public class DownloadReturnBean {
         public String FName;
         public String FPassWord;
         public String FEmpID;
+        public String FPermit;
+        public String FNameERP;
+        public String FPassWordERP;
     }
 
     public class Client {

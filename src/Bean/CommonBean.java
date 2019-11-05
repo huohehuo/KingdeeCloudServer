@@ -12,4 +12,5 @@ public class CommonBean {
 		FName=name;
 		FNumber = number;
 	}
+	public CommonBean(){}
 }

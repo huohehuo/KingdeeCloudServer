@@ -45,9 +45,14 @@
     <div  class="card">
         <div class="card-body">
             <table class="table">
+                <%
+                    WebDao aa = new WebDao();
+//    List list = (List) request.getAttribute("pl_list");
+                    List list = aa.getRegister();
+                %>
                 <thead>
                 <tr>
-                    <th>用户码</th>
+                    <th>用户码(总数:<%=list.size()%>)</th>
                     <th>手机信息</th>
                     <th>版本号</th>
                     <th>最后登录时间</th>
@@ -56,9 +61,6 @@
                 </thead>
                 <tbody>
                 <%
-                    WebDao aa = new WebDao();
-//    List list = (List) request.getAttribute("pl_list");
-                    List list = aa.getRegister();
                     for (int i = 0; i < list.size(); i++) {
                         RegisterBean rs = (RegisterBean) list.get(i);
                 %>

@@ -42,8 +42,9 @@ public class ClientSearchLike extends HttpServlet {
                 conn = JDBCUtil.getConn(request);
                 SearchBean searchBean = new Gson().fromJson(parameter,SearchBean.class);
                 SearchBean.S2Product s2Product = new Gson().fromJson(searchBean.json,SearchBean.S2Product.class);
+                Lg.e("查找客户：json",s2Product);
                 if (!"".equals(s2Product.FOrg))con+=con+" and t0.FUSEORGID="+s2Product.FOrg;
-                SQL = "SELECT distinct top 20 t0.FMASTERID,t1.FSHORTNAME as 简称,t0.FNUMBER as 客户编码,t1.FNAME as 客户名称 FROM t_BD_Customer t0 LEFT OUTER JOIN t_BD_Customer_L t1 ON (t0.FCUSTID = t1.FCUSTID AND t1.FLocaleId = 2052) WHERE ((t0.FFORBIDSTATUS = 'A')) and (t0.FNUMBER like '%"+s2Product.likeOr+"%' or t1.FNAME like '%"+s2Product.likeOr+"%')" +con;
+                SQL = "SELECT distinct top 30 t0.FMASTERID,t0.FMASTERID as FCUSTID,t1.FSHORTNAME as 简称,t0.FNUMBER as 客户编码,t1.FNAME as 客户名称 FROM t_BD_Customer t0 LEFT OUTER JOIN t_BD_Customer_L t1 ON (t0.FCUSTID = t1.FCUSTID AND t1.FLocaleId = 2052) WHERE ((t0.FFORBIDSTATUS = 'A')) and (t0.FNUMBER like '%"+s2Product.likeOr+"%' or t1.FNAME like '%"+s2Product.likeOr+"%'  or t0.FCUSTID like '%"+s2Product.likeOr+"%'or t0.FMASTERID like '%"+s2Product.likeOr+"%')" +con;
                 sta = conn.prepareStatement(SQL);
                 Lg.e("Client:SQL:"+SQL);
                 rs = sta.executeQuery();
@@ -53,6 +54,7 @@ public class ClientSearchLike extends HttpServlet {
                     System.out.println("rs的长度"+i);
                     while (rs.next()) {
                         DownloadReturnBean.Client bean = downloadReturnBean.new Client();
+                        // TODO: 2019/6/12 0012  //一期时，这里为MASTERID,后期更新一期时要改为FCUSTID，
                         bean.FItemID = rs.getString("FMASTERID");
                         bean.FNumber = rs.getString("客户编码");
                         bean.FName = rs.getString("客户名称");

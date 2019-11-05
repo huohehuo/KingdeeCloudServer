@@ -24,7 +24,7 @@
 %>
 <table border="0" bgcolor="ccceee" width="650" style="height: 161px;">
     <tr bgcolor="CCCCCC" align="center">
-        <td style="height: 30px;width:80px ">用户码</td>
+        <td style="height: 30px;width:80px ">用户码=<%=list.size()%></td>
         <td style="height: 30px;width:80px ">操作</td>
 
     </tr>

@@ -5,6 +5,7 @@ import Bean.DownloadReturnBean;
 import Bean.DownloadReturnBean.*;
 import Utils.CommonJson;
 import Utils.JDBCUtil;
+import Utils.Lg;
 import Utils.getDataBaseUrl;
 import com.google.gson.Gson;
 
@@ -173,6 +174,7 @@ public class DownloadInfo extends HttpServlet {
                         case 15://组织/供应商/客户 的简称表
                             remarkDatas = getRemarkData(statement, rSet, version, dBean);
                             System.out.println("remarkDatas" + remarkDatas.size());
+                            Lg.e("简称表"+remarkDatas.size(),remarkDatas);
                             dBean.remarkDatas = remarkDatas;
                             size += remarkDatas.size();
                             break;
@@ -492,7 +494,9 @@ public class DownloadInfo extends HttpServlet {
     private ArrayList<User> getUser(Statement statement, ResultSet rSet, String version, DownloadReturnBean dBean) {
         ArrayList<User> container = new ArrayList<DownloadReturnBean.User>();
 
-        String sql = "SELECT t0.FUSERID,t0.FNAME as 用户名,t0.FPASSWORD as 密码 FROM T_SEC_user t0 LEFT OUTER JOIN T_SEC_user_L t1 ON (t0.FUSERID = t1.FUSERID AND t1.FLocaleId = 2052) LEFT OUTER JOIN T_SEC_USERGROUP_L st01_L ON (t0.FPRIMARYGROUP = st01_L.FID AND st01_L.FLocaleId = 2052) WHERE (((t0.FCREATEORG IN (1) OR t0.FUSERID IN (SELECT DISTINCT fuserid FROM t_sec_userorg WHERE forgid IN (1))) AND (t0.FFORBIDSTATUS = 'A' AND t0.FUSERTYPE = '1')) ) OPTION ( MAXDOP 0)";
+//        String sql = "SELECT t0.FUSERID,t0.FNAME as 用户名,t0.FPASSWORD as 密码 FROM T_SEC_user t0 LEFT OUTER JOIN T_SEC_user_L t1 ON (t0.FUSERID = t1.FUSERID AND t1.FLocaleId = 2052) LEFT OUTER JOIN T_SEC_USERGROUP_L st01_L ON (t0.FPRIMARYGROUP = st01_L.FID AND st01_L.FLocaleId = 2052) WHERE (((t0.FCREATEORG IN (1) OR t0.FUSERID IN (SELECT DISTINCT fuserid FROM t_sec_userorg WHERE forgid IN (1))) AND (t0.FFORBIDSTATUS = 'A' AND t0.FUSERTYPE = '1')) ) OPTION ( MAXDOP 0)";
+//        String sql = "SELECT t0.FUSERID,t0.FNAME as 用户名,t0.FPASSWORD as 密码,isnull(t2.FCondition,'') as FPermit from  T_SEC_user t0 LEFT OUTER JOIN T_SEC_user_L t1 ON (t0.FUSERID = t1.FUSERID AND t1.FLocaleId = 2052) LEFT OUTER JOIN T_SEC_USERGROUP_L st01_L ON (t0.FPRIMARYGROUP = st01_L.FID AND st01_L.FLocaleId = 2052)  left join t_UserPermitPC t2 on t0.FUserID=t2.FUserID  WHERE t2.FRemark in('一般权限','管理员权限','保管员权限') or t0.FName in('Administrator')  and  (((t0.FCREATEORG IN (1) OR t0.FUSERID IN (SELECT DISTINCT fuserid FROM t_sec_userorg WHERE forgid IN (1))) AND (t0.FFORBIDSTATUS = 'A' AND t0.FUSERTYPE = '1')) ) OPTION ( MAXDOP 0)";
+        String sql = "select FUserIDERP as FUSERID,FUserName as 用户名,ISNull(FPASSWORD,'') as 密码,isnull(FCondition,'') as FPermit,FUserNameERP as ERP用户名,FPassWordERP as ERP用户密码 from t_UserPermitPC  where FTypeID=1  and FRemark in('一般权限','管理员权限','保管员权限')";
 
         try {
             rSet = statement.executeQuery(sql);
@@ -501,6 +505,9 @@ public class DownloadInfo extends HttpServlet {
                 bean.FUserID = rSet.getString("FUSERID");
                 bean.FName = rSet.getString("用户名");
                 bean.FPassWord = rSet.getString("密码");
+                bean.FPermit = rSet.getString("FPermit");
+                bean.FNameERP = rSet.getString("ERP用户名");
+                bean.FPassWordERP = rSet.getString("ERP用户密码");
                 container.add(bean);
             }
         } catch (SQLException e) {

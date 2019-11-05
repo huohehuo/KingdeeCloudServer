@@ -24,7 +24,7 @@ import java.util.ArrayList;
 /**
  * Servlet implementation class PurchaseInStoreUpload
  */
-@WebServlet("/doPackingUpload")
+@WebServlet("/doSplitingUpload")
 public class doSplitingUpload extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -59,7 +59,7 @@ public class doSplitingUpload extends HttpServlet {
 				DownloadReturnBean downloadReturnBean = new DownloadReturnBean();
 				PurchaseInStoreUploadBean pBean = gson.fromJson(parameter, PurchaseInStoreUploadBean.class);
 				for(int i =0;i<pBean.list.size();i++){
-					sta = conn.prepareStatement("exec proc_PDACountOff_Insert2 ?,?,?,?,?,?");
+					sta = conn.prepareStatement("exec proc_PDACountOff_Split2 ?,?,?,?,?,?");
 					String main = pBean.list.get(i).main;
 					sta.setString(1, main);
 					sta.setString(2, "");

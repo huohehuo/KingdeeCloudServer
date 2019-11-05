@@ -1,4 +1,4 @@
-package Server.P2;
+package Server.upload.P1;
 
 import Bean.CommonBean;
 import Bean.DownloadReturnBean;
@@ -24,14 +24,14 @@ import java.util.ArrayList;
 /**
  * Servlet implementation class PurchaseInStoreUpload
  */
-@WebServlet("/doSplitingP1Upload")
-public class doSplitingP1Upload extends HttpServlet {
+@WebServlet("/doReBoxP1Upload")
+public class doReBoxP1Upload extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public doSplitingP1Upload() {
+    public doReBoxP1Upload() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -59,7 +59,7 @@ public class doSplitingP1Upload extends HttpServlet {
 				DownloadReturnBean downloadReturnBean = new DownloadReturnBean();
 				PurchaseInStoreUploadBean pBean = gson.fromJson(parameter, PurchaseInStoreUploadBean.class);
 				for(int i =0;i<pBean.list.size();i++){
-					sta = conn.prepareStatement("exec proc_PDACountOff_Split1 ?,?,?,?,?,?");
+					sta = conn.prepareStatement("exec proc_PDAAssembleCatch_Insert1 ?,?,?,?,?,?");
 					String main = pBean.list.get(i).main;
 					sta.setString(1, main);
 					sta.setString(2, "");
@@ -75,6 +75,10 @@ public class doSplitingP1Upload extends HttpServlet {
 					if (rs != null) {
 						while (rs.next()) {
 							DownloadReturnBean.PrintDataBean cBean = downloadReturnBean.new PrintDataBean();
+							cBean. FFBaoNo					=rs.getString("分包号");
+							cBean.FBaoNum					=rs.getString("包数");
+							cBean.FWide					=rs.getString("宽度");
+							cBean.FStorage					=rs.getString("仓库");
 							cBean. FQtyAll					=rs.getString("总数量");
 							cBean. FVolAll					=rs.getString("总面积");
 							cBean. FBoxCode					=rs.getString("箱码");
@@ -85,22 +89,19 @@ public class doSplitingP1Upload extends HttpServlet {
 							cBean. FCarNo					=rs.getString("车号");
 							cBean. FUnit					=rs.getString("单位");
 							cBean. FModel					=rs.getString("规格");
+							cBean.FBatch					=rs.getString("批号");
 							cBean. FQty					=rs.getString("数量");
 							cBean. FVol					=rs.getString("面积");
 							cBean. FVolSplit					=rs.getString("面积");
-							cBean.FBatch					=rs.getString("批号");
 							cBean.FLev					=rs.getString("等级");
 							cBean.FBoxType					=rs.getString("箱码类型");
-							cBean.FBaoNum					=rs.getString("包数");
-							cBean.FWide					=rs.getString("宽度");
-							cBean.FStorage					=rs.getString("仓库");
 //							cBean.FEntryID					=rs.getString("FEntryID");
 							list.add(cBean);
 						}
 					}
 				}
 				downloadReturnBean.printDataBeans = list;
-				Lg.e("doSplitingP1Upload:",downloadReturnBean);
+				Lg.e("doReBoxP1Upload:",downloadReturnBean);
 				response.getWriter().write(CommonJson.getCommonJson(true,gson.toJson(downloadReturnBean)));
 			} catch (ClassNotFoundException | SQLException e) {
 				// TODO Auto-generated catch block

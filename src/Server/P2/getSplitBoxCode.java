@@ -22,14 +22,14 @@ import java.util.ArrayList;
 /**
  * 条码检测（出库）
  */
-@WebServlet("/getBoxCodeAndBatch")
-public class getBoxCodeAndBatch extends HttpServlet {
+@WebServlet("/getSplitBoxCode")
+public class getSplitBoxCode extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public getBoxCodeAndBatch() {
+    public getSplitBoxCode() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -53,18 +53,17 @@ public class getBoxCodeAndBatch extends HttpServlet {
 				Lg.e("getBoxCodeAndBatch",parameter);
 				CommonBean commonBean = new CommonBean();
 				conn = JDBCUtil.getConn(request);
-				sta = conn.prepareStatement("exec proc_PDAGetDataBatchNo2 ?");
+				sta = conn.prepareStatement("exec proc_PDAGetDataAssemble2 ?");
 
 				sta.setString(1, parameter);
 				rs = sta.executeQuery();
 				if (rs != null) {
 					while (rs.next()) {
 						commonBean.FStandby1					=rs.getString("箱码");
-						commonBean.FStandby2					=rs.getString("批号");
 					}
 				}
 
-				Lg.e("getBoxCodeAndBatch:",commonBean);
+				Lg.e("getSplitBoxCode:",commonBean);
 				response.getWriter().write(CommonJson.getCommonJson(true,gson.toJson(commonBean)));
 //				response.getWriter().write(CommonJson.getCommonJson(true, ""));
 			} catch (ClassNotFoundException | SQLException e) {

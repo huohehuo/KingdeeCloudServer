@@ -1,10 +1,10 @@
-package Server.print;
+package Server.P2;
 
+import Bean.CommonBean;
 import Bean.DownloadReturnBean;
 import Utils.CommonJson;
 import Utils.JDBCUtil;
 import Utils.Lg;
-import Utils.MathUtil;
 import com.google.gson.Gson;
 
 import javax.servlet.ServletException;
@@ -22,14 +22,14 @@ import java.util.ArrayList;
 /**
  * 条码检测（出库）
  */
-@WebServlet("/PrintData4P2")
-public class PrintData4P2 extends HttpServlet {
+@WebServlet("/getBoxCodeAndBatch")
+public class getBoxCodeAndBatch extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public PrintData4P2() {
+    public getBoxCodeAndBatch() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -50,28 +50,22 @@ public class PrintData4P2 extends HttpServlet {
 		ArrayList<DownloadReturnBean.PrintDataBean> list = new ArrayList<>();
 		if(parameter!=null&&!parameter.equals("")){
 			try {
-				Lg.e("PrintData",parameter);
-				DownloadReturnBean downloadReturnBean = new DownloadReturnBean();
+				Lg.e("getBoxCodeAndBatch",parameter);
+				CommonBean commonBean = new CommonBean();
 				conn = JDBCUtil.getConn(request);
-				sta = conn.prepareStatement("exec proc_PDABarCodeSign_Insert2 ?");
+				sta = conn.prepareStatement("exec proc_PDAGetDataBatchNo2 ?");
 
-					sta.setString(1, parameter);
-					rs = sta.executeQuery();
-					if (rs != null) {
-						while (rs.next()) {
-							DownloadReturnBean.PrintDataBean cBean = downloadReturnBean.new PrintDataBean();
-							cBean.FBarCode					=rs.getString("条码");
-							cBean.FBatch					=rs.getString("批号");
-							cBean.FAuxNum					=rs.getString("辅助数量");
-							cBean.FBaseNum					= MathUtil.cutZero(rs.getString("基本单位数量"));
-							cBean.FStoreNum					=MathUtil.cutZero(rs.getString("库存单位数量"));
-							list.add(cBean);
-						}
+				sta.setString(1, parameter);
+				rs = sta.executeQuery();
+				if (rs != null) {
+					while (rs.next()) {
+						commonBean.FStandby1					=rs.getString("箱码");
+						commonBean.FStandby2					=rs.getString("批号");
 					}
+				}
 
-				downloadReturnBean.printDataBeans = list;
-				Lg.e("PrintData:",list);
-				response.getWriter().write(CommonJson.getCommonJson(true,gson.toJson(downloadReturnBean)));
+				Lg.e("getBoxCodeAndBatch:",commonBean);
+				response.getWriter().write(CommonJson.getCommonJson(true,gson.toJson(commonBean)));
 //				response.getWriter().write(CommonJson.getCommonJson(true, ""));
 			} catch (ClassNotFoundException | SQLException e) {
 				e.printStackTrace();

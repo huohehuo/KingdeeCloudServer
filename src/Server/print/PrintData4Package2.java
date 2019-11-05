@@ -21,14 +21,14 @@ import java.util.ArrayList;
 /**
  * 条码检测（出库）
  */
-@WebServlet("/PrintData4Package")
-public class PrintData4Package extends HttpServlet {
+@WebServlet("/PrintData4Package2")
+public class PrintData4Package2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public PrintData4Package() {
+    public PrintData4Package2() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -52,13 +52,16 @@ public class PrintData4Package extends HttpServlet {
 				Lg.e("PrintData4Package",parameter);
 				DownloadReturnBean downloadReturnBean = new DownloadReturnBean();
 				conn = JDBCUtil.getConn(request);
-				sta = conn.prepareStatement("exec proc_PDACountOff_Insert1 ?");
+				sta = conn.prepareStatement("exec proc_PDACountOffLen_Insert1 ?");
 
 					sta.setString(1, parameter);
 					rs = sta.executeQuery();
 					if (rs != null) {
 						while (rs.next()) {
 							DownloadReturnBean.PrintDataBean cBean = downloadReturnBean.new PrintDataBean();
+							cBean. FWide					=rs.getString("宽度");
+							cBean. FBaoNum					=rs.getString("包数");
+							cBean. FStorage					=rs.getString("仓库");
 							cBean. FQtyAll					=rs.getString("总数量");
 							cBean. FVolAll					=rs.getString("总面积");
 							cBean. FBoxCode					=rs.getString("箱码");
@@ -69,11 +72,11 @@ public class PrintData4Package extends HttpServlet {
 							cBean. FCarNo					=rs.getString("车号");
 							cBean. FUnit					=rs.getString("单位");
 							cBean. FModel					=rs.getString("规格");
+							cBean.FBatch					=rs.getString("批号");
+							cBean.FLev					=rs.getString("等级");
 							cBean. FQty					=rs.getString("数量");
 							cBean. FVol					=rs.getString("面积");
 							cBean. FVolSplit					=rs.getString("面积");
-							cBean.FBatch					=rs.getString("批号");
-							cBean.FLev					=rs.getString("等级");
 
 							list.add(cBean);
 						}

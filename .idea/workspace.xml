@@ -10,266 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c314ea08-6d77-469a-9858-6948002aef46" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Bean/ImageBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ResInterface/BaseIO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ResInterface/StorageIO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ResInterface/基础资源接口" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/CodeCheck/CodeCheckForBoxOut4P1.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/CodeCheck/CodeCheckForBoxReBox4P1.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/CodeCheck/CodeCheckForOut4Box.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/CodeCheck/CodeOnlyDelete4All.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/CodeCheck/CodeOnlyDelete4Box.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/CodeCheck/P2/CodeCheckForDryingOut4P2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/CodeCheck/P2/CodeCheckForOut4P2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/CodeCheck/P2/CodeCheckForOutForDB4P2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/CodeCheck/P2/CodeOnlyDelete4Drying.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/CodeCheckInsert/CodeCheckInsertForDBOutBox.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/CodeCheckInsert/CodeCheckInsertForOutBox.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/OnlyCode/DeleteBoxCodeAll.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/OnlyCode/GetPGet4BoxUploadData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/OnlyCode/GetPGetData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/P2/CodeCheckInsertForOutDrying.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/P2/GetBoxPrintData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/P2/GetDryingGetUploadData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/P2/GetSplitBoxData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/P2/GetWortPrintData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/P2/PrintOutCheck4BoxCode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/P2/PrintOutCheck4BoxCode4P1List.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/P2/doPackingUpload.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/P2/doSplitingP1Upload.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/P2/doSplitingUpload.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/P2/getBoxCodeAndBatch.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/P2/getSplitBoxCode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/print/PrintData4FlInStore.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/print/PrintData4P1.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/print/PrintData4P2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/print/PrintData4PackagReAdd.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/print/PrintData4Package.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/print/PrintData4Package2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/print/PrintOutCheck4P2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/prop/RegisterUtils/UserLimitUtils/DesUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/prop/RegisterUtils/UserLimitUtils/GetUseLimit.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/upload/P1/BoxReAddUpload.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/upload/P1/CgOrder2WgrkBoxUpload.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/upload/P1/DB4P1BoxUpload.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/upload/P1/DBBoxUpload.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/upload/P1/P1PG2CprkUpload.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/upload/P1/PGet4BOxUpload.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/upload/P1/SaleOutBoxUpload.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/upload/P1/doReBoxP1Upload.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/upload/P2/DryingGetUpload.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/upload/P2/P2ProductionInStoreUpload.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Utils/ImageUpload.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Utils/ImageUtil.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/0000获取基本单位数量.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/000打印条码写入.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/00入库单据条码写入临时表.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/00入库单据条码验证.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/00批号补打条码写入.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/01出库单据条码写入临时表.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/01出库单据条码验证.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/02盘盈盘亏单据条码写入临时表.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/02盘盈盘亏单据条码验证.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/02调拨单据条码写入临时表.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/02调拨单据条码验证.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/0查看单据删除临时表.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/1产品入库单.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/1其他入库单.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/1其他出库单.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/1生产领料单.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/2发货通知单下推销售出库单.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/2销售出库单.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/2销售订单下推销售出库单.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/3退货通知单下推销售退货单.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/3销售出库单下推销售退货.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/3销售订单下推销售退货单.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/4采购订单下推外购入库单.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/5直接调拨单.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/5调拨申请单下推分布式调入单.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/5调拨申请单下推分布式调出单.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/6盘亏单.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/6盘盈单.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/8条码标记表.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/8条码标识表入库单.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/8条码标识表出库单.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/8盘盈盘亏单条码标记表.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/8调拨单条码标记表.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/9PDA单据.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/9批号流水表.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug/版本/100000/9权限表.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/OnlyCode/CodeCheckDelete.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/OnlyCode/CodeCheckForIn.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/OnlyCode/CodeCheckForOut.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/OnlyCode/CodeCheckForOutForDB.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/OnlyCode/CodeCheckForPY.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/OnlyCode/CodeCheckInsertForIn.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/OnlyCode/CodeCheckInsertForOut.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/OnlyCode/CodeCheckInsertForOutDB.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/OnlyCode/CodeCheckInsertForPY.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/upload/BackMsg2SaleBackUpload.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/upload/CgOrder2WgrkUpload.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/upload/DBUpload.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/upload/OtherInUpload.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/upload/OtherOutUpload.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/upload/PDUpload.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/upload/PGUpload.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/upload/PKUpload.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/upload/PYUpload.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/upload/PrISUpload.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/upload/SaleOutUpload.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/OnlyCode/CodeCheckDelete.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/OnlyCode/CodeCheckForIn.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/OnlyCode/CodeCheckForOut.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/OnlyCode/CodeCheckForOutForDB.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/OnlyCode/CodeCheckForPY.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/OnlyCode/CodeCheckInsertForIn.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/OnlyCode/CodeCheckInsertForOut.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/OnlyCode/CodeCheckInsertForOutDB.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/OnlyCode/CodeCheckInsertForPY.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/upload/BackMsg2SaleBackUpload.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/upload/CgOrder2WgrkUpload.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/upload/DBUpload.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/upload/OtherInUpload.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/upload/OtherOutUpload.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/upload/PDUpload.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/upload/PGUpload.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/upload/PKUpload.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/upload/PYUpload.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/upload/PrISUpload.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/upload/SaleOutUpload.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Debug/配置文件/DBSetFile.db" afterPath="$PROJECT_DIR$/Debug/配置文件/DBSetFile.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/CodeCheckBean.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/CodeCheckBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/CommonBean.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/CommonBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownLoadSubListBean.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownLoadSubListBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$BarCode.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$BarCode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$Client.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$Client.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$CodeCheckBackDataBean.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$CodeCheckBackDataBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$GetGoodsDepartment.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$GetGoodsDepartment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$InStorageType.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$InStorageType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$InstorageNum.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$InstorageNum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$Org.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$Org.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$PriceMethod.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$PriceMethod.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$PrintDataBean.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$PrintDataBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$RemarkData.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$RemarkData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$SaleMan.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$SaleMan.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$StoreMan.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$StoreMan.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$Unit.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$Unit.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$User.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$bibiezhong.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$bibiezhong.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$buyer.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$buyer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$department.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$department.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$employee.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$employee.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$payType.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$payType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$product.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$product.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$purchaseMethod.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$purchaseMethod.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$storage.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$storage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$suppliers.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$suppliers.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$wanglaikemu.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$wanglaikemu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$wavehouse.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$wavehouse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$yuandanType.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$yuandanType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/PrintHistory.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/PrintHistory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/PushDownDLBean$DLbean.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/PushDownDLBean$DLbean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/PushDownListRequestBean.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/PushDownListRequestBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/PushDownListReturnBean$PushDownListBean.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/PushDownListReturnBean$PushDownListBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/ClientSearch/ClientSearchLike.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/ClientSearch/ClientSearchLike.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/NumInStorage/GetInStoreNum.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/NumInStorage/GetInStoreNum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/PushDown/PushDownList.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/PushDown/PushDownList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/PushDown/PushDownloadList.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/PushDown/PushDownloadList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/SupplerSearch/SupplerSearchLike.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/SupplerSearch/SupplerSearchLike.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/print/PrintBeforeData.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/print/PrintBeforeData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/print/PrintOutCheck.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/print/PrintOutCheck.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/prop/DownloadInfo.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/prop/DownloadInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/prop/RegisterUtils/RegisterGetNum.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/prop/RegisterUtils/RegisterGetNum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/prop/RegisterUtils/ServiceVersion.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/prop/RegisterUtils/ServiceVersion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/CodeCheckBean.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/CodeCheckBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/CommonBean.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/CommonBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownLoadSubListBean.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownLoadSubListBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$BarCode.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$BarCode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$Client.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$Client.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$CodeCheckBackDataBean.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$CodeCheckBackDataBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$GetGoodsDepartment.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$GetGoodsDepartment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$InStorageType.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$InStorageType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$InstorageNum.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$InstorageNum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$Org.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$Org.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$PriceMethod.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$PriceMethod.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$PrintDataBean.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$PrintDataBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$RemarkData.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$RemarkData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$SaleMan.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$SaleMan.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$StoreMan.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$StoreMan.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$Unit.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$Unit.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$User.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$bibiezhong.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$bibiezhong.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$buyer.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$buyer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$department.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$department.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$employee.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$employee.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$payType.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$payType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$product.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$product.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$purchaseMethod.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$purchaseMethod.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$storage.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$storage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$suppliers.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$suppliers.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$wanglaikemu.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$wanglaikemu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$wavehouse.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$wavehouse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$yuandanType.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$yuandanType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/PrintHistory.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/PrintHistory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/PushDownDLBean$DLbean.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/PushDownDLBean$DLbean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/PushDownListRequestBean.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/PushDownListRequestBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/PushDownListReturnBean$PushDownListBean.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/PushDownListReturnBean$PushDownListBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/ClientSearch/ClientSearchLike.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Server/ClientSearch/ClientSearchLike.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/NumInStorage/GetInStoreNum.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Server/NumInStorage/GetInStoreNum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/PushDown/PushDownList.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Server/PushDown/PushDownList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/PushDown/PushDownloadList.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Server/PushDown/PushDownloadList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/SupplerSearch/SupplerSearchLike.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Server/SupplerSearch/SupplerSearchLike.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/print/PrintBeforeData.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Server/print/PrintBeforeData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/print/PrintOutCheck.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Server/print/PrintOutCheck.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/prop/DownloadInfo.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Server/prop/DownloadInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/prop/RegisterUtils/RegisterGetNum.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Server/prop/RegisterUtils/RegisterGetNum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/prop/RegisterUtils/ServiceVersion.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Server/prop/RegisterUtils/ServiceVersion.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/SearchIO/S2Product4P2.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Debug/版本/100000/73触发表删生产领料.sql" afterPath="$PROJECT_DIR$/Debug/版本/100000/73触发表删生产领料.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Debug/版本/100000/74触发表删销售出库.sql" afterPath="$PROJECT_DIR$/Debug/版本/100000/74触发表删销售出库.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Debug/版本/100000/77触发表删分布式调入单.sql" afterPath="$PROJECT_DIR$/Debug/版本/100000/77触发表删分布式调入单.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/registerMsg.jsp" afterPath="$PROJECT_DIR$/out/artifacts/Assist/registerMsg.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bean/CodeCheckBean.java" afterPath="$PROJECT_DIR$/src/Bean/CodeCheckBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bean/CommonBean.java" afterPath="$PROJECT_DIR$/src/Bean/CommonBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bean/DownLoadSubListBean.java" afterPath="$PROJECT_DIR$/src/Bean/DownLoadSubListBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bean/DownloadReturnBean.java" afterPath="$PROJECT_DIR$/src/Bean/DownloadReturnBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bean/PrintHistory.java" afterPath="$PROJECT_DIR$/src/Bean/PrintHistory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bean/PushDownDLBean.java" afterPath="$PROJECT_DIR$/src/Bean/PushDownDLBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bean/PushDownListRequestBean.java" afterPath="$PROJECT_DIR$/src/Bean/PushDownListRequestBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bean/PushDownListReturnBean.java" afterPath="$PROJECT_DIR$/src/Bean/PushDownListReturnBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/ClientSearch/ClientSearchLike.java" afterPath="$PROJECT_DIR$/src/Server/ClientSearch/ClientSearchLike.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/NumInStorage/GetInStoreNum.java" afterPath="$PROJECT_DIR$/src/Server/NumInStorage/GetInStoreNum.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/PushDown/PushDownList.java" afterPath="$PROJECT_DIR$/src/Server/PushDown/PushDownList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/PushDown/PushDownloadList.java" afterPath="$PROJECT_DIR$/src/Server/PushDown/PushDownloadList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/SupplerSearch/SupplerSearchLike.java" afterPath="$PROJECT_DIR$/src/Server/SupplerSearch/SupplerSearchLike.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/print/PrintBeforeData.java" afterPath="$PROJECT_DIR$/src/Server/print/PrintBeforeData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/print/PrintOutCheck.java" afterPath="$PROJECT_DIR$/src/Server/print/PrintOutCheck.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/prop/DownloadInfo.java" afterPath="$PROJECT_DIR$/src/Server/prop/DownloadInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/prop/RegisterUtils/RegisterGetNum.java" afterPath="$PROJECT_DIR$/src/Server/prop/RegisterUtils/RegisterGetNum.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/prop/RegisterUtils/ServiceVersion.java" afterPath="$PROJECT_DIR$/src/Server/prop/RegisterUtils/ServiceVersion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/registerMsg.jsp" afterPath="$PROJECT_DIR$/web/registerMsg.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Server/OnlyCode/CodeCheckDelete.java" afterPath="$PROJECT_DIR$/src/Server/CodeCheck/CodeCheckDelete.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Server/OnlyCode/CodeCheckForIn.java" afterPath="$PROJECT_DIR$/src/Server/CodeCheck/CodeCheckForIn.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Server/OnlyCode/CodeCheckForOut.java" afterPath="$PROJECT_DIR$/src/Server/CodeCheck/CodeCheckForOut.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Server/OnlyCode/CodeCheckForOutForDB.java" afterPath="$PROJECT_DIR$/src/Server/CodeCheck/CodeCheckForOutForDB.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Server/OnlyCode/CodeCheckForPY.java" afterPath="$PROJECT_DIR$/src/Server/CodeCheck/CodeCheckForPY.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Server/OnlyCode/CodeCheckInsertForIn.java" afterPath="$PROJECT_DIR$/src/Server/CodeCheckInsert/CodeCheckInsertForIn.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Server/OnlyCode/CodeCheckInsertForOut.java" afterPath="$PROJECT_DIR$/src/Server/CodeCheckInsert/CodeCheckInsertForOut.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Server/OnlyCode/CodeCheckInsertForOutDB.java" afterPath="$PROJECT_DIR$/src/Server/CodeCheckInsert/CodeCheckInsertForOutDB.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Server/OnlyCode/CodeCheckInsertForPY.java" afterPath="$PROJECT_DIR$/src/Server/CodeCheckInsert/CodeCheckInsertForPY.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Server/upload/BackMsg2SaleBackUpload.java" afterPath="$PROJECT_DIR$/src/Server/upload/P1/BackMsg2SaleBackUpload.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Server/upload/CgOrder2WgrkUpload.java" afterPath="$PROJECT_DIR$/src/Server/upload/P1/CgOrder2WgrkUpload.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Server/upload/DBUpload.java" afterPath="$PROJECT_DIR$/src/Server/upload/P2/DBUpload.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Server/upload/OtherInUpload.java" afterPath="$PROJECT_DIR$/src/Server/upload/P1/OtherInUpload.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Server/upload/OtherOutUpload.java" afterPath="$PROJECT_DIR$/src/Server/upload/P1/OtherOutUpload.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Server/upload/PDUpload.java" afterPath="$PROJECT_DIR$/src/Server/upload/P1/PDUpload.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Server/upload/PGUpload.java" afterPath="$PROJECT_DIR$/src/Server/upload/P2/PGUpload.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Server/upload/PKUpload.java" afterPath="$PROJECT_DIR$/src/Server/upload/P1/PKUpload.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Server/upload/PYUpload.java" afterPath="$PROJECT_DIR$/src/Server/upload/P1/PYUpload.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Server/upload/PrISUpload.java" afterPath="$PROJECT_DIR$/src/Server/upload/P2/PrISUpload.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Server/upload/SaleOutUpload.java" afterPath="$PROJECT_DIR$/src/Server/upload/P1/SaleOutUpload.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/web/WEB-INF/classes/" />
@@ -330,8 +72,8 @@
       <file leaf-file-name="PushDownloadList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Server/PushDown/PushDownloadList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1364">
-              <caret line="80" column="30" lean-forward="false" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
+            <state relative-caret-position="224">
+              <caret line="53" column="33" lean-forward="false" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="false" />
                 <element signature="e#28722#28744#0" expanded="false" />
@@ -358,6 +100,36 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ProductSearch.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Server/SearchIO/ProductSearch.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="28" column="46" lean-forward="true" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+              <folding>
+                <marker date="1552445108725" expanded="true" signature="1911:3337" ph="select top 5... T_BD_MATERIAL" />
+                <marker date="1552445108725" expanded="true" signature="3737:5163" ph="select top 5... T_BD_MATERIAL" />
+                <marker date="1552445108725" expanded="true" signature="5563:6989" ph="select top 5... T_BD_MATERIAL" />
+                <marker date="1552445108725" expanded="true" signature="8053:9478" ph="select top 5... T_BD_MATERIAL" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="S2Product4P2.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Server/SearchIO/S2Product4P2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="43" column="77" lean-forward="true" selection-start-line="43" selection-start-column="77" selection-end-line="43" selection-end-column="77" />
+              <folding>
+                <marker date="1573026546083" expanded="true" signature="1913:3339" ph="select top 5... T_BD_MATERIAL" />
+                <marker date="1573026546083" expanded="true" signature="3739:5165" ph="select top 5... T_BD_MATERIAL" />
+                <marker date="1573026546083" expanded="true" signature="5567:6993" ph="select top 5... T_BD_MATERIAL" />
+                <marker date="1573026546083" expanded="true" signature="8057:9482" ph="select top 5... T_BD_MATERIAL" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="BaseIO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ResInterface/BaseIO.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -373,7 +145,7 @@
       <file leaf-file-name="StorageIO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ResInterface/StorageIO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
+            <state relative-caret-position="462">
               <caret line="32" column="44" lean-forward="false" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="false" />
@@ -386,23 +158,12 @@
       <file leaf-file-name="DownloadInfo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Server/prop/DownloadInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
+            <state relative-caret-position="10252">
               <caret line="487" column="34" lean-forward="false" selection-start-line="487" selection-start-column="34" selection-end-line="487" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="false" />
                 <element signature="e#890#891#0" expanded="false" />
                 <element signature="e#913#914#0" expanded="false" />
-                <element signature="e#11650#11677#0" expanded="false" />
-                <element signature="e#13161#13189#0" expanded="false" />
-                <element signature="e#19168#19198#0" expanded="false" />
-                <element signature="e#20716#20741#0" expanded="false" />
-                <element signature="e#21867#21895#0" expanded="false" />
-                <element signature="e#28154#28179#0" expanded="false" />
-                <element signature="e#37856#37888#0" expanded="false" />
-                <element signature="e#39560#39592#0" expanded="false" />
-                <element signature="e#41307#41339#0" expanded="false" />
-                <element signature="e#42235#42270#0" expanded="false" />
-                <element signature="e#43450#43478#0" expanded="false" />
                 <marker date="1568018109546" expanded="true" signature="11703:11918" ph="SELECT t0.FU... t_BD_Customer" />
                 <marker date="1568018109546" expanded="true" signature="14371:15726" ph="select t0.FM... T_BD_MATERIAL" />
                 <marker date="1568018109546" expanded="true" signature="19224:19474" ph="SELECT t1.FS... t_BD_Supplier" />
@@ -426,37 +187,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="P2ProductionInStoreUpload.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="P2ProductionInStoreUpload.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Server/upload/P2/P2ProductionInStoreUpload.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="47" column="17" lean-forward="true" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PushDownOCUpload.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Server/upload/PushDownOCUpload.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CgOrder2WgrkUpload.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Server/upload/P1/CgOrder2WgrkUpload.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="21" column="14" lean-forward="false" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#749#750#0" expanded="false" />
-                <element signature="e#772#773#0" expanded="false" />
+                <element signature="e#793#794#0" expanded="false" />
+                <element signature="e#816#817#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -550,7 +289,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Server/upload/P1/DB4P1BoxUpload.java" />
         <option value="$PROJECT_DIR$/src/Server/upload/P2/P2ProductionInStoreUpload.java" />
         <option value="$PROJECT_DIR$/src/Server/upload/P1/P1PG2CprkUpload.java" />
         <option value="$PROJECT_DIR$/src/Server/upload/P1/SaleOutUpload.java" />
@@ -601,6 +339,7 @@
         <option value="$PROJECT_DIR$/src/Server/upload/P1/CgOrder2WgrkBoxUpload.java" />
         <option value="$PROJECT_DIR$/src/Server/print/PrintData4FlInStore.java" />
         <option value="$PROJECT_DIR$/src/Server/PushDown/PushDownloadList.java" />
+        <option value="$PROJECT_DIR$/src/Server/SearchIO/S2Product4P2.java" />
       </list>
     </option>
   </component>
@@ -688,9 +427,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -832,6 +568,32 @@
               <option name="myItemId" value="Server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SupplerSearch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KingdeeCloudServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KingdeeCloudServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SearchIO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -874,32 +636,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="prop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KingdeeCloudServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KingdeeCloudServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="prop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RegisterUtils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -964,8 +700,26 @@
               <option name="myItemId" value="Server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="NumInStorage" />
+              <option name="myItemId" value="KingdeeCloudServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KingdeeCloudServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="P2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -987,7 +741,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CodeCheckInsert" />
+              <option name="myItemId" value="NumInStorage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1044,17 +798,12 @@
               <option name="myItemId" value="out" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="artifacts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -1065,27 +814,27 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../KingdeePDA-NC-HD/HD-Server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../KingdeePDA-OnlyCode-GZ-WS/WS-OnlyCodeServer" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="SQL Server (Microsoft)" />
     <property name="SearchEverywhereHistoryKey" value="ProductSearchLike&#9;FILE&#9;file://E:/FZ-kingdee/KingdeeServer/Asist/src/Server/ProductSearch/ProductSearchLike.java" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\FZ-kingdee\KingdeeCloud\KingdeeCloudServer\out\artifacts\Assist" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="Server.print" />
-      <recent name="Server.upload.P1" />
-      <recent name="Server.upload" />
-      <recent name="Server.CodeCheck" />
-      <recent name="ResInterface" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\FZ-kingdee\KingdeeCloud\KingdeeCloudServer\src\Utils" />
       <recent name="E:\FZ-kingdee\KingdeeCloud\KingdeeCloudServer\src\Bean" />
       <recent name="E:\FZ-kingdee\KingdeeCloud\KingdeeCloudServer\src\Server\prop\RegisterUtils" />
       <recent name="E:\FZ-kingdee\KingdeeCloud\KingdeeCloudServer\out\artifacts\Assist\WEB-INF" />
+      <recent name="E:\FZ-kingdee\KingdeeCloud\KingdeeCloudServer\out\artifacts\Assist" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Server.SearchIO" />
+      <recent name="Server.print" />
+      <recent name="Server.upload.P1" />
+      <recent name="Server.upload" />
+      <recent name="Server.CodeCheck" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\FZ-kingdee\KingdeeCloud\KingdeeCloudServer\out\artifacts\Assist" />
     </key>
   </component>
@@ -2227,11 +1976,14 @@
       <workItem from="1571640731575" duration="1202000" />
       <workItem from="1571798315963" duration="316000" />
       <workItem from="1572235511322" duration="2468000" />
+      <workItem from="1573007716651" duration="206000" />
+      <workItem from="1573025227426" duration="171000" />
+      <workItem from="1573025405122" duration="2456000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2325917000" />
+    <option name="totallyTimeSpent" value="2328750000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2247,35 +1999,35 @@
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46203905" sideWeight="0.5133262" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38650963" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4902386" sideWeight="0.48667377" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34273317" sideWeight="0.49573562" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22707888" sideWeight="0.7120419" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1380597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32804233" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28997868" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.04904051" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39828694" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275488" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4902386" sideWeight="0.48667377" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34273317" sideWeight="0.49573562" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23454158" sideWeight="0.7120419" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32804233" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2707889" sideWeight="0.28795812" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275488" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="2081" y="100" width="1736" height="866" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.4978678" order="11" side_tool="false" content_ui="tabs" />
@@ -2333,20 +2085,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Server/OnlyCode/DetailTableDeleteAll.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/P2/GetSplitBoxData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="87" column="30" lean-forward="false" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Server/print/PrintOutCheck4P2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -2683,10 +2421,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ResInterface/BaseIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="23" column="47" lean-forward="false" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ResInterface/基础资源接口">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ResInterface/StorageIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="32" column="44" lean-forward="false" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <marker date="1567588563527" expanded="true" signature="1358:1616" ph="SELECT t0.FU... t_BD_Stock" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/prop/DownloadInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10252">
+          <caret line="487" column="34" lean-forward="false" selection-start-line="487" selection-start-column="34" selection-end-line="487" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#890#891#0" expanded="false" />
+            <element signature="e#913#914#0" expanded="false" />
+            <marker date="1568018109546" expanded="true" signature="11703:11918" ph="SELECT t0.FU... t_BD_Customer" />
+            <marker date="1568018109546" expanded="true" signature="14371:15726" ph="select t0.FM... T_BD_MATERIAL" />
+            <marker date="1568018109546" expanded="true" signature="19224:19474" ph="SELECT t1.FS... t_BD_Supplier" />
+            <marker date="1568018109546" expanded="true" signature="20767:20974" ph="SELECT t0.FU... T_BD_UNIT" />
+            <marker date="1568018109546" expanded="true" signature="22710:22968" ph="SELECT t0.FU... t_BD_Stock" />
+            <marker date="1568018109546" expanded="true" signature="24352:24561" ph="SELECT t0.FU... T_BAS_FLEXVALUES" />
+            <marker date="1568018109546" expanded="true" signature="25798:26028" ph="SELECT t0.FU... T_HR_EMPINFO" />
+            <marker date="1568018109546" expanded="true" signature="26971:27202" ph="SELECT t0.FU... T_BD_DEPARTMENT" />
+            <marker date="1568018109546" expanded="true" signature="29322:29551" ph="select FUser... t_UserPermitPC" />
+            <marker date="1568018109546" expanded="true" signature="30467:30944" ph="select t0.FM... T_STK_INVENTORY" />
+            <marker date="1568018109546" expanded="true" signature="31958:32201" ph="SELECT t0.FB... V_BD_BUYER" />
+            <marker date="1568018109546" expanded="true" signature="33101:33366" ph="SELECT t0.FB... V_BD_WAREHOUSEWORKERS" />
+            <marker date="1568018109546" expanded="true" signature="34269:34518" ph="SELECT t0.FB... V_BD_SALESMAN" />
+            <marker date="1568018109546" expanded="true" signature="35348:35663" ph="SELECT t0_L.... T_ORG_Organizations" />
+            <marker date="1568018109546" expanded="true" signature="36435:37057" ph="select FNUMB... FNUMBER" />
+            <marker date="1568018109546" expanded="true" signature="36487:36627" ph="select t1.FN... t_BD_Supplier" />
+            <marker date="1568018109546" expanded="true" signature="36659:36792" ph="select t1.FN... t_BD_Customer" />
+            <marker date="1568018109546" expanded="true" signature="36824:37031" ph="select t0.FN... T_ORG_Organizations" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/upload/P2/P2ProductionInStoreUpload.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#793#794#0" expanded="false" />
+            <element signature="e#816#817#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Server/PushDown/PushDownloadList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1364">
-          <caret line="80" column="30" lean-forward="false" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
+        <state relative-caret-position="224">
+          <caret line="53" column="33" lean-forward="false" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="false" />
             <element signature="e#28722#28744#0" expanded="false" />
@@ -2712,80 +2520,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ResInterface/BaseIO.java">
+    <entry file="file://$PROJECT_DIR$/src/Server/SearchIO/ProductSearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="23" column="47" lean-forward="false" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+        <state relative-caret-position="242">
+          <caret line="28" column="46" lean-forward="true" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <marker date="1552445108725" expanded="true" signature="1911:3337" ph="select top 5... T_BD_MATERIAL" />
+            <marker date="1552445108725" expanded="true" signature="3737:5163" ph="select top 5... T_BD_MATERIAL" />
+            <marker date="1552445108725" expanded="true" signature="5563:6989" ph="select top 5... T_BD_MATERIAL" />
+            <marker date="1552445108725" expanded="true" signature="8053:9478" ph="select top 5... T_BD_MATERIAL" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ResInterface/基础资源接口">
+    <entry file="file://$PROJECT_DIR$/src/Server/SearchIO/S2Product4P2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ResInterface/StorageIO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="32" column="44" lean-forward="false" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
+        <state relative-caret-position="44">
+          <caret line="43" column="77" lean-forward="true" selection-start-line="43" selection-start-column="77" selection-end-line="43" selection-end-column="77" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <marker date="1567588563527" expanded="true" signature="1358:1616" ph="SELECT t0.FU... t_BD_Stock" />
+            <marker date="1573026546083" expanded="true" signature="1913:3339" ph="select top 5... T_BD_MATERIAL" />
+            <marker date="1573026546083" expanded="true" signature="3739:5165" ph="select top 5... T_BD_MATERIAL" />
+            <marker date="1573026546083" expanded="true" signature="5567:6993" ph="select top 5... T_BD_MATERIAL" />
+            <marker date="1573026546083" expanded="true" signature="8057:9482" ph="select top 5... T_BD_MATERIAL" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/prop/DownloadInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="487" column="34" lean-forward="false" selection-start-line="487" selection-start-column="34" selection-end-line="487" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#890#891#0" expanded="false" />
-            <element signature="e#913#914#0" expanded="false" />
-            <element signature="e#11650#11677#0" expanded="false" />
-            <element signature="e#13161#13189#0" expanded="false" />
-            <element signature="e#19168#19198#0" expanded="false" />
-            <element signature="e#20716#20741#0" expanded="false" />
-            <element signature="e#21867#21895#0" expanded="false" />
-            <element signature="e#28154#28179#0" expanded="false" />
-            <element signature="e#37856#37888#0" expanded="false" />
-            <element signature="e#39560#39592#0" expanded="false" />
-            <element signature="e#41307#41339#0" expanded="false" />
-            <element signature="e#42235#42270#0" expanded="false" />
-            <element signature="e#43450#43478#0" expanded="false" />
-            <marker date="1568018109546" expanded="true" signature="11703:11918" ph="SELECT t0.FU... t_BD_Customer" />
-            <marker date="1568018109546" expanded="true" signature="14371:15726" ph="select t0.FM... T_BD_MATERIAL" />
-            <marker date="1568018109546" expanded="true" signature="19224:19474" ph="SELECT t1.FS... t_BD_Supplier" />
-            <marker date="1568018109546" expanded="true" signature="20767:20974" ph="SELECT t0.FU... T_BD_UNIT" />
-            <marker date="1568018109546" expanded="true" signature="22710:22968" ph="SELECT t0.FU... t_BD_Stock" />
-            <marker date="1568018109546" expanded="true" signature="24352:24561" ph="SELECT t0.FU... T_BAS_FLEXVALUES" />
-            <marker date="1568018109546" expanded="true" signature="25798:26028" ph="SELECT t0.FU... T_HR_EMPINFO" />
-            <marker date="1568018109546" expanded="true" signature="26971:27202" ph="SELECT t0.FU... T_BD_DEPARTMENT" />
-            <marker date="1568018109546" expanded="true" signature="29322:29551" ph="select FUser... t_UserPermitPC" />
-            <marker date="1568018109546" expanded="true" signature="30467:30944" ph="select t0.FM... T_STK_INVENTORY" />
-            <marker date="1568018109546" expanded="true" signature="31958:32201" ph="SELECT t0.FB... V_BD_BUYER" />
-            <marker date="1568018109546" expanded="true" signature="33101:33366" ph="SELECT t0.FB... V_BD_WAREHOUSEWORKERS" />
-            <marker date="1568018109546" expanded="true" signature="34269:34518" ph="SELECT t0.FB... V_BD_SALESMAN" />
-            <marker date="1568018109546" expanded="true" signature="35348:35663" ph="SELECT t0_L.... T_ORG_Organizations" />
-            <marker date="1568018109546" expanded="true" signature="36435:37057" ph="select FNUMB... FNUMBER" />
-            <marker date="1568018109546" expanded="true" signature="36487:36627" ph="select t1.FN... t_BD_Supplier" />
-            <marker date="1568018109546" expanded="true" signature="36659:36792" ph="select t1.FN... t_BD_Customer" />
-            <marker date="1568018109546" expanded="true" signature="36824:37031" ph="select t0.FN... T_ORG_Organizations" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/upload/P2/P2ProductionInStoreUpload.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="47" column="17" lean-forward="true" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>

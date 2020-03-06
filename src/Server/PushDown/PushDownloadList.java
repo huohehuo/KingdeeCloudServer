@@ -6,6 +6,7 @@ import Bean.PushDownRKBean;
 import Utils.CommonJson;
 import Utils.JDBCUtil;
 import Utils.Lg;
+import Utils.MathUtil;
 import com.google.gson.Gson;
 
 import javax.servlet.ServletException;
@@ -44,7 +45,13 @@ public class PushDownloadList extends HttpServlet {
 //                SQL =   "select '' as 货主编码,t3.FUNITID as 单位ID,st31.FNUMBER as 物料编码,st33.FName as 物料名称,st33.FSPECIFICATION as 规格型号,t0.FBillNo as 订单编号,convert(float,(t3.FSALQTY-t3_R.FJOINQTY)) as 订单数量,0 as 已验数量,t3_F.FTAXPRICE as 含税单价,t3.FMATERIALID as 物料ID,t3.FENTRYID as 明细唯一值,t3.FID as 明细内码,t3.FSEQ as 明细序号 from t_PUR_POOrder t0   LEFT OUTER JOIN t_PUR_POOrderEntry t3 ON t0.FID = t3.FID   LEFT OUTER JOIN t_PUR_POOrderEntry_D t3_D ON t3.FENTRYID = t3_D.FENTRYID  LEFT OUTER JOIN t_PUR_POOrderEntry_F  t3_F ON   t3.FENTRYID = t3_F.FENTRYID LEFT OUTER JOIN T_BD_MATERIAL st31 ON t3.FMATERIALID = st31.FMATERIALID left join T_BD_MATERIAL_L st33 ON t3.FMATERIALID = st33.FMATERIALID LEFT OUTER JOIN t_PUR_POOrderEntry_R t3_R ON t3.FENTRYID = t3_R.FENTRYID   where t0.FOBJECTTYPEID = 'PUR_PurchaseOrder' and t0.FDOCUMENTSTATUS = 'C' AND t0.FCANCELSTATUS = 'A' AND t0.FCLOSESTATUS = 'A' AND t3.FMRPFREEZESTATUS = 'A' AND t3.FMRPTERMINATESTATUS = 'A' AND t3.FMRPCLOSESTATUS = 'A' AND t3.FCHANGEFLAG <> 'I'  AND (t3_D.FBASEDELIVERYMAXQTY > t3_R.FBASESTOCKINQTY) AND (t3_D.FBASEDELIVERYMAXQTY > t3_R.FBASEJOINQTY)  and t0.FBillNo= '" + dBean.interID+"'";
                 SQL =   "select t3_F.FTAXRATE as 税率,t3_D.FREQUIREORGID as 需求组织ID,t_PRICEUNITID.FNumber as 计价单位编码,'' as 货主编码,t3.FUNITID as 单位ID,st31.FNUMBER as 物料编码,st33.FName as 物料名称,st33.FSPECIFICATION as 规格型号,t0.FBillNo as 订单编号,convert(float,(t3.FSALQTY-t3_R.FJOINQTY)) as 订单数量,0 as 已验数量,t3_F.FTAXPRICE as 含税单价,t3.FMATERIALID as 物料ID,t3.FENTRYID as 明细唯一值,t3.FID as 明细内码,t3.FSEQ as 明细序号 from t_PUR_POOrder t0   LEFT OUTER JOIN t_PUR_POOrderEntry t3 ON t0.FID = t3.FID   LEFT OUTER JOIN t_PUR_POOrderEntry_D t3_D ON t3.FENTRYID = t3_D.FENTRYID  LEFT OUTER JOIN t_PUR_POOrderEntry_F  t3_F ON   t3.FENTRYID = t3_F.FENTRYID LEFT OUTER JOIN T_BD_MATERIAL st31 ON t3.FMATERIALID = st31.FMATERIALID left join T_BD_MATERIAL_L st33 ON t3.FMATERIALID = st33.FMATERIALID LEFT OUTER JOIN t_PUR_POOrderEntry_R t3_R ON t3.FENTRYID = t3_R.FENTRYID left join T_BD_UNIT t_PRICEUNITID on t_PRICEUNITID.FUnitID =t3_F.FPRICEUNITID   where t0.FOBJECTTYPEID = 'PUR_PurchaseOrder' and t0.FDOCUMENTSTATUS = 'C' AND t0.FCANCELSTATUS = 'A' AND t0.FCLOSESTATUS = 'A' AND t3.FMRPFREEZESTATUS = 'A' AND t3.FMRPTERMINATESTATUS = 'A' AND t3.FMRPCLOSESTATUS = 'A' AND t3.FCHANGEFLAG <> 'I'  AND (t3_D.FBASEDELIVERYMAXQTY > t3_R.FBASESTOCKINQTY) AND (t3_D.FBASEDELIVERYMAXQTY > t3_R.FBASEJOINQTY)  and t0.FBillNo=  '" + dBean.interID+"'";
                         break;
+            case 35://采购订单下推外购入库单
+//                SQL =   "select '' as 货主编码,t3.FUNITID as 单位ID,st31.FNUMBER as 物料编码,st33.FName as 物料名称,st33.FSPECIFICATION as 规格型号,t0.FBillNo as 订单编号,convert(float,(t3.FSALQTY-t3_R.FJOINQTY)) as 订单数量,0 as 已验数量,t3_F.FTAXPRICE as 含税单价,t3.FMATERIALID as 物料ID,t3.FENTRYID as 明细唯一值,t3.FID as 明细内码,t3.FSEQ as 明细序号 from t_PUR_POOrder t0   LEFT OUTER JOIN t_PUR_POOrderEntry t3 ON t0.FID = t3.FID   LEFT OUTER JOIN t_PUR_POOrderEntry_D t3_D ON t3.FENTRYID = t3_D.FENTRYID  LEFT OUTER JOIN t_PUR_POOrderEntry_F  t3_F ON   t3.FENTRYID = t3_F.FENTRYID LEFT OUTER JOIN T_BD_MATERIAL st31 ON t3.FMATERIALID = st31.FMATERIALID left join T_BD_MATERIAL_L st33 ON t3.FMATERIALID = st33.FMATERIALID LEFT OUTER JOIN t_PUR_POOrderEntry_R t3_R ON t3.FENTRYID = t3_R.FENTRYID   where t0.FOBJECTTYPEID = 'PUR_PurchaseOrder' and t0.FDOCUMENTSTATUS = 'C' AND t0.FCANCELSTATUS = 'A' AND t0.FCLOSESTATUS = 'A' AND t3.FMRPFREEZESTATUS = 'A' AND t3.FMRPTERMINATESTATUS = 'A' AND t3.FMRPCLOSESTATUS = 'A' AND t3.FCHANGEFLAG <> 'I'  AND (t3_D.FBASEDELIVERYMAXQTY > t3_R.FBASESTOCKINQTY) AND (t3_D.FBASEDELIVERYMAXQTY > t3_R.FBASEJOINQTY)  and t0.FBillNo= '" + dBean.interID+"'";
+                SQL =   "select t3.FLOT_TEXT as 批号,t3_F.FTAXRATE as 税率,t3_D.FREQUIREORGID as 需求组织ID,t_PRICEUNITID.FNumber as 计价单位编码,'' as 货主编码,t3.FUNITID as 单位ID,st31.FNUMBER as 物料编码,st33.FName as 物料名称,st33.FSPECIFICATION as 规格型号,t0.FBillNo as 订单编号,convert(float,(t3.FSALQTY-t3_R.FJOINQTY)) as 订单数量,0 as 已验数量,t3_F.FTAXPRICE as 含税单价,t3.FMATERIALID as 物料ID,t3.FENTRYID as 明细唯一值,t3.FID as 明细内码,t3.FSEQ as 明细序号 from t_PUR_POOrder t0   LEFT OUTER JOIN t_PUR_POOrderEntry t3 ON t0.FID = t3.FID   LEFT OUTER JOIN t_PUR_POOrderEntry_D t3_D ON t3.FENTRYID = t3_D.FENTRYID  LEFT OUTER JOIN t_PUR_POOrderEntry_F  t3_F ON   t3.FENTRYID = t3_F.FENTRYID LEFT OUTER JOIN T_BD_MATERIAL st31 ON t3.FMATERIALID = st31.FMATERIALID left join T_BD_MATERIAL_L st33 ON t3.FMATERIALID = st33.FMATERIALID LEFT OUTER JOIN t_PUR_POOrderEntry_R t3_R ON t3.FENTRYID = t3_R.FENTRYID left join T_BD_UNIT t_PRICEUNITID on t_PRICEUNITID.FUnitID =t3_F.FPRICEUNITID   where t0.FOBJECTTYPEID = 'PUR_PurchaseOrder' and t0.FDOCUMENTSTATUS = 'C' AND t0.FCANCELSTATUS = 'A' AND t0.FCLOSESTATUS = 'A' AND t3.FMRPFREEZESTATUS = 'A' AND t3.FMRPTERMINATESTATUS = 'A' AND t3.FMRPCLOSESTATUS = 'A' AND t3.FCHANGEFLAG <> 'I'  AND (t3_D.FBASEDELIVERYMAXQTY > t3_R.FBASESTOCKINQTY) AND (t3_D.FBASEDELIVERYMAXQTY > t3_R.FBASEJOINQTY)  and t0.FBillNo=  '" + dBean.interID+"'";
+                break;
+
             case 2://销售订单下推销售出库单
+            case 34://销售订单下推销售出库单
             case 31://销售订单下推销售出库单
 //                SQL =   "select  t3.FUNITID as 单位ID, st31.FNUMBER as 物料编码,st33.FName as 物料名称,st33.FSPECIFICATION as 规格型号,t0.FBillNo as 订单编号,convert(float,(t2_R.FCANOUTQTY + (t3_D.FDELIVERYMAXQTY - t3.FQTY))) as 订单数量,0 as 已验数量,t3_F.FTAXPRICE as 含税单价,t3.FMATERIALID as 物料ID,t3.FENTRYID as 明细唯一值,t3.FID as 明细内码,t3.FSEQ as 明细序号 from T_SAL_ORDER t0   LEFT OUTER JOIN T_SAL_ORDEREntry t3 ON t0.FID = t3.FID   LEFT OUTER JOIN T_SAL_ORDEREntry_D t3_D ON t3.FENTRYID = t3_D.FENTRYID  LEFT OUTER JOIN T_SAL_ORDEREntry_F  t3_F ON   t3.FENTRYID = t3_F.FENTRYID  LEFT OUTER JOIN T_SAL_ORDERENTRY_R t2_R ON t3.FENTRYID = t2_R.FENTRYID LEFT OUTER JOIN T_BD_MATERIAL st31 ON t3.FMATERIALID = st31.FMATERIALID left join T_BD_MATERIAL_L st33 ON t3.FMATERIALID = st33.FMATERIALID LEFT OUTER JOIN T_SAL_ORDEREntry_R t3_R ON t3.FENTRYID = t3_R.FENTRYID where t0.FOBJECTTYPEID = 'SAL_SaleOrder' and t0.FDOCUMENTSTATUS = 'C' AND t0.FCANCELSTATUS = 'A' AND t0.FCLOSESTATUS = 'A' AND t3.FMRPFREEZESTATUS = 'A' AND t3.FMRPTERMINATESTATUS = 'A' AND t3.FMRPCLOSESTATUS = 'A' AND t3.FCHANGEFLAG <> 'I'  AND ((t2_R.FBASECANOUTQTY + (t3_D.FBASEDELIVERYMAXQTY - t3.FBASEUNITQTY)) > 0 OR (t2_R.FBASECANOUTQTY < 0))  and t0.FBillNo='" + dBean.interID+"'";
 //                SQL =   "select  t1008.FNumber as 货主编码,t3.FUNITID as 单位ID, st31.FNUMBER as 物料编码,st33.FName as 物料名称,st33.FSPECIFICATION as 规格型号,t0.FBillNo as 订单编号,convert(float,(t2_R.FCANOUTQTY + (t3_D.FDELIVERYMAXQTY - t3.FQTY))) as 订单数量,0 as 已验数量,t3_F.FTAXPRICE as 含税单价,t3.FMATERIALID as 物料ID,t3.FENTRYID as 明细唯一值,t3.FID as 明细内码,t3.FSEQ as 明细序号 from T_SAL_ORDER t0   LEFT OUTER JOIN T_SAL_ORDEREntry t3 ON t0.FID = t3.FID   LEFT OUTER JOIN T_SAL_ORDEREntry_D t3_D ON t3.FENTRYID = t3_D.FENTRYID  LEFT OUTER JOIN T_SAL_ORDEREntry_F  t3_F ON   t3.FENTRYID = t3_F.FENTRYID  LEFT OUTER JOIN T_SAL_ORDERENTRY_R t2_R ON t3.FENTRYID = t2_R.FENTRYID LEFT OUTER JOIN T_BD_MATERIAL st31 ON t3.FMATERIALID = st31.FMATERIALID left join T_BD_MATERIAL_L st33 ON t3.FMATERIALID = st33.FMATERIALID LEFT OUTER JOIN T_SAL_ORDEREntry_R t3_R ON t3.FENTRYID = t3_R.FENTRYID left join T_ORG_Organizations t1008 on t1008.FORGID =t3.FOWNERID where t0.FOBJECTTYPEID = 'SAL_SaleOrder' and t0.FDOCUMENTSTATUS = 'C' AND t0.FCANCELSTATUS = 'A' AND t0.FCLOSESTATUS = 'A' AND t3.FMRPFREEZESTATUS = 'A' AND t3.FMRPTERMINATESTATUS = 'A' AND t3.FMRPCLOSESTATUS = 'A' AND t3.FCHANGEFLAG <> 'I'  AND ((t2_R.FBASECANOUTQTY + (t3_D.FBASEDELIVERYMAXQTY - t3.FBASEUNITQTY)) > 0 OR (t2_R.FBASECANOUTQTY < 0))  and t0.FBillNo='" + dBean.interID+"'";
@@ -87,6 +94,10 @@ public class PushDownloadList extends HttpServlet {
                 break;
             case 24://出库申请单下推其他出库单
                 SQL =   "select  t3.FUNITID 单位ID, st31.FNUMBER as 物料编码,st33.FName as 物料名称,st33.FSPECIFICATION as 规格型号,t0.FBillNo as 订单编号, convert(float,t3.FQTY+ ROUND( (t3_E.FRETURNBASEQTY-t3_E.FNORMALJOINBASEQTY  )/isnull(t_R1.FCONVERTNUMERATOR,1)*isnull(t_R1.FCONVERTDENOMINATOR,1)/isnull(t_R3.FCONVERTDENOMINATOR,1)*isnull(t_R3.FCONVERTNUMERATOR,1),t100.FPRECISION)) as 订单数量,0 as 已验数量,0 as 含税单价,t3.FMATERIALID as 物料ID,t3.FENTRYID as 明细唯一值,t3.FID as 明细内码,t3.FSEQ as 明细序号 from T_STK_OUTSTOCKAPPLY t0   LEFT OUTER JOIN T_STK_OUTSTOCKAPPLYENTRY t3 ON t0.FID = t3.FID   LEFT OUTER JOIN T_STK_OUTSTOCKAPPLYENTRY_E t3_E ON  t3.FENTRYID = t3_E.FENTRYID  LEFT OUTER JOIN T_BD_MATERIAL st31 ON t3.FMATERIALID = st31.FMATERIALID left join T_BD_MATERIAL_L st33 ON t3.FMATERIALID = st33.FMATERIALID left join t_BD_MaterialBase t2M on t3.FMATERIALID=t2M.fmaterialid left join T_BD_UNIT_L t6 on t6.FUnitID = t2M.FBASEUNITID left join  T_BD_UNITCONVERTRATE t_R1 on (t_R1.FMASTERID=st31.FMASTERID and t_R1.FCURRENTUNITID = t3.FUnitID)  left join  T_BD_UNITCONVERTRATE t_R3 on (t_R3.FMASTERID=st31.FMASTERID and t_R3.FCURRENTUNITID = t2M.FBASEUNITID) left join T_BD_UNIT t100 on t2M.FBASEUNITID=t100.FUNITID where t0.FOBJECTTYPEID = 'STK_OutStockApply' AND t0.FDOCUMENTSTATUS = 'C' AND t0.FCLOSESTATUS = 'A' AND t3.FBUSINESSEND = 'A' AND t3.FBUSINESSCLOSED = 'A' AND t3.FBASEQTY - t3_E.FNORMALJOINBASEQTY + t3_E.FRETURNBASEQTY > 0 and t0.FBillNo= '" + dBean.interID+"'";
+                break;
+            case 33://简单生产入库
+//                SQL =   "select '' as 货主编码,'' as 仓库编码,t3.FLOT_TEXT as 批号,st019.FNumber as 辅助标识,st017.FNumber as 实际规格,t3.F_FFF_TEXT1 as 等级,CONVERT (DECIMAL(28,0),t3.F_FFF_Decimal) as 原木长,CONVERT (DECIMAL(28,0),t3.F_FFF_Decimal1) as 原木直径,t3.F_FFF_INTEGER2 as 板长,t3.F_FFF_INTEGER3 as 板宽,t3.F_FFF_INTEGER4 as 板厚, t3.FUNITID 单位ID, st31.FNUMBER as 物料编码,st33.FName as 物料名称,st33.FSPECIFICATION as 规格型号,t0.FBillNo as 订单编号, convert(float,t3.FACTUALQTY ) as 订单数量,0 as 已验数量,0 as 含税单价,t3.FMATERIALID as 物料ID,t3.FENTRYID as 明细唯一值,t3.FID as 明细内码,t3.FSEQ as 明细序号 from T_SP_PICKMTRL t0   LEFT OUTER JOIN T_SP_PICKMTRLData t3 ON t0.FID = t3.FID    LEFT OUTER JOIN T_BD_MATERIAL st31 ON t3.FMATERIALID = st31.FMATERIALID left join T_BD_MATERIAL_L st33 ON t3.FMATERIALID = st33.FMATERIALID LEFT OUTER JOIN T_BD_FLEXSITEMDETAILV st011 ON t3.FAUXPROPID = st011.FID LEFT OUTER JOIN T_BAS_ASSISTANTDATAENTRY st017 ON st011.FF100001 = st017.FEntryId LEFT OUTER JOIN T_BD_FLEXSITEMDETAILV st018 ON t3.FAUXPROPID = st018.FID LEFT OUTER JOIN T_BAS_ASSISTANTDATAENTRY st019 ON st018.FF100002 = st019.FEntryId  where  t0.FFORMID = 'SP_PickMtrl'  and t0.FID = '" + dBean.interID+"'";
+                SQL =   "select t0.FBillNo as 订单编号,t3.FACTUALQTY as 订单数量,st33.FSPECIFICATION as 规格型号,st33.FName as 物料名称,st31.FNumber as 物料编码,st019.FNumber as 辅助标识,st017.FNumber as 实际规格,t3.FLOT_TEXT as 批号,t3.FMATERIALID  as 物料ID,t3.FUnitID as 单位ID,t3.FENTRYID as 明细唯一值,t3.FID as 明细内码,t3.FSEQ as 明细序号 from T_SP_PICKMTRL t0   LEFT OUTER JOIN T_SP_PICKMTRLData t3 ON t0.FID = t3.FID    LEFT OUTER JOIN T_BD_MATERIAL st31 ON t3.FMATERIALID = st31.FMATERIALID left join T_BD_MATERIAL_L st33 ON t3.FMATERIALID = st33.FMATERIALID LEFT OUTER JOIN T_BD_FLEXSITEMDETAILV st011 ON t3.FAUXPROPID = st011.FID LEFT OUTER JOIN T_BAS_ASSISTANTDATAENTRY st017 ON st011.FF100001 = st017.FEntryId LEFT OUTER JOIN T_BD_FLEXSITEMDETAILV st018 ON t3.FAUXPROPID = st018.FID LEFT OUTER JOIN T_BAS_ASSISTANTDATAENTRY st019 ON st018.FF100002 = st019.FEntryId  where  t0.FFORMID = 'SP_PickMtrl' and t0.FID = '" + dBean.interID+"'";
                 break;
             case 25://简单生产入库
             case 27://简单生产入库
@@ -199,66 +210,86 @@ public class PushDownloadList extends HttpServlet {
 //            PushDownRKBean pushDownRKBean = new PushDownRKBean();
             while (rs.next()) {
                     PushDownDLBean.DLbean dLbean = pushDownDLBean.new DLbean();
-                    dLbean.FUnitID = rs.getString("单位ID");
-                    dLbean.FNumber = rs.getString("物料编码");
-                    dLbean.FName = rs.getString("物料名称");
-                    dLbean.FModel = rs.getString("规格型号");
-                    dLbean.FBillNo = rs.getString("订单编号");
-                    dLbean.FQty = rs.getString("订单数量");
-                    dLbean.FQtying = rs.getString("已验数量");
-                    dLbean.FTaxPrice = rs.getString("含税单价");
-                    dLbean.FMaterialID = rs.getString("物料ID");
-                    dLbean.FEntryID = rs.getString("明细唯一值");
-                    dLbean.FID = rs.getString("明细内码");
-                    dLbean.FSEQ = rs.getString("明细序号");
-                    if (dBean.tag== 1 ||dBean.tag ==32){
-                        dLbean.FPriceUnitID = rs.getString("计价单位编码");
-                        dLbean.FTaxRate = rs.getString("税率");
-                        dLbean.FNeedOrgID = rs.getString("需求组织ID");
-                    }
-                    if (dBean.tag==22 ||dBean.tag==23){
-                        dLbean.FStorageOutID = rs.getString("调出仓库ID");
-                        dLbean.FStorageInID = rs.getString("调入仓库ID");
-                        dLbean.FOrgOutID = rs.getString("调出组织ID");
-                        dLbean.FOrgInID = rs.getString("调入组织ID");
-                        dLbean.FHuozhuOutID = rs.getString("调出货主ID");
-                        dLbean.FHuozhuInID = rs.getString("调入货主ID");
+                    if (dBean.tag== 33){
+                        dLbean.FNumber = rs.getString("物料编码");
+                        dLbean.FName = rs.getString("物料名称");
+                        dLbean.FModel = rs.getString("规格型号");
+                        dLbean.FEntryID = rs.getString("明细唯一值");
+                        dLbean.FID = rs.getString("明细内码");
+                        dLbean.FSEQ = rs.getString("明细序号");
+                        dLbean.AuxSign=rs.getString("辅助标识");
+                        dLbean.ActualModel=rs.getString("实际规格");
+                        dLbean.FBatchNo=rs.getString("批号");
+                        dLbean.FUnitID = rs.getString("单位ID");
+                        dLbean.FMaterialID = rs.getString("物料ID");
+                        dLbean.FBillNo = rs.getString("订单编号");
+                        dLbean.FQty = MathUtil.D2save5(MathUtil.toD(rs.getString("订单数量"))/0.00236)+"";
                     }else{
-                        dLbean.FHuoZhuNumber = rs.getString("货主编码");
+                        dLbean.FUnitID = rs.getString("单位ID");
+                        dLbean.FNumber = rs.getString("物料编码");
+                        dLbean.FName = rs.getString("物料名称");
+                        dLbean.FModel = rs.getString("规格型号");
+                        dLbean.FBillNo = rs.getString("订单编号");
+                        dLbean.FQty = rs.getString("订单数量");
+                        dLbean.FQtying = rs.getString("已验数量");
+                        dLbean.FTaxPrice = rs.getString("含税单价");
+                        dLbean.FMaterialID = rs.getString("物料ID");
+                        dLbean.FEntryID = rs.getString("明细唯一值");
+                        dLbean.FID = rs.getString("明细内码");
+                        dLbean.FSEQ = rs.getString("明细序号");
+                        if (dBean.tag== 1 ||dBean.tag ==32){
+                            dLbean.FPriceUnitID = rs.getString("计价单位编码");
+                            dLbean.FTaxRate = rs.getString("税率");
+                            dLbean.FNeedOrgID = rs.getString("需求组织ID");
+                        }
+                        if (dBean.tag==22 ||dBean.tag==23){
+                            dLbean.FStorageOutID = rs.getString("调出仓库ID");
+                            dLbean.FStorageInID = rs.getString("调入仓库ID");
+                            dLbean.FOrgOutID = rs.getString("调出组织ID");
+                            dLbean.FOrgInID = rs.getString("调入组织ID");
+                            dLbean.FHuozhuOutID = rs.getString("调出货主ID");
+                            dLbean.FHuozhuInID = rs.getString("调入货主ID");
+                        }else{
+                            dLbean.FHuoZhuNumber = rs.getString("货主编码");
+                        }
+                        if (dBean.tag==3){
+                            dLbean.FBaseCanreturnQty=rs.getString("FBASECANRETURNQTY");
+                        }
+                        if (dBean.tag==4){
+                            dLbean.FStockID=rs.getString("仓库ID");
+                            dLbean.FBatchNo=rs.getString("批号");
+                        }
+                        if (dBean.tag==2||dBean.tag==31||dBean.tag==21||dBean.tag==34){
+                            dLbean.AuxSign=rs.getString("辅助标识");
+                            dLbean.ActualModel=rs.getString("实际规格");
+                            dLbean.FIsGift=rs.getString("是否赠品");
+                        }
+                        if (dBean.tag == 25 ||dBean.tag == 26 ||dBean.tag == 28||dBean.tag == 30||dBean.tag == 27){
+                            dLbean.FStorageOutID=rs.getString("仓库编码");
+                            dLbean.AuxSign=rs.getString("辅助标识");
+                            dLbean.ActualModel=rs.getString("实际规格");
+                            dLbean.FBatchNo=rs.getString("批号");
+                            dLbean.FLevel=rs.getString("等级");
+                            dLbean.FYmLenght=rs.getString("原木长");
+                            dLbean.FYmDiameter=rs.getString("原木直径");
+                            dLbean.FBLenght=rs.getString("板长");
+                            dLbean.FBWide=rs.getString("板宽");
+                            dLbean.FBThick=rs.getString("板厚");
+                        }
+                        if (dBean.tag == 29){
+                            dLbean.FWide=rs.getString("宽度");
+                            dLbean.FM3=rs.getString("M3");
+                            dLbean.FPCS=rs.getString("PCS");
+                            dLbean.FLevel=rs.getString("等级");
+                            dLbean.AuxSign=rs.getString("辅助标识");
+                            dLbean.ActualModel=rs.getString("实际规格");
+                        }
+                        if (dBean.tag == 35){
+                            dLbean.FBatchNo=rs.getString("批号");
+                        }
                     }
-                    if (dBean.tag==3){
-                        dLbean.FBaseCanreturnQty=rs.getString("FBASECANRETURNQTY");
-                    }
-                    if (dBean.tag==4){
-                        dLbean.FStockID=rs.getString("仓库ID");
-                        dLbean.FBatchNo=rs.getString("批号");
-                    }
-                    if (dBean.tag==2||dBean.tag==31||dBean.tag==21){
-                        dLbean.AuxSign=rs.getString("辅助标识");
-                        dLbean.ActualModel=rs.getString("实际规格");
-                        dLbean.FIsGift=rs.getString("是否赠品");
-                    }
-                    if (dBean.tag == 25 ||dBean.tag == 26 ||dBean.tag == 28||dBean.tag == 30||dBean.tag == 27){
-                        dLbean.FStorageOutID=rs.getString("仓库编码");
-                        dLbean.AuxSign=rs.getString("辅助标识");
-                        dLbean.ActualModel=rs.getString("实际规格");
-                        dLbean.FBatchNo=rs.getString("批号");
-                        dLbean.FLevel=rs.getString("等级");
-                        dLbean.FYmLenght=rs.getString("原木长");
-                        dLbean.FYmDiameter=rs.getString("原木直径");
-                        dLbean.FBLenght=rs.getString("板长");
-                        dLbean.FBWide=rs.getString("板宽");
-                        dLbean.FBThick=rs.getString("板厚");
-                    }
-                    if (dBean.tag == 29){
-                        dLbean.FWide=rs.getString("宽度");
-                        dLbean.FM3=rs.getString("M3");
-                        dLbean.FPCS=rs.getString("PCS");
-                        dLbean.FLevel=rs.getString("等级");
-                        dLbean.AuxSign=rs.getString("辅助标识");
-                        dLbean.ActualModel=rs.getString("实际规格");
 
-                    }
+                    dLbean.FStr1=dBean.tag+"";
                     dLbean.FAccountID=dBean.FAccountID==null?"":dBean.FAccountID;
 
                     container.add(dLbean);

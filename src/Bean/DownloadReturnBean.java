@@ -34,9 +34,25 @@ public class DownloadReturnBean {
     public ArrayList<WortPrintData> wortPrintDatas;
     public ArrayList<DryingGetData> dryingGetDatas;
     public ArrayList<PGetData> pGetDatas;
+    public ArrayList<BatchDataBean> batchDataBeans;
 
     public int size;
 
+    public class BatchDataBean {
+        public String FBarCode;
+        public String FName;
+        public String FQty;
+        public String FBatchNo;
+        public String FLenght;
+        public String FDiv;
+        public String FBLenght;
+        public String FBWide;
+        public String FThick;
+        public String FVol;
+        public String FTypeID;
+        public String FCeng;
+
+    }
 
     public class PGetData {
         public String FID;
@@ -52,6 +68,9 @@ public class DownloadReturnBean {
         public String FStr5;
 
     }
+
+
+
     public class DryingGetData {
         public String FID;
         public String FEntryID;
@@ -117,6 +136,7 @@ public class DownloadReturnBean {
         public String FModel;
         public String FBatch;
         public String FLenght;
+        public String FAveLenght;
         public String FChang;
         public String FKuan;
         public String FHou;

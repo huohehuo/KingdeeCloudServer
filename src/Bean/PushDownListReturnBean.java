@@ -55,6 +55,8 @@ public class PushDownListReturnBean {
         public String FFreight;
         public String FYaoNo;            //
 
+        public String FFieldMan;            //
+
         @Override
         public String toString() {
             return "PushDownListBean{" +

@@ -82,3 +82,20 @@ IF Not EXISTS ( SELECT 1 FROM SYSOBJECTS T1  INNER JOIN SYSCOLUMNS T2 ON T1.ID=T
 alter table t_PDABarCodeSign add F_TypeID int --区分单据类型 0 是水版 1是其他
 IF Not EXISTS ( SELECT 1 FROM SYSOBJECTS T1  INNER JOIN SYSCOLUMNS T2 ON T1.ID=T2.ID  WHERE T1.NAME='t_PDABarCodeSign' AND T2.NAME='F_Plies')
 alter table t_PDABarCodeSign add F_Plies decimal(20,8)  default 0 --层数
+
+IF Not EXISTS ( SELECT 1 FROM SYSOBJECTS T1  INNER JOIN SYSCOLUMNS T2 ON T1.ID=T2.ID  WHERE T1.NAME='t_PDABarCodeSign' AND T2.NAME='F_Plies')
+alter table t_PDABarCodeSign add F_Plies decimal(20,8)  default 0 --层数
+
+
+IF Not EXISTS ( SELECT 1 FROM SYSOBJECTS T1  INNER JOIN SYSCOLUMNS T2 ON T1.ID=T2.ID  WHERE T1.NAME='t_PDABarCodeSign' AND T2.NAME='FAllHouDu')
+alter table t_PDABarCodeSign add FAllHouDu varchar(502) --厚度合并
+IF Not EXISTS ( SELECT 1 FROM SYSOBJECTS T1  INNER JOIN SYSCOLUMNS T2 ON T1.ID=T2.ID  WHERE T1.NAME='t_PDABarCodeSign' AND T2.NAME='FAllChangDu')
+alter table t_PDABarCodeSign add FAllChangDu varchar(502) --长度合并
+IF Not EXISTS ( SELECT 1 FROM SYSOBJECTS T1  INNER JOIN SYSCOLUMNS T2 ON T1.ID=T2.ID  WHERE T1.NAME='t_PDABarCodeSign' AND T2.NAME='FAllChenShu')
+alter table t_PDABarCodeSign add FAllChenShu varchar(502) --层数合并
+IF Not EXISTS ( SELECT 1 FROM SYSOBJECTS T1  INNER JOIN SYSCOLUMNS T2 ON T1.ID=T2.ID  WHERE T1.NAME='t_PDABarCodeSign' AND T2.NAME='FAllKuanDu')
+alter table t_PDABarCodeSign add FAllKuanDu varchar(502) --宽度平均值合并
+IF Not EXISTS ( SELECT 1 FROM SYSOBJECTS T1  INNER JOIN SYSCOLUMNS T2 ON T1.ID=T2.ID  WHERE T1.NAME='t_PDABarCodeSign' AND T2.NAME='FAllGuiGe')
+alter table t_PDABarCodeSign add FAllGuiGe varchar(502) --规格
+
+ 

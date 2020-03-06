@@ -21,3 +21,5 @@ create table a_DetailsTable
 --CREATE UNIQUE INDEX a_DetailsTable_Index_FBarCode
 --ON a_DetailsTable (FBarCode) 
 end
+IF Not EXISTS ( SELECT 1 FROM SYSOBJECTS T1  INNER JOIN SYSCOLUMNS T2 ON T1.ID=T2.ID  WHERE T1.NAME='a_DetailsTable' AND T2.NAME='FDateAdd1')
+alter table a_DetailsTable add FDateAdd1 varchar(50) DEFAULT convert(varchar(50),getdate(),20)

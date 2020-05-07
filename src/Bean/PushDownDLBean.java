@@ -61,6 +61,8 @@ public class PushDownDLBean {
         public String FStr3;
         public String FStr4;
         public String FStr5;
+        public String FPayType;
+        public String FAcPrd;
 //
 //        public String FItemID;
 //        public String FAuxQty;

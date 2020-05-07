@@ -116,7 +116,7 @@ public class ProductSearchForTree extends HttpServlet {
                         productBean.FMASTERID                     = rs.getString("FMASTERID");
                         container.add(productBean);
                     }
-                    System.out.println("rs的长度"+container.size());
+                    Lg.e("得到物料"+container.size(),container);
                     downloadReturnBean.products = container;
                     response.getWriter().write(CommonJson.getCommonJson(true,gson.toJson(downloadReturnBean)));
                 }else{

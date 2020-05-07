@@ -56,21 +56,8 @@ public class PushDownListReturnBean {
         public String FYaoNo;            //
 
         public String FFieldMan;            //
+        public String FPayType;
+        public String FAcPrd;
 
-        @Override
-        public String toString() {
-            return "PushDownListBean{" +
-                    "FBillNo='" + FBillNo + '\'' +
-                    ", FName='" + FName + '\'' +
-                    ", FDate='" + FDate + '\'' +
-                    ", FSupply='" + FSupply + '\'' +
-                    ", FSupplyID='" + FSupplyID + '\'' +
-                    ", FDeptID='" + FDeptID + '\'' +
-                    ", FManagerID='" + FManagerID + '\'' +
-                    ", FEmpID='" + FEmpID + '\'' +
-                    ", FInterID='" + FInterID + '\'' +
-                    ", tag=" + tag +
-                    '}';
-        }
     }
 }

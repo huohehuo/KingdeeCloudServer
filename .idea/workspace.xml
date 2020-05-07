@@ -9,24 +9,9 @@
     <bookmark url="file://$PROJECT_DIR$/src/Server/prop/GetFile.java" line="30" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c314ea08-6d77-469a-9858-6948002aef46" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/httpclient_4_5_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/P2/GetBatchData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/print/PrintData35.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/print/PrintData4P2_1.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/print/PrintData4P2_33.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/print/PrintData4P2_33_Cy2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Utils/HttpRequestUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/WebIO/ConnectDataBaseIO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/WebIO/LoginIO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/WebIO/ProductGetCountIO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/WebIO/ProductGetDataIO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/WebIO/SetProptiesIO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/WebIO/WebSideIO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/WebIO/bean/LoginBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/WebIO/bean/RequestBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/WebIO/bean/WebResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Debug/配置文件/DBSetFile.db" afterPath="$PROJECT_DIR$/Debug/配置文件/DBSetFile.db" />
+    <list default="true" id="c314ea08-6d77-469a-9858-6948002aef46" name="Default" comment="完成0306，新增单据">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Bean/FloorBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/NumInStorage/GetFloorData.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$BarCode.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$BarCode.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$Client.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$Client.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$CodeCheckBackDataBean.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$CodeCheckBackDataBean.class" />
@@ -57,11 +42,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$wavehouse.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$wavehouse.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$yuandanType.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean$yuandanType.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/DownloadReturnBean.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/PushDownDLBean$DLbean.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/PushDownDLBean$DLbean.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/PushDownListReturnBean$PushDownListBean.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Bean/PushDownListReturnBean$PushDownListBean.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/PushDown/PushDownList.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/PushDown/PushDownList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/PushDown/PushDownloadList.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/PushDown/PushDownloadList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/print/PrintOutCheck4P2.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Server/print/PrintOutCheck4P2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Utils/MathUtil.class" afterPath="$PROJECT_DIR$/out/artifacts/Assist/WEB-INF/classes/Utils/MathUtil.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$BarCode.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$BarCode.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$Client.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$Client.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$CodeCheckBackDataBean.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$CodeCheckBackDataBean.class" />
@@ -92,21 +75,16 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$wavehouse.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$wavehouse.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$yuandanType.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean$yuandanType.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/DownloadReturnBean.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/PushDownDLBean$DLbean.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/PushDownDLBean$DLbean.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/PushDownListReturnBean$PushDownListBean.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Bean/PushDownListReturnBean$PushDownListBean.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/PushDown/PushDownList.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Server/PushDown/PushDownList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/PushDown/PushDownloadList.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Server/PushDown/PushDownloadList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Server/print/PrintOutCheck4P2.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Server/print/PrintOutCheck4P2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/classes/Utils/MathUtil.class" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/Utils/MathUtil.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Asist.iml" afterPath="$PROJECT_DIR$/Asist.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Debug/版本/100000/802条码标记表.sql" afterPath="$PROJECT_DIR$/Debug/版本/100000/802条码标记表.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Debug/版本/100000/901PDA单据.sql" afterPath="$PROJECT_DIR$/Debug/版本/100000/901PDA单据.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bean/DownloadReturnBean.java" afterPath="$PROJECT_DIR$/src/Bean/DownloadReturnBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bean/PushDownDLBean.java" afterPath="$PROJECT_DIR$/src/Bean/PushDownDLBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bean/PushDownListReturnBean.java" afterPath="$PROJECT_DIR$/src/Bean/PushDownListReturnBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/PushDown/PushDownList.java" afterPath="$PROJECT_DIR$/src/Server/PushDown/PushDownList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/PushDown/PushDownloadList.java" afterPath="$PROJECT_DIR$/src/Server/PushDown/PushDownloadList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/print/PrintOutCheck4P2.java" afterPath="$PROJECT_DIR$/src/Server/print/PrintOutCheck4P2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils/MathUtil.java" afterPath="$PROJECT_DIR$/src/Utils/MathUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/SearchIO/ProductSearchForTree.java" afterPath="$PROJECT_DIR$/src/Server/SearchIO/ProductSearchForTree.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/web/WEB-INF/classes/" />
@@ -134,57 +112,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ConnectDataBaseIO.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/WebIO/ConnectDataBaseIO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="74" column="9" lean-forward="false" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
-              <folding>
-                <element signature="method#ConnectDataBaseIO#0;class#ConnectDataBaseIO#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PushDownloadList.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PushDownloadList.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Server/PushDown/PushDownloadList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4170">
-              <caret line="294" column="42" lean-forward="true" selection-start-line="294" selection-start-column="42" selection-end-line="294" selection-end-column="42" />
+            <state relative-caret-position="92">
+              <caret line="41" column="28" lean-forward="true" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
               <folding>
-                <element signature="e#33423#33445#0" expanded="false" />
-                <marker date="1583141783539" expanded="true" signature="2718:3997" ph="select t3_F.... t_PUR_POOrder" />
-                <marker date="1583141783539" expanded="true" signature="5239:6537" ph="select t3.FL... t_PUR_POOrder" />
-                <marker date="1583141783539" expanded="true" signature="9225:10910" ph="select t3_F.... T_SAL_ORDER" />
-                <marker date="1583141783539" expanded="true" signature="11003:12688" ph="select t3_F.... T_SAL_ORDER" />
-                <marker date="1583141783539" expanded="true" signature="12772:13966" ph="select t2_R.... T_SAL_ORDER" />
-                <marker date="1583141783539" expanded="true" signature="13792:13892" ph="SELECT 1 FRO... T_BD_MATERIALQUALITY" />
-                <marker date="1583141783539" expanded="true" signature="14059:15084" ph="select t3.FS... T_SAL_OUTSTOCK" />
-                <marker date="1583141783539" expanded="true" signature="15175:16107" ph="select t3.FU... T_SAL_DELIVERYNOTICE" />
-                <marker date="1583141783539" expanded="true" signature="16192:17098" ph="select t1008... T_SAL_RETURNNOTICE" />
-                <marker date="1583141783539" expanded="true" signature="17192:17963" ph="select t11.F... ICMO" />
-                <marker date="1583141783539" expanded="true" signature="18074:19033" ph="select t3.FU... T_STK_STKTRANSFERAPP" />
-                <marker date="1583141783539" expanded="true" signature="19144:20804" ph="select t3.FU... T_STK_STKTRANSFERAPP" />
-                <marker date="1583141783539" expanded="true" signature="20902:22562" ph="select t3.FU... T_STK_STKTRANSFERAPP" />
-                <marker date="1583141783539" expanded="true" signature="22648:24076" ph="select t3.FU... T_STK_OUTSTOCKAPPLY" />
-                <marker date="1583141783539" expanded="true" signature="25311:26187" ph="select t0.FB... T_SP_PICKMTRL" />
-                <marker date="1583141783539" expanded="true" signature="27468:28593" ph="select '' as... T_SP_PICKMTRL" />
-                <marker date="1583141783539" expanded="true" signature="28680:29876" ph="select '' as... t_STK_InStock" />
-                <marker date="1583141783539" expanded="true" signature="29963:31021" ph="select '' as... t_STK_InStock" />
-                <marker date="1583141783539" expanded="true" signature="31115:32312" ph="select '' as... T_SP_PICKMTRL" />
-                <marker date="1583141783539" expanded="true" signature="32406:33397" ph="select '' as... T_SP_PICKMTRL" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PrintData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Server/print/PrintData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="e#33434#33456#0" expanded="false" />
+                <marker date="1588750568517" expanded="true" signature="2718:3997" ph="select t3_F.... t_PUR_POOrder" />
+                <marker date="1588750568517" expanded="true" signature="5239:6537" ph="select t3.FL... t_PUR_POOrder" />
+                <marker date="1588750568517" expanded="true" signature="9233:10918" ph="select t3_F.... T_SAL_ORDER" />
+                <marker date="1588750568517" expanded="true" signature="11014:12699" ph="select t3_F.... T_SAL_ORDER" />
+                <marker date="1588750568517" expanded="true" signature="12783:13977" ph="select t2_R.... T_SAL_ORDER" />
+                <marker date="1588750568517" expanded="true" signature="13803:13903" ph="SELECT 1 FRO... T_BD_MATERIALQUALITY" />
+                <marker date="1588750568517" expanded="true" signature="14070:15095" ph="select t3.FS... T_SAL_OUTSTOCK" />
+                <marker date="1588750568517" expanded="true" signature="15186:16118" ph="select t3.FU... T_SAL_DELIVERYNOTICE" />
+                <marker date="1588750568517" expanded="true" signature="16203:17109" ph="select t1008... T_SAL_RETURNNOTICE" />
+                <marker date="1588750568517" expanded="true" signature="17203:17974" ph="select t11.F... ICMO" />
+                <marker date="1588750568517" expanded="true" signature="18085:19044" ph="select t3.FU... T_STK_STKTRANSFERAPP" />
+                <marker date="1588750568517" expanded="true" signature="19155:20815" ph="select t3.FU... T_STK_STKTRANSFERAPP" />
+                <marker date="1588750568517" expanded="true" signature="20913:22573" ph="select t3.FU... T_STK_STKTRANSFERAPP" />
+                <marker date="1588750568517" expanded="true" signature="22659:24087" ph="select t3.FU... T_STK_OUTSTOCKAPPLY" />
+                <marker date="1588750568517" expanded="true" signature="25322:26198" ph="select t0.FB... T_SP_PICKMTRL" />
+                <marker date="1588750568517" expanded="true" signature="27479:28604" ph="select '' as... T_SP_PICKMTRL" />
+                <marker date="1588750568517" expanded="true" signature="28691:29887" ph="select '' as... t_STK_InStock" />
+                <marker date="1588750568517" expanded="true" signature="29974:31032" ph="select '' as... t_STK_InStock" />
+                <marker date="1588750568517" expanded="true" signature="31126:32323" ph="select '' as... T_SP_PICKMTRL" />
+                <marker date="1588750568517" expanded="true" signature="32417:33408" ph="select '' as... T_SP_PICKMTRL" />
               </folding>
             </state>
           </provider>
@@ -193,29 +147,102 @@
       <file leaf-file-name="PushDownList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Server/PushDown/PushDownList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1016">
-              <caret line="265" column="56" lean-forward="false" selection-start-line="265" selection-start-column="56" selection-end-line="265" selection-end-column="56" />
+            <state relative-caret-position="1232">
+              <caret line="73" column="26" lean-forward="false" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
               <folding>
-                <element signature="e#22831#22867#0" expanded="false" />
-                <marker date="1583140743161" expanded="true" signature="3266:4582" ph="select disti... t_PUR_POOrder" />
-                <marker date="1583140743161" expanded="true" signature="4699:6110" ph="select disti... t_PUR_POOrder" />
-                <marker date="1583140743161" expanded="true" signature="6276:7475" ph="select disti... T_SAL_ORDER" />
-                <marker date="1583140743161" expanded="true" signature="7594:8792" ph="select disti... T_SAL_ORDER" />
-                <marker date="1583140743161" expanded="true" signature="8907:9829" ph="select disti... T_SAL_ORDER" />
-                <marker date="1583140743161" expanded="true" signature="9691:9791" ph="SELECT 1 FRO... T_BD_MATERIALQUALITY" />
-                <marker date="1583140743161" expanded="true" signature="9936:10882" ph="select disti... T_SAL_OUTSTOCK" />
-                <marker date="1583140743161" expanded="true" signature="11010:11794" ph="select disti... T_SAL_DELIVERYNOTICE" />
-                <marker date="1583140743161" expanded="true" signature="11910:12962" ph="select disti... T_SAL_RETURNNOTICE" />
-                <marker date="1583140743161" expanded="true" signature="13080:13593" ph="select disti... ICStockBill" />
-                <marker date="1583140743161" expanded="true" signature="13689:14338" ph="select disti... T_STK_STKTRANSFERAPP" />
-                <marker date="1583140743161" expanded="true" signature="14420:15338" ph="select disti... T_STK_STKTRANSFERAPP" />
-                <marker date="1583140743161" expanded="true" signature="15420:16339" ph="select disti... T_STK_STKTRANSFERAPP" />
-                <marker date="1583140743161" expanded="true" signature="16421:17534" ph="select disti... T_STK_OUTSTOCKAPPLY" />
-                <marker date="1583140743161" expanded="true" signature="18420:19290" ph="select disti... T_SP_PICKMTRL" />
-                <marker date="1583140743161" expanded="true" signature="19414:20188" ph="select disti... T_SP_PICKMTRL" />
-                <marker date="1583140743161" expanded="true" signature="20290:20878" ph="select disti... t_STK_InStock" />
-                <marker date="1583140743161" expanded="true" signature="20980:21738" ph="select disti... t_STK_InStock" />
-                <marker date="1583140743161" expanded="true" signature="21890:22800" ph="select disti... T_SP_PICKMTRL" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#22925#22961#0" expanded="false" />
+                <marker date="1588750581427" expanded="true" signature="3266:4582" ph="select disti... t_PUR_POOrder" />
+                <marker date="1588750581427" expanded="true" signature="4699:6110" ph="select disti... t_PUR_POOrder" />
+                <marker date="1588750581427" expanded="true" signature="6276:7522" ph="select disti... T_SAL_ORDER" />
+                <marker date="1588750581427" expanded="true" signature="7641:8886" ph="select disti... T_SAL_ORDER" />
+                <marker date="1588750581427" expanded="true" signature="9001:9923" ph="select disti... T_SAL_ORDER" />
+                <marker date="1588750581427" expanded="true" signature="9785:9885" ph="SELECT 1 FRO... T_BD_MATERIALQUALITY" />
+                <marker date="1588750581427" expanded="true" signature="10030:10976" ph="select disti... T_SAL_OUTSTOCK" />
+                <marker date="1588750581427" expanded="true" signature="11104:11888" ph="select disti... T_SAL_DELIVERYNOTICE" />
+                <marker date="1588750581427" expanded="true" signature="12004:13056" ph="select disti... T_SAL_RETURNNOTICE" />
+                <marker date="1588750581427" expanded="true" signature="13174:13687" ph="select disti... ICStockBill" />
+                <marker date="1588750581427" expanded="true" signature="13783:14432" ph="select disti... T_STK_STKTRANSFERAPP" />
+                <marker date="1588750581427" expanded="true" signature="14514:15432" ph="select disti... T_STK_STKTRANSFERAPP" />
+                <marker date="1588750581427" expanded="true" signature="15514:16433" ph="select disti... T_STK_STKTRANSFERAPP" />
+                <marker date="1588750581427" expanded="true" signature="16515:17628" ph="select disti... T_STK_OUTSTOCKAPPLY" />
+                <marker date="1588750581427" expanded="true" signature="18514:19384" ph="select disti... T_SP_PICKMTRL" />
+                <marker date="1588750581427" expanded="true" signature="19508:20282" ph="select disti... T_SP_PICKMTRL" />
+                <marker date="1588750581427" expanded="true" signature="20384:20972" ph="select disti... t_STK_InStock" />
+                <marker date="1588750581427" expanded="true" signature="21074:21832" ph="select disti... t_STK_InStock" />
+                <marker date="1588750581427" expanded="true" signature="21984:22894" ph="select disti... T_SP_PICKMTRL" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GetInStorageNumList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Server/NumInStorage/GetInStorageNumList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <marker date="1523268436943" expanded="true" signature="1766:2403" ph="select t2.FN... ICInventory" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GetFloorData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Server/NumInStorage/GetFloorData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="89">
+              <caret line="37" column="81" lean-forward="false" selection-start-line="37" selection-start-column="81" selection-end-line="37" selection-end-column="81" />
+              <folding>
+                <marker date="1588832421399" expanded="true" signature="1883:3983" ph="select t2.FN... ICInventory" />
+                <marker date="1588832421399" expanded="true" signature="2254:2868" ph="select t0.FA... T_STK_INVENTORY" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductSearchForTree.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Server/SearchIO/ProductSearchForTree.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="660">
+              <caret line="83" column="93" lean-forward="false" selection-start-line="83" selection-start-column="93" selection-end-line="83" selection-end-column="93" />
+              <folding>
+                <marker date="1588833660534" expanded="true" signature="1929:3355" ph="select top 5... T_BD_MATERIAL" />
+                <marker date="1588833660534" expanded="true" signature="3750:5176" ph="select top 5... T_BD_MATERIAL" />
+                <marker date="1588833660534" expanded="true" signature="6197:7623" ph="select top 8... T_BD_MATERIAL" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FloorBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Bean/FloorBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DownloadReturnBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Bean/DownloadReturnBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="814">
+              <caret line="37" column="42" lean-forward="false" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CodeCheckForIn.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Server/CodeCheck/CodeCheckForIn.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="748">
+              <caret line="51" column="17" lean-forward="false" selection-start-line="51" selection-start-column="17" selection-end-line="52" selection-end-column="81" />
+              <folding>
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -224,53 +251,19 @@
       <file leaf-file-name="PushDownListReturnBean.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Bean/PushDownListReturnBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="36" column="30" lean-forward="false" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+            <state relative-caret-position="1254">
+              <caret line="57" column="46" lean-forward="false" selection-start-line="57" selection-start-column="46" selection-end-line="59" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginIO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/WebIO/LoginIO.java">
+      <file leaf-file-name="PushDownDLBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Bean/PushDownDLBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1100">
-              <caret line="67" column="40" lean-forward="false" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#749#750#0" expanded="false" />
-                <element signature="e#772#773#0" expanded="false" />
-                <element signature="e#3405#3495#0" expanded="false" />
-                <marker date="1582164458995" expanded="true" signature="4305:4375" ph="select * fro... p_CreateProc" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebSideIO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/WebIO/WebSideIO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="41" column="33" lean-forward="false" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#564#565#0" expanded="false" />
-                <element signature="e#587#588#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBUpload.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Server/upload/P2/DBUpload.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="43" column="35" lean-forward="false" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#753#754#0" expanded="false" />
-                <element signature="e#776#777#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="1364">
+              <caret line="62" column="28" lean-forward="false" selection-start-line="62" selection-start-column="28" selection-end-line="64" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -286,8 +279,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>CodeCheckForBoxOut4P1箱码出库验证返回</find>
-      <find>doSplitingP1Upload</find>
       <find>供应商</find>
       <find>FSupply</find>
       <find>CodeCheckDelete</find>
@@ -316,6 +307,8 @@
       <find>FStr1</find>
       <find>FBatchNo</find>
       <find>FDept</find>
+      <find>doReBoxP1Upload</find>
+      <find>PrintData4PackagReAdd</find>
     </findStrings>
     <replaceStrings>
       <replace>rs</replace>
@@ -339,10 +332,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Server/P2/GetBoxPrintData.java" />
-        <option value="$PROJECT_DIR$/src/ResInterface/BaseIO.java" />
-        <option value="$PROJECT_DIR$/src/Server/upload/P1/BoxReAdd.java" />
-        <option value="$PROJECT_DIR$/src/Server/upload/P1/BoxReAddUpload.java" />
         <option value="$PROJECT_DIR$/src/Server/upload/P1/doReBoxP1Upload.java" />
         <option value="$PROJECT_DIR$/src/Server/print/PrintData4PackagReAdd.java" />
         <option value="$PROJECT_DIR$/src/ResInterface/StorageIO.java" />
@@ -355,7 +344,6 @@
         <option value="$PROJECT_DIR$/src/Server/upload/P1/SaleOutBoxUpload.java" />
         <option value="$PROJECT_DIR$/src/Server/ClientSearch/ClientSearchLike.java" />
         <option value="$PROJECT_DIR$/src/Server/upload/P1/DBBoxUpload.java" />
-        <option value="$PROJECT_DIR$/src/Server/CodeCheck/CodeCheckForOut4Box.java" />
         <option value="$PROJECT_DIR$/src/Server/prop/RegisterUtils/ServiceVersion.java" />
         <option value="$PROJECT_DIR$/src/Server/upload/PushDownOCUpload.java" />
         <option value="$PROJECT_DIR$/src/Server/upload/P1/CgOrder2WgrkBoxUpload.java" />
@@ -363,9 +351,7 @@
         <option value="$PROJECT_DIR$/src/Server/SearchIO/S2Product4P2.java" />
         <option value="$PROJECT_DIR$/src/Utils/MathUtil.java" />
         <option value="$PROJECT_DIR$/src/Server/print/PrintData4P2_33.java" />
-        <option value="$PROJECT_DIR$/src/Bean/PushDownListReturnBean.java" />
         <option value="$PROJECT_DIR$/src/Server/P2/GetBatchData.java" />
-        <option value="$PROJECT_DIR$/src/Bean/DownloadReturnBean.java" />
         <option value="$PROJECT_DIR$/src/Server/P2/doPackingUpload.java" />
         <option value="$PROJECT_DIR$/src/Server/print/PrintData4P2_1.java" />
         <option value="$PROJECT_DIR$/src/Bean/PrintHistory.java" />
@@ -387,9 +373,16 @@
         <option value="$PROJECT_DIR$/src/WebIO/ProductGetDataIO.java" />
         <option value="$PROJECT_DIR$/src/WebIO/SetProptiesIO.java" />
         <option value="$PROJECT_DIR$/src/WebIO/WebSideIO.java" />
-        <option value="$PROJECT_DIR$/src/Server/PushDown/PushDownList.java" />
-        <option value="$PROJECT_DIR$/src/Server/PushDown/PushDownloadList.java" />
         <option value="$PROJECT_DIR$/src/Server/print/PrintData35.java" />
+        <option value="$PROJECT_DIR$/src/Server/CodeCheck/CodeCheckForOut4Box.java" />
+        <option value="$PROJECT_DIR$/src/Bean/PushDownDLBean.java" />
+        <option value="$PROJECT_DIR$/src/Bean/PushDownListReturnBean.java" />
+        <option value="$PROJECT_DIR$/src/Server/PushDown/PushDownloadList.java" />
+        <option value="$PROJECT_DIR$/src/Server/PushDown/PushDownList.java" />
+        <option value="$PROJECT_DIR$/src/Bean/DownloadReturnBean.java" />
+        <option value="$PROJECT_DIR$/src/Bean/FloorBean.java" />
+        <option value="$PROJECT_DIR$/src/Server/NumInStorage/GetFloorData.java" />
+        <option value="$PROJECT_DIR$/src/Server/SearchIO/ProductSearchForTree.java" />
       </list>
     </option>
   </component>
@@ -597,15 +590,55 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="print" />
+              <option name="myItemId" value="NumInStorage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KingdeeCloudServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KingdeeCloudServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CodeCheck" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KingdeeCloudServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KingdeeCloudServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bean" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -616,28 +649,28 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../KingdeePDA-Cloud/KingdeePDA-Cloud-JS-JHZL/JHZL-KingdeeCloudServer" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../KingdeePDA-HF-ZDY-three/ZDY-th-Server" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="SQL Server (Microsoft)" />
     <property name="SearchEverywhereHistoryKey" value="ProductSearchLike&#9;FILE&#9;file://E:/FZ-kingdee/KingdeeServer/Asist/src/Server/ProductSearch/ProductSearchLike.java" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\FZ-kingdee\KingdeeCloud\KingdeeCloudServer\out\artifacts\Assist" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="Server.print" />
-      <recent name="Utils" />
-      <recent name="WebIO" />
-      <recent name="Bean" />
-      <recent name="Server.P2" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\FZ-kingdee\KingdeeCloud\KingdeeCloudServer\src\Bean" />
       <recent name="D:\FZ-kingdee\KingdeeCloud\KingdeeCloudServer\lib" />
       <recent name="E:\FZ-kingdee\KingdeeCloud\KingdeeCloudServer\src\Utils" />
       <recent name="E:\FZ-kingdee\KingdeeCloud\KingdeeCloudServer\src\Bean" />
       <recent name="E:\FZ-kingdee\KingdeeCloud\KingdeeCloudServer\src\Server\prop\RegisterUtils" />
-      <recent name="E:\FZ-kingdee\KingdeeCloud\KingdeeCloudServer\out\artifacts\Assist\WEB-INF" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Server.NumInStorage" />
+      <recent name="Server.print" />
+      <recent name="Utils" />
+      <recent name="WebIO" />
+      <recent name="Bean" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\FZ-kingdee\KingdeeCloud\KingdeeCloudServer\out\artifacts\Assist" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1820,12 +1853,32 @@
       <workItem from="1582599533284" duration="1128000" />
       <workItem from="1583139744661" duration="3606000" />
       <workItem from="1583198471072" duration="4342000" />
-      <workItem from="1583459965655" duration="94000" />
+      <workItem from="1583459965655" duration="440000" />
+      <workItem from="1584083007837" duration="1295000" />
+      <workItem from="1584512433834" duration="2021000" />
+      <workItem from="1585039455275" duration="166000" />
+      <workItem from="1586249784772" duration="1436000" />
+      <workItem from="1587954899486" duration="2877000" />
+      <workItem from="1587976433329" duration="3718000" />
+      <workItem from="1588037877210" duration="751000" />
+      <workItem from="1588058063747" duration="1255000" />
+      <workItem from="1588214847244" duration="600000" />
+      <workItem from="1588748694939" duration="5331000" />
+      <workItem from="1588823651812" duration="4759000" />
+      <workItem from="1588844383850" duration="21000" />
     </task>
+    <task id="LOCAL-00001" summary="完成0306，新增单据">
+      <created>1583460063016</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583460063016</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2472503000" />
+    <option name="totallyTimeSpent" value="2497079000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1838,7 +1891,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1849,13 +1902,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46203905" sideWeight="0.5133262" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38650963" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32321042" sideWeight="0.48667377" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34924078" sideWeight="0.48667377" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34273317" sideWeight="0.49573562" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22334754" sideWeight="0.7120419" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19029851" sideWeight="0.7120419" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1380597" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28997868" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.04904051" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1898,187 +1951,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Bean/DownloadReturnBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3784">
-          <caret line="172" column="17" lean-forward="false" selection-start-line="172" selection-start-column="17" selection-end-line="172" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/print/PrintData4P2_1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="59" column="37" lean-forward="false" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bean/PrintHistory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/CodeCheck/CodeCheckForOut.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/P2/getBoxCodeAndBatch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="55" column="73" lean-forward="false" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/CodeCheck/CodeCheckDelete.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1144">
-          <caret line="66" column="17" lean-forward="false" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/print/PrintData4P2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="64" column="82" lean-forward="false" selection-start-line="64" selection-start-column="82" selection-end-line="64" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/print/PrintData4P2_33_Cy2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="54" column="49" lean-forward="false" selection-start-line="54" selection-start-column="49" selection-end-line="54" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/print/PrintOutCheck4P2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="89" column="35" lean-forward="false" selection-start-line="89" selection-start-column="35" selection-end-line="89" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/print/PrintData4P2_33.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="41" column="47" lean-forward="true" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/CommonJson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/ImageUpload.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/ImageUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/InfoCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/JsonCreater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/Other/SNAddOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/Other/Servlet1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/Other/Servlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Webdao/WebDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bean/ConnectResponseBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/JDBCUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/prop/SetPropties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="21" column="21" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils/SQLInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="31" lean-forward="false" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bean/ConnectSQLBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Utils/MathUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
           <caret line="34" column="29" lean-forward="false" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/prop/ConnectDataBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="27" column="37" lean-forward="false" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -2118,10 +1994,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="634">
           <caret line="85" column="50" lean-forward="false" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#sendGet#0;class#HttpRequestUtils#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2171,11 +2043,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="43" column="35" lean-forward="false" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#753#754#0" expanded="false" />
-            <element signature="e#776#777#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2190,13 +2057,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1100">
           <caret line="67" column="40" lean-forward="false" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#749#750#0" expanded="false" />
-            <element signature="e#772#773#0" expanded="false" />
-            <element signature="e#3405#3495#0" expanded="false" />
-            <marker date="1582164458995" expanded="true" signature="4305:4375" ph="select * fro... p_CreateProc" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2204,19 +2064,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
           <caret line="41" column="33" lean-forward="false" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#564#565#0" expanded="false" />
-            <element signature="e#587#588#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bean/PushDownDLBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="62" column="28" lean-forward="true" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2224,7 +2071,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="57" column="48" lean-forward="true" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2232,85 +2078,284 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WebIO/ConnectDataBaseIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="44" column="31" lean-forward="false" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/prop/GetServerTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils/JDBCUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/PushDown/PushDownloadList.java">
+    <entry file="file://$PROJECT_DIR$/src/Server/prop/GetUseTime.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4170">
-          <caret line="294" column="42" lean-forward="true" selection-start-line="294" selection-start-column="42" selection-end-line="294" selection-end-column="42" />
-          <folding>
-            <element signature="e#33423#33445#0" expanded="false" />
-            <marker date="1583141783539" expanded="true" signature="2718:3997" ph="select t3_F.... t_PUR_POOrder" />
-            <marker date="1583141783539" expanded="true" signature="5239:6537" ph="select t3.FL... t_PUR_POOrder" />
-            <marker date="1583141783539" expanded="true" signature="9225:10910" ph="select t3_F.... T_SAL_ORDER" />
-            <marker date="1583141783539" expanded="true" signature="11003:12688" ph="select t3_F.... T_SAL_ORDER" />
-            <marker date="1583141783539" expanded="true" signature="12772:13966" ph="select t2_R.... T_SAL_ORDER" />
-            <marker date="1583141783539" expanded="true" signature="13792:13892" ph="SELECT 1 FRO... T_BD_MATERIALQUALITY" />
-            <marker date="1583141783539" expanded="true" signature="14059:15084" ph="select t3.FS... T_SAL_OUTSTOCK" />
-            <marker date="1583141783539" expanded="true" signature="15175:16107" ph="select t3.FU... T_SAL_DELIVERYNOTICE" />
-            <marker date="1583141783539" expanded="true" signature="16192:17098" ph="select t1008... T_SAL_RETURNNOTICE" />
-            <marker date="1583141783539" expanded="true" signature="17192:17963" ph="select t11.F... ICMO" />
-            <marker date="1583141783539" expanded="true" signature="18074:19033" ph="select t3.FU... T_STK_STKTRANSFERAPP" />
-            <marker date="1583141783539" expanded="true" signature="19144:20804" ph="select t3.FU... T_STK_STKTRANSFERAPP" />
-            <marker date="1583141783539" expanded="true" signature="20902:22562" ph="select t3.FU... T_STK_STKTRANSFERAPP" />
-            <marker date="1583141783539" expanded="true" signature="22648:24076" ph="select t3.FU... T_STK_OUTSTOCKAPPLY" />
-            <marker date="1583141783539" expanded="true" signature="25311:26187" ph="select t0.FB... T_SP_PICKMTRL" />
-            <marker date="1583141783539" expanded="true" signature="27468:28593" ph="select '' as... T_SP_PICKMTRL" />
-            <marker date="1583141783539" expanded="true" signature="28680:29876" ph="select '' as... t_STK_InStock" />
-            <marker date="1583141783539" expanded="true" signature="29963:31021" ph="select '' as... t_STK_InStock" />
-            <marker date="1583141783539" expanded="true" signature="31115:32312" ph="select '' as... T_SP_PICKMTRL" />
-            <marker date="1583141783539" expanded="true" signature="32406:33397" ph="select '' as... T_SP_PICKMTRL" />
-          </folding>
+        <state relative-caret-position="616">
+          <caret line="45" column="61" lean-forward="false" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/PushDown/PushDownList.java">
+    <entry file="file://$PROJECT_DIR$/src/Bean/UseTimeBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1016">
-          <caret line="265" column="56" lean-forward="false" selection-start-line="265" selection-start-column="56" selection-end-line="265" selection-end-column="56" />
-          <folding>
-            <element signature="e#22831#22867#0" expanded="false" />
-            <marker date="1583140743161" expanded="true" signature="3266:4582" ph="select disti... t_PUR_POOrder" />
-            <marker date="1583140743161" expanded="true" signature="4699:6110" ph="select disti... t_PUR_POOrder" />
-            <marker date="1583140743161" expanded="true" signature="6276:7475" ph="select disti... T_SAL_ORDER" />
-            <marker date="1583140743161" expanded="true" signature="7594:8792" ph="select disti... T_SAL_ORDER" />
-            <marker date="1583140743161" expanded="true" signature="8907:9829" ph="select disti... T_SAL_ORDER" />
-            <marker date="1583140743161" expanded="true" signature="9691:9791" ph="SELECT 1 FRO... T_BD_MATERIALQUALITY" />
-            <marker date="1583140743161" expanded="true" signature="9936:10882" ph="select disti... T_SAL_OUTSTOCK" />
-            <marker date="1583140743161" expanded="true" signature="11010:11794" ph="select disti... T_SAL_DELIVERYNOTICE" />
-            <marker date="1583140743161" expanded="true" signature="11910:12962" ph="select disti... T_SAL_RETURNNOTICE" />
-            <marker date="1583140743161" expanded="true" signature="13080:13593" ph="select disti... ICStockBill" />
-            <marker date="1583140743161" expanded="true" signature="13689:14338" ph="select disti... T_STK_STKTRANSFERAPP" />
-            <marker date="1583140743161" expanded="true" signature="14420:15338" ph="select disti... T_STK_STKTRANSFERAPP" />
-            <marker date="1583140743161" expanded="true" signature="15420:16339" ph="select disti... T_STK_STKTRANSFERAPP" />
-            <marker date="1583140743161" expanded="true" signature="16421:17534" ph="select disti... T_STK_OUTSTOCKAPPLY" />
-            <marker date="1583140743161" expanded="true" signature="18420:19290" ph="select disti... T_SP_PICKMTRL" />
-            <marker date="1583140743161" expanded="true" signature="19414:20188" ph="select disti... T_SP_PICKMTRL" />
-            <marker date="1583140743161" expanded="true" signature="20290:20878" ph="select disti... t_STK_InStock" />
-            <marker date="1583140743161" expanded="true" signature="20980:21738" ph="select disti... t_STK_InStock" />
-            <marker date="1583140743161" expanded="true" signature="21890:22800" ph="select disti... T_SP_PICKMTRL" />
-          </folding>
+        <state relative-caret-position="220">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/prop/SetUseTimeForPC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="37" column="24" lean-forward="false" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/prop/SetUseTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/prop/RegisterUtils/ServiceVersion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="24" lean-forward="false" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/prop/RegisterCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/prop/RegisterUtils/RegisterUpdateMsg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="33" column="31" lean-forward="false" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/prop/ConnectDataBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="49" column="77" lean-forward="false" selection-start-line="49" selection-start-column="77" selection-end-line="49" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bean/ConnectSQLBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/SearchIO/ProductTreeList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="29" column="57" lean-forward="false" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/CodeCheck/CodeCheckForOut.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1210">
+          <caret line="73" column="37" lean-forward="false" selection-start-line="73" selection-start-column="37" selection-end-line="73" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/CodeCheckInsert/CodeCheckInsertForOutBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="31" column="7" lean-forward="true" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/upload/P1/doReBoxP1Upload.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/print/PrintData4PackagReAdd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/CodeCheckInsert/CodeCheckInsertForDBOutBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="946">
+          <caret line="61" column="20" lean-forward="false" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/CodeCheck/CodeCheckForOut4Box.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="61" column="51" lean-forward="false" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bean/PushDownDLBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1364">
+          <caret line="62" column="28" lean-forward="false" selection-start-line="62" selection-start-column="28" selection-end-line="64" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Bean/PushDownListReturnBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="36" column="30" lean-forward="false" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+        <state relative-caret-position="1254">
+          <caret line="57" column="46" lean-forward="false" selection-start-line="57" selection-start-column="46" selection-end-line="59" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/WebIO/ConnectDataBaseIO.java">
+    <entry file="file://$PROJECT_DIR$/src/Server/PushDown/PushDownList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="74" column="9" lean-forward="false" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
+        <state relative-caret-position="1232">
+          <caret line="73" column="26" lean-forward="false" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
           <folding>
-            <element signature="method#ConnectDataBaseIO#0;class#ConnectDataBaseIO#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#22925#22961#0" expanded="false" />
+            <marker date="1588750581427" expanded="true" signature="3266:4582" ph="select disti... t_PUR_POOrder" />
+            <marker date="1588750581427" expanded="true" signature="4699:6110" ph="select disti... t_PUR_POOrder" />
+            <marker date="1588750581427" expanded="true" signature="6276:7522" ph="select disti... T_SAL_ORDER" />
+            <marker date="1588750581427" expanded="true" signature="7641:8886" ph="select disti... T_SAL_ORDER" />
+            <marker date="1588750581427" expanded="true" signature="9001:9923" ph="select disti... T_SAL_ORDER" />
+            <marker date="1588750581427" expanded="true" signature="9785:9885" ph="SELECT 1 FRO... T_BD_MATERIALQUALITY" />
+            <marker date="1588750581427" expanded="true" signature="10030:10976" ph="select disti... T_SAL_OUTSTOCK" />
+            <marker date="1588750581427" expanded="true" signature="11104:11888" ph="select disti... T_SAL_DELIVERYNOTICE" />
+            <marker date="1588750581427" expanded="true" signature="12004:13056" ph="select disti... T_SAL_RETURNNOTICE" />
+            <marker date="1588750581427" expanded="true" signature="13174:13687" ph="select disti... ICStockBill" />
+            <marker date="1588750581427" expanded="true" signature="13783:14432" ph="select disti... T_STK_STKTRANSFERAPP" />
+            <marker date="1588750581427" expanded="true" signature="14514:15432" ph="select disti... T_STK_STKTRANSFERAPP" />
+            <marker date="1588750581427" expanded="true" signature="15514:16433" ph="select disti... T_STK_STKTRANSFERAPP" />
+            <marker date="1588750581427" expanded="true" signature="16515:17628" ph="select disti... T_STK_OUTSTOCKAPPLY" />
+            <marker date="1588750581427" expanded="true" signature="18514:19384" ph="select disti... T_SP_PICKMTRL" />
+            <marker date="1588750581427" expanded="true" signature="19508:20282" ph="select disti... T_SP_PICKMTRL" />
+            <marker date="1588750581427" expanded="true" signature="20384:20972" ph="select disti... t_STK_InStock" />
+            <marker date="1588750581427" expanded="true" signature="21074:21832" ph="select disti... t_STK_InStock" />
+            <marker date="1588750581427" expanded="true" signature="21984:22894" ph="select disti... T_SP_PICKMTRL" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/NumInStorage/GetInStorageNumList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <marker date="1523268436943" expanded="true" signature="1766:2403" ph="select t2.FN... ICInventory" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bean/InStorageNumListBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/CodeCheck/CodeCheckForIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="51" column="17" lean-forward="false" selection-start-line="51" selection-start-column="17" selection-end-line="52" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bean/DownloadReturnBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="814">
+          <caret line="37" column="42" lean-forward="false" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bean/FloorBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/SearchIO/ProductSearchForTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="83" column="93" lean-forward="false" selection-start-line="83" selection-start-column="93" selection-end-line="83" selection-end-column="93" />
+          <folding>
+            <marker date="1588833660534" expanded="true" signature="1929:3355" ph="select top 5... T_BD_MATERIAL" />
+            <marker date="1588833660534" expanded="true" signature="3750:5176" ph="select top 5... T_BD_MATERIAL" />
+            <marker date="1588833660534" expanded="true" signature="6197:7623" ph="select top 8... T_BD_MATERIAL" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/NumInStorage/GetFloorData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="37" column="81" lean-forward="false" selection-start-line="37" selection-start-column="81" selection-end-line="37" selection-end-column="81" />
+          <folding>
+            <marker date="1588832421399" expanded="true" signature="1883:3983" ph="select t2.FN... ICInventory" />
+            <marker date="1588832421399" expanded="true" signature="2254:2868" ph="select t0.FA... T_STK_INVENTORY" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/PushDown/PushDownloadList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="41" column="28" lean-forward="true" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+          <folding>
+            <element signature="e#33434#33456#0" expanded="false" />
+            <marker date="1588750568517" expanded="true" signature="2718:3997" ph="select t3_F.... t_PUR_POOrder" />
+            <marker date="1588750568517" expanded="true" signature="5239:6537" ph="select t3.FL... t_PUR_POOrder" />
+            <marker date="1588750568517" expanded="true" signature="9233:10918" ph="select t3_F.... T_SAL_ORDER" />
+            <marker date="1588750568517" expanded="true" signature="11014:12699" ph="select t3_F.... T_SAL_ORDER" />
+            <marker date="1588750568517" expanded="true" signature="12783:13977" ph="select t2_R.... T_SAL_ORDER" />
+            <marker date="1588750568517" expanded="true" signature="13803:13903" ph="SELECT 1 FRO... T_BD_MATERIALQUALITY" />
+            <marker date="1588750568517" expanded="true" signature="14070:15095" ph="select t3.FS... T_SAL_OUTSTOCK" />
+            <marker date="1588750568517" expanded="true" signature="15186:16118" ph="select t3.FU... T_SAL_DELIVERYNOTICE" />
+            <marker date="1588750568517" expanded="true" signature="16203:17109" ph="select t1008... T_SAL_RETURNNOTICE" />
+            <marker date="1588750568517" expanded="true" signature="17203:17974" ph="select t11.F... ICMO" />
+            <marker date="1588750568517" expanded="true" signature="18085:19044" ph="select t3.FU... T_STK_STKTRANSFERAPP" />
+            <marker date="1588750568517" expanded="true" signature="19155:20815" ph="select t3.FU... T_STK_STKTRANSFERAPP" />
+            <marker date="1588750568517" expanded="true" signature="20913:22573" ph="select t3.FU... T_STK_STKTRANSFERAPP" />
+            <marker date="1588750568517" expanded="true" signature="22659:24087" ph="select t3.FU... T_STK_OUTSTOCKAPPLY" />
+            <marker date="1588750568517" expanded="true" signature="25322:26198" ph="select t0.FB... T_SP_PICKMTRL" />
+            <marker date="1588750568517" expanded="true" signature="27479:28604" ph="select '' as... T_SP_PICKMTRL" />
+            <marker date="1588750568517" expanded="true" signature="28691:29887" ph="select '' as... t_STK_InStock" />
+            <marker date="1588750568517" expanded="true" signature="29974:31032" ph="select '' as... t_STK_InStock" />
+            <marker date="1588750568517" expanded="true" signature="31126:32323" ph="select '' as... T_SP_PICKMTRL" />
+            <marker date="1588750568517" expanded="true" signature="32417:33408" ph="select '' as... T_SP_PICKMTRL" />
           </folding>
         </state>
       </provider>

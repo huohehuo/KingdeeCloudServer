@@ -12,12 +12,15 @@ public class FloorBean {
     public String FBaseUnitID;
     public String FBaseUnit;
     public String FStoreUnitID;
+    public String FStoreUnitNumber;
     public String FStoreUnit;
     public String FAuxUnitID;
     public String FAuxUnit;
     public String FAuxAttr;
     public String FHuozhuNumber;
     public String FQty;
+    public String FStorage;
+    public String FStorageNumber;
 
     public String FBarCode;
     public boolean isClick;

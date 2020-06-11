@@ -4,6 +4,7 @@ import Bean.DownloadReturnBean;
 import Bean.FloorBean;
 import Utils.CommonJson;
 import Utils.JDBCUtil;
+import Utils.Lg;
 import Utils.getDataBaseUrl;
 import com.google.gson.Gson;
 
@@ -30,6 +31,7 @@ public class GetFloorData extends HttpServlet {
         PreparedStatement sta = null;
         ResultSet rs = null;
         response.setCharacterEncoding("UTF-8");
+        request.setCharacterEncoding("UTF-8");
         PrintWriter writer = response.getWriter();
         String json = request.getParameter("json");
         ArrayList<FloorBean> container = new ArrayList<>();
@@ -42,9 +44,10 @@ public class GetFloorData extends HttpServlet {
                 System.out.println(request.getParameter("sqlip")+" "
                         +request.getParameter("sqlport")+" "+request.getParameter("sqlname")
                         +" "+request.getParameter("sqlpass")+" "+request.getParameter("sqluser"));
-                String SQL = "select top 100 st019.FNumber as 辅助属性,st017.FNumber as 实际规格,isnull(t5.FNumber,isnull(t_20.FNumber,t_22.FNumber)) as 货主编码,t0.FSTOCKID,t0.fmaterialid as 商品ID,t31.FSTOREUNITID as 单位ID,t2.FNumber as 商品代码,t2L.FName as 商品名称,t2L.FSPECIFICATION as 规格,t0.FNumber as 批号,ROUND( t0.FQty,t100.FPRECISION)  as 库存数,'PCS' as 单位,t3.FName as 基本单位,t4.FName as 辅助单位,t5U.FName as 库存单位  from ( select t0.FAUXPROPID,t0.FSTOCKORGID, t0.FOWNERID,t0.FBASEUNITID,t0.FMATERIALID,t0.FSTOCKID,st035.FNUMBER, sum(CAST(CASE  WHEN (T2.FSTOREURNOM = 0 OR T2.FSTOREURNUM = 0) THEN T0.FBASEQTY ELSE (CAST((T0.FBASEQTY * T2.FSTOREURNOM) AS NUMERIC(23, 10)) / T2.FSTOREURNUM) END AS NUMERIC(23, 10))) as FQty,t0.FOWNERTYPEID   from T_STK_INVENTORY t0 left join T_BD_MATERIALSTOCK t2 on t0.FMATERIALID =t2.FMATERIALID  LEFT OUTER JOIN T_BD_LOTMASTER st035 ON t0.FLOT = st035.FLOTID     group by t0.FOWNERID,t0.FMATERIALID,t0.FAUXPROPID,t0.FSTOCKID,st035.FNUMBER,t0.FBASEUNITID,t0.FSTOCKSTATUSID,t0.FSTOCKORGID,t0.FOWNERTYPEID) t0" +
-                        " left join T_BD_MATERIAL t2 on t0.FMATERIALID = t2.FMaterialid left join t_bd_material_l t2L on  t2.fmaterialid=t2L.fmaterialid left join T_BD_MATERIALSTOCK t31 on t31.fmaterialid=t0.fmaterialid left join T_BD_UNIT_L t3 on t0.FBASEUNITID=t3.FUnitID left join T_BD_UNIT_L t4 on t31.FAUXUNITID=t4.FUnitID left join T_BD_UNIT_L t5U on t31.FSTOREUNITID=t5U.FUnitID left join T_ORG_Organizations t5 on t0.FOWNERID=t5.FORGID LEFT OUTER JOIN T_BD_FLEXSITEMDETAILV st011 ON t0.FAUXPROPID = st011.FID LEFT OUTER JOIN T_BAS_ASSISTANTDATAENTRY st017 ON st011.FF100001 = st017.FEntryId LEFT OUTER JOIN T_BD_FLEXSITEMDETAILV st018 ON t0.FAUXPROPID = st018.FID LEFT OUTER JOIN T_BAS_ASSISTANTDATAENTRY st019 ON st018.FF100002 = st019.FEntryId left join t_BD_Supplier t_20  on t_20.FSUPPLIERID = t0.FOWNERID left join t_BD_Customer t_22  on t_22.FCUSTID  = t0.FOWNERID left join T_BD_UNIT t100 on t5U.FUNITID=t100.FUNITID  LEFT OUTER JOIN T_ORG_Organizations st012 ON t0.FSTOCKORGID = st012.FOrgID where t0.FQty>0  and st012.FNumber = '107.03' and t0.FOWNERTYPEID = N'BD_Customer' and t2.FNumber=?";
+                String SQL = "select top 100 t51U.FNumber as 库存单位编码,t21.FNumber as 仓库编码,st019.FNumber as 辅助属性,st017.FNumber as 实际规格,isnull(t5.FNumber,isnull(t_20.FNumber,t_22.FNumber)) as 货主编码,t0.FSTOCKID,t0.fmaterialid as 商品ID,t31.FSTOREUNITID as 单位ID,t2.FNumber as 商品代码,t2L.FName as 商品名称,t2L.FSPECIFICATION as 规格,t0.FNumber as 批号,CONVERT ( DECIMAL (18,4),t0.FQty)  as 库存数,'PCS' as 单位,t3.FName as 基本单位,t4.FName as 辅助单位,t5U.FName as 库存单位  from ( select t0.FAUXPROPID,t0.FSTOCKORGID, t0.FOWNERID,t0.FBASEUNITID,t0.FMATERIALID,t0.FSTOCKID,st035.FNUMBER, sum(CAST(CASE  WHEN (T2.FSTOREURNOM = 0 OR T2.FSTOREURNUM = 0) THEN T0.FBASEQTY ELSE (CAST((T0.FBASEQTY * T2.FSTOREURNOM) AS NUMERIC(23, 10)) / T2.FSTOREURNUM) END AS NUMERIC(23, 10))) as FQty,t0.FOWNERTYPEID   from T_STK_INVENTORY t0 left join T_BD_MATERIALSTOCK t2 on t0.FMATERIALID =t2.FMATERIALID  LEFT OUTER JOIN T_BD_LOTMASTER st035 ON t0.FLOT = st035.FLOTID     group by t0.FOWNERID,t0.FMATERIALID,t0.FAUXPROPID,t0.FSTOCKID,st035.FNUMBER,t0.FBASEUNITID,t0.FSTOCKSTATUSID,t0.FSTOCKORGID,t0.FOWNERTYPEID) t0" +
+                        " left join T_BD_MATERIAL t2 on t0.FMATERIALID = t2.FMaterialid left join t_bd_material_l t2L on  t2.fmaterialid=t2L.fmaterialid left join T_BD_MATERIALSTOCK t31 on t31.fmaterialid=t0.fmaterialid left join T_BD_UNIT_L t3 on t0.FBASEUNITID=t3.FUnitID left join T_BD_UNIT_L t4 on t31.FAUXUNITID=t4.FUnitID left join T_BD_UNIT_L t5U on t31.FSTOREUNITID=t5U.FUnitID left join T_ORG_Organizations t5 on t0.FOWNERID=t5.FORGID LEFT OUTER JOIN T_BD_FLEXSITEMDETAILV st011 ON t0.FAUXPROPID = st011.FID LEFT OUTER JOIN T_BAS_ASSISTANTDATAENTRY st017 ON st011.FF100001 = st017.FEntryId LEFT OUTER JOIN T_BD_FLEXSITEMDETAILV st018 ON t0.FAUXPROPID = st018.FID LEFT OUTER JOIN T_BAS_ASSISTANTDATAENTRY st019 ON st018.FF100002 = st019.FEntryId left join t_BD_Supplier t_20  on t_20.FSUPPLIERID = t0.FOWNERID left join t_BD_Customer t_22  on t_22.FCUSTID  = t0.FOWNERID left join T_BD_UNIT t100 on t5U.FUNITID=t100.FUNITID  LEFT OUTER JOIN T_ORG_Organizations st012 ON t0.FSTOCKORGID = st012.FOrgID left join T_BD_UNIT  t51U on t31.FSTOREUNITID=t51U.FUnitID left join t_BD_Stock t21 on t0.FSTOCKID=t21.FSTOCKID where t0.FQty>0  and st012.FNumber = '107.03' and t0.FOWNERTYPEID = N'BD_Customer' and t2.FNumber=?";
                 sta = conn.prepareStatement(SQL);
+                Lg.e("获取GetFloorData:"+SQL);
                 sta.setString(1,json);
                 rs = sta.executeQuery();
 //                ArrayList<InStorageNumListBean.inStoreList> container = new ArrayList<>();
@@ -59,14 +62,17 @@ public class GetFloorData extends HttpServlet {
                     inBean.FBatchNo = rs.getString("批号");
                     inBean.FUnitID = rs.getString("单位ID");
                     inBean.FUnit = rs.getString("单位");
+                    inBean.FStorageNumber = rs.getString("仓库编码");
                     inBean.FBaseUnit = rs.getString("基本单位");
                     inBean.FStoreUnit = rs.getString("库存单位");
+                    inBean.FStoreUnitNumber = rs.getString("库存单位编码");
                     inBean.FAuxUnit = rs.getString("辅助单位");
                     inBean.FAuxAttr = rs.getString("辅助属性");
                     inBean.FHuozhuNumber = rs.getString("货主编码");
                     inBean.FQty = rs.getString("库存数");
                     container.add(inBean);
                 }
+                Lg.e("GetFloorData得到",container);
                 if(container.size()>0){
                     downloadReturnBean.floorBeans = container;
                     writer.write(CommonJson.getCommonJson(true,new Gson().toJson(downloadReturnBean)));
